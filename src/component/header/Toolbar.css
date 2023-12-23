@@ -1,0 +1,45 @@
+.toolbar {
+  height: 5.92vh;
+  width: 100%;
+  background-color: white;
+}
+
+.toolbar-nav-content {
+  width: 23.62vw;
+  height: 2.77vh;
+  margin-left: 57vw;
+  margin-top: 1.57vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toolbar-nav-content img {
+  width: 1.56vw;
+  height: 2.77vh;
+}
+
+.toolbar-buttons {
+  width: 15.73vw;
+  height: 3.15vh;
+  right: 1.4vw;
+  bottom: 2.96vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toolbar-button {
+  width: 6.77vw;
+  height: 3.15vh;
+  border-radius: 0.65vh;
+  background-color: #c65161;
+  border: none;
+  color: white;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.toolbar-cancel-button {
+  background-color: #313f68;
+  opacity: 100%;
+}

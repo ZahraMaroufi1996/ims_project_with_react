@@ -1,0 +1,152 @@
+.sidebar {
+  width: 15.1vw;
+  height: 100%;
+  background-color: #1a4348;
+}
+
+.sidebar-account-info {
+  width: 6.977vw;
+  height: 12.96vh;
+  margin-top: 8.33vh;
+  margin-left: 4.088vw;
+  /* background-color: red; */
+  border-bottom: 0.092vh solid rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-account-info-image {
+  width: 3.33vw;
+  height: 5.93vh;
+}
+
+.sidebar-account-info-name {
+  width: 4.79vw;
+  height: 3.79vh;
+}
+
+.sidebar-account-info-name span {
+  font-size: 1.296vh;
+  font-family: "FiraGO", sans-serif;
+  line-height: 1.76vh;
+}
+
+.sidebar-account-info-username {
+  color: #a6d4c4;
+  text-align: right;
+  width: 3.23vw;
+  height: 1.76vh;
+}
+
+.sidebar-account-info-Saleh-username {
+  color: #ffffff;
+  width: 4.79vw;
+  height: 1.76vh;
+}
+
+.sidebar-logo {
+  width: 6.98vw;
+  height: 8.24vh;
+  bottom: 6.48vh;
+  left: 4.06vw;
+  position: absolute;
+}
+
+.sidebar-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-button {
+  background-color: #68d5b0;
+  width: 9.58vw;
+  height: 3.7vh;
+  margin-top: 6vh;
+  margin-left: 3.64vw;
+  /* position: absolute; */
+  color: white;
+  font-size: 1.66vh;
+  border-radius: 7px;
+  border: none;
+}
+
+.sidebar-topology-icon {
+  background-color: white;
+  /* width: 15.1vw; */
+  width: 100%;
+  height: 7.13vh;
+  margin-top: 9.81vh;
+}
+.sidebar-selected-icon {
+  height: 7.13vh;
+  width: 0.625vw;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: #68d5b0;
+}
+
+.sidebar-topology-icon-content {
+  width: 6.38vw;
+  height: 2.77vh;
+  /* background-color: red; */
+}
+
+.sidebar-configuration-icon {
+  background-color: white;
+  width: 100%;
+  height: 7.13vh;
+  margin-top: 20px;
+}
+
+.sidebar-configuration-icon-content {
+  width: 8.88vw;
+  height: 4.12vh;
+}
+
+.sidebar-monitoring-icon {
+  background-color: white;
+  width: 100%;
+  height: 7.13vh;
+  margin-top: 20px;
+}
+
+.sidebar-monitoring-icon-content {
+  width: 7.18vw;
+  height: 2.77vh;
+}
+
+.sidebar-troubleshooting-icon {
+  background-color: white;
+  width: 100%;
+  height: 7.13vh;
+  margin-top: 20px;
+}
+
+.sidebar-troubleshooting-icon-content {
+  width: 9.89vw;
+  height: 2.77vh;
+}
+
+.sidebar-icons span {
+  color: white;
+  font-size: 1.48vh;
+  padding-left: 12px;
+  font-family: "FiraGO", sans-serif;
+  text-align: center;
+}
+
+.sidebar-configuration-icon-image {
+  width: 2.31vw;
+  height: 4.12vh;
+  /* left: 0;
+  top: 0;
+  position: absolute; */
+}
+
+.sidebar-image {
+  height: 2.77vh;
+  width: 1.56vw;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
