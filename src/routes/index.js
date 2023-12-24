@@ -6,19 +6,19 @@ import Troubleshooting from "../pages/troubleshooting";
 
 const AppRoutes = [
   {
-    path: "/topology",
+    path: "topology",
     element: Topology,
   },
   {
-    path: "/configuration",
+    path: "configuration",
     element: Configuration,
   },
   {
-    path: "/monitoring",
+    path: "monitoring",
     element: Monitoring,
   },
   {
-    path: "/troubleshooting",
+    path: "troubleshooting",
     element: Troubleshooting,
   },
 ];

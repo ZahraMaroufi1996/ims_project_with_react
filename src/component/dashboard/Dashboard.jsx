@@ -14,7 +14,7 @@ import "./Dashboard.css";
 
 function Dashboard() {
   return (
-    <Router>
+    <>
       <Sidebar />
       <div className="main-body">
         <Toolbar />
@@ -23,17 +23,11 @@ function Dashboard() {
             {AppRoutes.map((prop, key) => {
               return <Route path={prop.path} element={<prop.element />} />;
             })}
-
-            {/* <Route path="/" element={<Topology />} />
-             <Route path="/login" element={<Login />} /> }
-            <Route path="/configuration" element={<Configuration />} />
-            <Route path="/monitoring" element={<Monitoring />} />
-            <Route path="/troubleshooting" element={<Troubleshooting />} /> */}
           </Routes>
         </Content>
         <Footer />
       </div>
-    </Router>
+    </>
   );
 }
 
