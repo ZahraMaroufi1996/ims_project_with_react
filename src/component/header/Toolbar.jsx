@@ -1,4 +1,13 @@
 import React from "react";
+import { About } from "../icons/About";
+import { Message } from "../icons/Message";
+import { Sound } from "../icons/Sound";
+import { Profile } from "../icons/Profile";
+import { Logout } from "../icons/Logout";
+import { Exit } from "../icons/Exit";
+import { Help } from "../icons/Help";
+import { Lock } from "../icons/Lock";
+
 import "./Toolbar.css";
 
 const Toolbar = () => {
@@ -6,28 +15,28 @@ const Toolbar = () => {
     <nav class="toolbar">
       <div class="toolbar-nav-content">
         <a href="#">
-          <img src="images/IMS_TOPOLOGY_images/Title Bar Icon _ About.svg" />
+          <About />
         </a>
         <a href="#">
-          <img src="images/IMS_TOPOLOGY_images/Title Bar Icon _ Help.svg" />
+          <Help />
         </a>
         <a href="#">
-          <img src="images/IMS_TOPOLOGY_images/Title Bar Icon _ Message.svg" />
+          <Message />
         </a>
         <a href="#" id="sound-icon">
-          <img src="images/IMS_TOPOLOGY_images/Title Bar Icon _ Sound.svg" />
+          <Sound />
         </a>
         <a href="#">
-          <img src="images/IMS_TOPOLOGY_images/Title Bar Icon _ Lock.svg" />
+          <Lock />
         </a>
         <a href="#" id="profile-icon">
-          <img src="images/IMS_TOPOLOGY_images/Title Bar Icon _ Profile.svg" />
+          <Profile />
         </a>
         <a href="#" id="log-out-icon">
-          <img src="images/IMS_TOPOLOGY_images/Title Bar Icon _ Log Out.svg" />
+          <Logout />
         </a>
         <a href="#" id="exit-icon">
-          <img src="images/IMS_TOPOLOGY_images/Title Bar Icon _ Exit.svg" />
+          <Exit />
         </a>
       </div>
     </nav>

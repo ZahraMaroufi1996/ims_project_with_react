@@ -1,0 +1,67 @@
+.virtual-ips {
+  background-color: white;
+  width: 29.89vw;
+  height: 72.31vh;
+  margin-left: 1.45vw;
+  margin-top: 2.6vh;
+  border-radius: 20px;
+  border: 1px solid red;
+}
+
+.virtual-ips-title {
+  /* background-color: #1f666e; */
+  width: 11.98vw;
+  height: 2.22vh;
+  margin-top: 3.7vh;
+  margin-left: 1.35vw;
+  /* left: 1.35vw;
+  top: 3.7vh; */
+  /* position: absolute; */
+  color: #83a79a;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.virtual-ips-content {
+  width: 27.083vw;
+  height: 6.29vh;
+  margin-left: 1.46vw;
+  margin-top: 2.22vh;
+  border-radius: 0.65vh;
+  border: 1px solid red;
+}
+
+.virtual-ips-main-text {
+  color: #1a4348;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+  margin-left: 0vw;
+  margin-top: 0.64vh;
+}
+
+.virtual-ips-down-text {
+  color: #1f666e;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+  margin-left: 0vw;
+  margin-bottom: 0vh;
+}
+
+.virtual-ips-boxes {
+  width: 12.03vw;
+  height: 3.7vh;
+}
+
+.virtual-ips-save-button {
+  margin-top: 33.88vh;
+  margin-left: 21.15vw;
+}
+
+.topology-buttton {
+  width: 7.29vw;
+  height: 3.7vh;
+  border-style: none;
+  border-radius: 0.65vh;
+  background-color: #1f666e;
+  color: white;
+}

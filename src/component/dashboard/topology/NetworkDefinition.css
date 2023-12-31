@@ -1,0 +1,63 @@
+.network {
+  background-color: white;
+  width: 78.75vw;
+  height: 9.35vh;
+  margin-left: 1.45vw;
+  margin-top: 2.6vh;
+  border-radius: 20px;
+  border: 1px solid red;
+}
+
+.network-definition {
+  background-color: white;
+  width: 48.91vw;
+  height: 3.7vh;
+  margin-left: 1.19vw;
+}
+
+#network-definition-form {
+  height: 100%;
+}
+.network-definition-subnetmask {
+  width: 17.81vw;
+  height: 3.7vh;
+}
+
+.network-definition-gateway {
+  width: 16.2vw;
+  height: 3.7vh;
+}
+
+.network-definition span {
+  color: #83a79a;
+  font-size: 1.66vh;
+  text-align: center;
+}
+
+label,
+.network span {
+  color: #1a4348;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.network-definition-button {
+  margin-left: 19.9vw;
+}
+
+.ip-octet {
+  width: 2.604vw;
+  height: 3.7vh;
+  border-radius: 0.65vh;
+  background-color: #eef5f2;
+  color: black;
+}
+
+.topology-buttton {
+  width: 7.29vw;
+  height: 3.7vh;
+  border-style: none;
+  border-radius: 0.65vh;
+  background-color: #1f666e;
+  color: white;
+}

@@ -1,9 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Login from "./pages/login";
-// import Topology from "./pages/topology";
-// import Configuration from "./pages/configuration";
-// import Monitoring from "./pages/monitoring";
-// import Troubleshooting from "./pages/troubleshooting";
 import Toolbar from "../header/Toolbar";
 import Sidebar from "../sidebar/Sidebar";
 import Footer from "../footer/Footer";

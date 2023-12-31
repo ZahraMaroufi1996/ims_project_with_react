@@ -45,9 +45,8 @@
 .sidebar-logo {
   width: 6.98vw;
   height: 8.24vh;
-  bottom: 6.48vh;
-  left: 4.06vw;
-  position: absolute;
+  margin-left: 4.06vw;
+  margin-top: 12vh;
 }
 
 .sidebar-logo img {

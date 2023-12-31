@@ -1,8 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 import "./login.css";
+import { LoginLogo } from "../component/login/LoginLogo";
+import { Avatar } from "../component/login/Avatar";
+import { UserIcon } from "../component/login/UserIcon.jsx";
+import { PassIcon } from "../component/login/PassIcon";
 
 const Login = () => {
   const url = "https://88d188a7-0705-4aa4-b0f9-0d2781378c89.mock.pstmn.io";
@@ -12,6 +16,8 @@ const Login = () => {
     username: "",
     password: "",
   });
+
+  const history = useNavigate();
   // const [error, setError] = useState(undefined);
   const handleChange = (e) => {
     e.preventDefault();
@@ -28,9 +34,7 @@ const Login = () => {
         my_token = response.data.token;
         console.log(my_token);
         localStorage.setItem("token", my_token);
-        // $("head").append(
-        //   `<meta http-equiv="refresh" content="0; URL=After_Login_Page.html" />`
-        // );
+        history("/dashboard/topology");
       })
       .catch((error) => {
         console.log(error);
@@ -38,50 +42,53 @@ const Login = () => {
   };
 
   return (
-    <div class="Login-container">
-      <div class="Login-Avatar">
-        <img src="../../images/login_images/Avatar.svg" class="Avatar-image" />
+    <div className="Login-body">
+      <div className="login-content d-flex flex-column">
+        <div className="Login-container d-flex flex-column justify-content-between">
+          <div className="Login-Avatar">
+            <Avatar />
+          </div>
+          <form
+            className="Login-form d-flex flex-column justify-content-between"
+            id="login-form"
+            onSubmit={handleSubmit}
+          >
+            <div className="username-container d-flex flex-row justify-content-around">
+              <input
+                className="username-btn"
+                type="text"
+                name="username"
+                placeholder="نام کاربری"
+                onChange={handleChange}
+              />
+              <UserIcon />
+            </div>
+            <div className="password-container">
+              <input
+                class="password-btn"
+                type="password"
+                name="password"
+                placeholder="رمز عبور"
+                onChange={handleChange}
+              />
+              <PassIcon />
+            </div>
+            <div className="submit-container">
+              <button type="submit" class="submit-button">
+                وارد شوید
+              </button>
+            </div>
+          </form>
+          <div className="Login-Language">
+            <label className="switch">
+              <input type="checkbox" name="language" id="language" />
+              <span className="slider round"> EN </span>
+            </label>
+          </div>
+        </div>
+        <LoginLogo />
+        <p className="Login-Logo-text">Sina NMS Client Version 2.7.4</p>
       </div>
-      <form class="Login-form" id="login-form" onSubmit={handleSubmit}>
-        <div class="username-container">
-          <input
-            class="username-btn"
-            type="text"
-            name="username"
-            placeholder="نام کاربری"
-            onChange={handleChange}
-          />
-          <img
-            src="../../images/login_images/Group 8492.svg"
-            class="username-icon"
-          />
-        </div>
-
-        <div class="password-container">
-          <input
-            class="password-btn"
-            type="password"
-            name="password"
-            placeholder="رمز عبور"
-            onChange={handleChange}
-          />
-          <img
-            src="../../images/login_images/Group 8493.svg"
-            class="password-icon"
-          />
-        </div>
-        <div class="submit-container">
-          <button type="submit" class="submit-button">
-            وارد شوید
-          </button>
-        </div>
-        <div class="Login-Language">
-          <label class="switch">
-            <input type="checkbox" name="language" id="language" />
-            <span class="slider round"> EN </span>
-          </label>
-        </div>
-      </form>
     </div>
   );
 };

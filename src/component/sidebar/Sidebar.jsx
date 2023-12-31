@@ -1,11 +1,17 @@
 import React from "react";
 import "./Sidebar.css";
+import { Logo } from "../icons/Logo";
+import { Test } from "../icons/test";
 
 const Sidebar = () => {
   return (
     <div class="sidebar">
       <div class="sidebar-account-info d-flex flex-column justify-content-around align-items-center">
-        <img class="sidebar-account-info-image" src="images/img1.svg" />
+        {/* <img
+          class="sidebar-account-info-image"
+          src="../../images/sidebar_images/img1.svg"
+        /> */}
+        {/* <Logo /> */}
         <div class="sidebar-account-info-name d-flex flex-column justify-content-between align-items-center">
           <span class="sidebar-account-info-Saleh-username text-center">
             Saleh Zekavati
@@ -21,7 +27,7 @@ const Sidebar = () => {
           href="IMS_Topology.html"
           class="sidebar-topology-icon-content d-flex flex-row justify-content-center align-items-center"
         >
-          <img class="sidebar-image" src="images/Menu Icon _ Topology.svg" />
+          {/* <Test /> */}
           <span>TOPOLOGY</span>
         </a>
       </div>
@@ -31,17 +37,20 @@ const Sidebar = () => {
           href="IMS_Configuration.html"
           class="sidebar-configuration-icon-content d-flex justify-content-center align-items-center"
         >
-          <img
+          {/* <img
             class="sidebar-configuration-icon-image"
-            src="images/Menu Icon _ Config.svg"
-          />
+            src="../../images/sidebar_images/Menu Icon _ Config.svg"
+          /> */}
           <span>CONFIGURATION</span>
         </a>
       </div>
 
       <div class="sidebar-monitoring-icon d-flex justify-content-center align-items-center">
         <a class="sidebar-monitoring-icon-content d-flex justify-content-center align-items-center">
-          <img class="sidebar-image" src="images/Group 8329.svg" />
+          <img
+            class="sidebar-image"
+            src="../../images/sidebar_images/Group 8329.svg"
+          />
           <span>MONITORING</span>
         </a>
       </div>
@@ -51,13 +60,17 @@ const Sidebar = () => {
           href="IMS_Troubleshooting.html"
           class="sidebar-troubleshooting-icon-content d-flex justify-content-center align-items-center"
         >
-          <img class="sidebar-image" src="images/Group 8332.svg" />
+          <img
+            class="sidebar-image"
+            src="../../images/sidebar_images/Group 8332.svg"
+          />
           <span>TROUBLESHOOTING</span>
         </a>
       </div>
       <button class="sidebar-button">Save & Restart</button>
       <div class="sidebar-logo">
-        <img src="images/IMS_TOPOLOGY_images/Group 8498.svg" />
+        {/* <img src="../../images/sidebar_images/Group 8498.svg" /> */}
+        <Logo />
       </div>
     </div>
   );
