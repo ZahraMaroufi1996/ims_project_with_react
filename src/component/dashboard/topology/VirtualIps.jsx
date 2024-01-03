@@ -26,12 +26,8 @@ const VirtualIps = () => {
         Authorization: `Bearer ${token}`,
       },
     })
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then((response) => {})
+      .catch((error) => {});
   };
 
   const handleOnChangeDatabaseVirtualIp = (value) => {
@@ -43,11 +39,11 @@ const VirtualIps = () => {
   const handleOnChangeHomerVirtualIp = (value) => {
     setHomerVirtualIp(value);
   };
+  // return <div class="virtual-ips"></div>;
   return (
     <div class="virtual-ips">
       <form id="virtual-ips-form" onSubmit={handleSubmit}>
         <div class="virtual-ips-title">Virtual IPs for Load Balancers</div>
-
         <VirtualIpInput
           mainTitle={"Database Virtual IP*"}
           subTitle={"Main database used by IMS services"}

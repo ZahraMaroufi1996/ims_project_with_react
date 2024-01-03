@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
 import Axios from "axios";
-import "./NetworkDefinition.css";
+import classes from "./NetworkDefinition.module.css";
 import { IpInput } from "./ipInput";
+import classNames from "classnames";
 
 const NetworkDefinition = () => {
   const [subnet, setSubnet] = useState();
@@ -24,12 +25,8 @@ const NetworkDefinition = () => {
         Authorization: `Bearer ${token}`,
       },
     })
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then((response) => {})
+      .catch((error) => {});
   };
 
   const handleOnChangeSubnet = (value) => {
@@ -40,23 +37,35 @@ const NetworkDefinition = () => {
   };
 
   return (
-    <div class="network">
-      <form
-        id="network-definition-form"
-        class="d-flex flex-row align-items-center"
-        onSubmit={handleSubmit}
-      >
-        <div class="network-definition d-flex flex-row justify-content-between align-items-center">
-          <span class="title-span">Network Definition</span>
-          <IpInput title={"subnetmask"} onChange={handleOnChangeSubnet} />
-          <IpInput title={"gateway"} onChange={handleOnChangeGateWay} />
-        </div>
-        <button
-          type="submit"
-          class="network-definition-button topology-buttton"
+    <div class={classes["network"]}>
+      <form id="network-definition-form" onSubmit={handleSubmit}>
+        <div
+          style={{ height: "100%" }}
+          className="d-flex flex-row align-items-center"
         >
-          Set
-        </button>
+          <div
+            className={classNames(
+              classes["network-definition"],
+              "d-flex",
+              "flex-row",
+              "justify-content-between",
+              "align-items-center"
+            )}
+          >
+            <span className={classes["title-span"]}>Network Definition</span>
+            <IpInput title={"subnetmask"} onChange={handleOnChangeSubnet} />
+            <IpInput title={"gateway"} onChange={handleOnChangeGateWay} />
+          </div>
+          <button
+            type="submit"
+            class={classNames(
+              classes["network-definition-button"],
+              classes["topology-buttton"]
+            )}
+          >
+            Set
+          </button>
+        </div>
       </form>
     </div>
   );

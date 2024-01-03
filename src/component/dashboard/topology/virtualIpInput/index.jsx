@@ -19,7 +19,6 @@ const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
     const ip = `${form.field1}.${form.field2}.${form.field3}.${form.field4}`;
     onChange(ip);
   }, [form.field1, form.field2, form.field3, form.field4]);
-  console.log(form);
   return (
     <div class="virtual-ips-database virtual-ips-content">
       <div class="d-flex flex-row justify-content-between align-items-center">

@@ -3,7 +3,6 @@ import Toolbar from "../header/Toolbar";
 import Sidebar from "../sidebar/Sidebar";
 import Footer from "../footer/Footer";
 import Content from "../content/Content";
-
 import AppRoutes from "../../routes";
 import "./Dashboard.css";
 

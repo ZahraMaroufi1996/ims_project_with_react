@@ -30,15 +30,11 @@ const Login = () => {
     // loginAPI(form)
     Axios.post(`${url}/api/login?Content-Type=application/json`, form)
       .then((response) => {
-        console.log(response.data);
         my_token = response.data.token;
-        console.log(my_token);
         localStorage.setItem("token", my_token);
         history("/dashboard/topology");
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => {});
   };
 
   return (
