@@ -1,0 +1,33 @@
+.general-class-content-field1-box {
+  width: 21.125vw;
+  height: 3.7vh;
+  background-color: #eef5f2;
+  border-radius: 0.64vh;
+}
+
+label,
+span,
+p {
+  color: #1a4348;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+input.general-class-content-field1-box {
+  border: none;
+}
+
+input[type="text"] {
+  text-align: center;
+  color: #2fbc8c;
+  border: none;
+}
+
+.private-memory,
+.shared-memory {
+  height: 3.7vh;
+  width: 3.125vw;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 0.64vh;
+}

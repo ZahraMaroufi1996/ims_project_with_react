@@ -15,7 +15,7 @@
   margin-left: 1.19vw;
 }
 
-#network-definition-form {
+.network-definition-form {
   height: 100%;
 }
 .network-definition-subnetmask {

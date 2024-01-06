@@ -1,0 +1,68 @@
+.general-class-content-field2-checkbox {
+  height: 2.04vh;
+  width: 4vw;
+  border: 1px solid black;
+}
+
+.P-CSCF-class-content-field2-checkbox1 {
+  border: 1px solid red;
+  width: 4.68vw;
+  height: 2.037vh;
+  color: #1a4348;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.P-CSCF-class-content-field2-checkbox2 {
+  border: 1px solid red;
+  width: 6.94vw;
+  height: 2.037vh;
+  color: #1a4348;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.P-CSCF-class-content-field2-checkbox3 {
+  border: 1px solid red;
+  width: 8.92vw;
+  height: 2.037vh;
+  color: #1a4348;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.chb {
+  visibility: hidden;
+}
+
+.chb + label {
+  position: relative;
+  padding-right: 5px;
+}
+
+.chb-1 + label::before {
+  position: absolute;
+  width: 0.91vw;
+  height: 1.75vh;
+  background-color: #e9e9e9;
+  border-radius: 0.37vh;
+  content: "";
+  border: 0.093vh solid #707070;
+  left: -20px;
+}
+
+.chb-1-circle + label::before {
+  position: absolute;
+  width: 0.91vw;
+  height: 1.75vh;
+  background-color: #e9e9e9;
+  border-radius: 50%;
+  content: "";
+  border: 0.093vh solid #707070;
+  left: -20px;
+}
+
+.chb-1:checked + label::before,
+.chb-1-circle:checked + label::before {
+  background-color: #68d5b0;
+}

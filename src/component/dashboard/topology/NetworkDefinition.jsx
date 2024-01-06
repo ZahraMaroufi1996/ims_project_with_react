@@ -38,34 +38,39 @@ const NetworkDefinition = () => {
 
   return (
     <div class={classes["network"]}>
-      <form id="network-definition-form" onSubmit={handleSubmit}>
+      <form
+        id="network-definition-form"
+        className={classNames(
+          classes["network-definition-form"],
+          "d-flex",
+          "flex-row ",
+          "align-items-center"
+        )}
+        onSubmit={handleSubmit}
+      >
         <div
-          style={{ height: "100%" }}
-          className="d-flex flex-row align-items-center"
+          className={classNames(
+            classes["network-definition"],
+            "d-flex",
+            "flex-row",
+            "justify-content-between",
+            "align-items-center"
+          )}
         >
-          <div
-            className={classNames(
-              classes["network-definition"],
-              "d-flex",
-              "flex-row",
-              "justify-content-between",
-              "align-items-center"
-            )}
-          >
-            <span className={classes["title-span"]}>Network Definition</span>
-            <IpInput title={"subnetmask"} onChange={handleOnChangeSubnet} />
-            <IpInput title={"gateway"} onChange={handleOnChangeGateWay} />
-          </div>
-          <button
-            type="submit"
-            class={classNames(
-              classes["network-definition-button"],
-              classes["topology-buttton"]
-            )}
-          >
-            Set
-          </button>
+          <span className={classes["title-span"]}>Network Definition</span>
+          <IpInput title={"subnetmask"} onChange={handleOnChangeSubnet} />
+          <IpInput title={"gateway"} onChange={handleOnChangeGateWay} />
         </div>
+        <button
+          type="submit"
+          class={classNames(
+            classes["network-definition-button"],
+            classes["topology-buttton"]
+          )}
+        >
+          Set
+        </button>
+        {/* </div> */}
       </form>
     </div>
   );

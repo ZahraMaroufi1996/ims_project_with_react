@@ -1,0 +1,47 @@
+.P-CSCF-class {
+  width: 36.82vw;
+  height: 61.57vh;
+  margin-left: 2.083vw;
+  margin-top: 2.6vh;
+  /* bottom: 3.7vh; */
+  /* border: 0.092vh solid #d5e8e1; */
+  border: 0.092vh solid red;
+  /* position: absolute; */
+  border-radius: 0.83vh;
+}
+
+.P-CSCF-class-content {
+  border: 0.092vh solid red;
+  width: 34.41vw;
+  height: 21.57vh;
+  margin-left: 1.31vw;
+  margin-top: 2.41vh;
+  /* position: absolute; */
+  border-radius: 0.83vh;
+}
+
+.P-CSCF-class-content-field2 {
+  border: 1px solid red;
+  width: 28.82vw;
+  height: 5.69vh;
+  margin-left: 5.51vw;
+  border-radius: 0.83vh;
+}
+
+.P-CSCF-class-content-field2 p {
+  margin-top: 0;
+}
+
+.P-CSCF-class-content-field4 {
+  border: 1px solid red;
+  width: 28.95vw;
+  height: 3.7vh;
+  margin-left: 5.51vw;
+  border-radius: 0.83vh;
+}
+
+.P-CSCF-class-content-field4-input1,
+.P-CSCF-class-content-field4-input2 {
+  height: 3.7vh;
+  width: 11.61vw;
+}

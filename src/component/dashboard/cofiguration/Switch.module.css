@@ -1,0 +1,67 @@
+.P-CSCF-class-content-field1,
+.P-CSCF-class-content-field3 {
+  width: 7.62vw;
+  height: 1.94vh;
+  margin-left: 5.51vw;
+  border-radius: 0.83vh;
+}
+
+/* ///////////////////////////////////////// slider styles///////////////////////////////////// */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 1.77vw;
+  height: 1.66vh;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #68d5b0;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 0.972vh;
+  width: 0.546vw;
+  left: 0.156vw;
+  bottom: 0.277vh;
+  border: 0.138vh solid white;
+}
+
+input:checked + .slider,
+input:checked + .slider:before {
+  background-color: #68d5b0;
+}
+
+input + .slider,
+input + .slider:before {
+  background-color: #ff8888;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(0.83vw);
+  -ms-transform: translateX(0.83vw);
+  transform: translateX(0.83vw);
+}
+
+.slider.round {
+  border-radius: 3.14vh;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
