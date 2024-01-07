@@ -1,0 +1,23 @@
+.P-CSCF-class-Rx-configuration {
+  width: 29.01vw;
+  height: 32.59vh;
+  margin-left: 6.72vw;
+  margin-top: 2.96vh;
+  border-radius: 0.83vh;
+  border: 0.092vh solid red;
+}
+
+.P-CSCF-class-Rx-configuration-field2,
+.P-CSCF-class-Rx-configuration-field3 {
+  width: 19.63vw;
+  height: 3.7vh;
+  margin-left: 8.49vw;
+  border-radius: 0.83vh;
+}
+
+.P-CSCF-class-Rx-configuration-field4 {
+  margin-left: 8.49vw;
+  width: 19.32vw;
+  height: 2.037vh;
+  border-radius: 0.83vh;
+}

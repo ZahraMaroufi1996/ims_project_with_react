@@ -1,0 +1,43 @@
+.S-CSCF-class {
+  width: 36.35vw;
+  height: 13.33vh;
+  margin-top: 2.59vh;
+  margin-left: 1.41vw;
+  /* border: 0.092vh solid #d5e8e1; */
+  border: 0.092vh solid red;
+  border-radius: 0.83vh;
+}
+
+.S-CSCF-class-content {
+  width: 34.46vw;
+  height: 9.81vh;
+  border-radius: 0.83vh;
+  border: 1px solid red;
+}
+
+.S-CSCF-class-content-input {
+  width: 12.81vw;
+  height: 3.7vh;
+  border-radius: 0.83vh;
+  border: 1px solid red;
+}
+
+.S-CSCF-class-content-title {
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+  color: #83a79a;
+}
+
+.S-CSCF-class-content-input34 {
+  border: 1px solid red;
+  width: 28.95vw;
+  height: 3.7vh;
+  margin-left: 5.51vw;
+  border-radius: 0.83vh;
+}
+
+.S-CSCF-class-content-input3,
+.S-CSCF-class-content-input4 {
+  height: 3.7vh;
+  width: 11.61vw;
+}

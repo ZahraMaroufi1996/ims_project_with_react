@@ -6,6 +6,20 @@
   border-radius: 0.83vh;
 }
 
+.P-CSCF-class-Rx-configuration-field5 {
+  margin-left: 8.49vw;
+  width: 19.27vw;
+  height: 3.7vh;
+  border-radius: 0.83vh;
+}
+
+.Rx-Source-Port {
+  width: 8.48vw;
+  height: 3.7vh;
+  background-color: #f9f9f9;
+  border-radius: 0.64vh;
+  border: none;
+}
 /* ///////////////////////////////////////// slider styles///////////////////////////////////// */
 .switch {
   position: relative;

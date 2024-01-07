@@ -49,6 +49,7 @@ const General = () => {
             )}
           >
             <Checkbox
+              type={"checkbox"}
               title={"P-CSCF"}
               id={"General-type-1"}
               name={"General-type-icon1"}
@@ -56,6 +57,7 @@ const General = () => {
               className={"general-class-content-field2-checkbox"}
             />
             <Checkbox
+              type={"checkbox"}
               title={"S-CSCF"}
               id={"General-type-2"}
               name={"General-type-icon2"}
@@ -63,6 +65,7 @@ const General = () => {
               className={"general-class-content-field2-checkbox"}
             />
             <Checkbox
+              type={"checkbox"}
               title={"I-CSCF"}
               id={"General-type-3"}
               name={"General-type-icon3"}

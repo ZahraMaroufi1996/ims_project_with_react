@@ -1,8 +1,8 @@
 import React from "react";
 import { General } from "../component/dashboard/cofiguration/General";
 import { Pcscf } from "../component/dashboard/cofiguration/Pcscf";
-// import { Icscf } from "../component/dashboard/cofiguration/Icscf";
-// import { Scscf } from "../component/dashboard/cofiguration/Scscf";
+import { Icscf } from "../component/dashboard/cofiguration/Icscf";
+import { Scscf } from "../component/dashboard/cofiguration/Scscf";
 // import { RtpProxy } from "../component/dashboard/cofiguration/RtpProxy";
 
 import classes from "./configuration.module.css";
@@ -16,9 +16,9 @@ const Configuration = () => {
         <Pcscf />
       </div>
       <div className="d-flex flex-column">
-        {/* <Icscf />
+        <Icscf />
         <Scscf />
-        <RtpProxy /> */}
+        {/* <RtpProxy /> */}
       </div>
     </div>
   );

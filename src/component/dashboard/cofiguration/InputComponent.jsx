@@ -3,10 +3,10 @@ import Axios from "axios";
 import classes from "./InputComponent.module.css";
 import classNames from "classnames";
 
-const InputComponent = ({ title, id, name, className }) => {
+const InputComponent = ({ title, id, name, className, unit }) => {
   return (
     <>
-      <label for="ims-domain">{title}</label>
+      <label for={id}>{title}</label>
       <input
         className={classNames(classes[className])}
         id={id}
@@ -14,7 +14,7 @@ const InputComponent = ({ title, id, name, className }) => {
         name={name}
         disabled
       />
-      {/* <span>MB</span> */}
+      {unit ? <span>MB</span> : ""}
     </>
   );
 };

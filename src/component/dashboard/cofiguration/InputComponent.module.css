@@ -23,11 +23,27 @@ input[type="text"] {
   border: none;
 }
 
-.private-memory,
-.shared-memory {
+.memory {
   height: 3.7vh;
   width: 3.125vw;
   border: none;
   background-color: #f9f9f9;
   border-radius: 0.64vh;
+}
+
+.register-time {
+  height: 3.7vh;
+  width: 2.6vw;
+  border: none;
+  /* background-color: #eef5f2; */
+  background-color: red;
+  border-radius: 0.64vh;
+}
+
+.rx-configuration-box {
+  width: 12.03vw;
+  height: 3.7vh;
+  border-radius: 0.65vh;
+  background-color: #eef5f2;
+  border: none;
 }

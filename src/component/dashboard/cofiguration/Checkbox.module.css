@@ -31,6 +31,13 @@
   font-family: "FiraGO", sans-serif;
 }
 
+.transport-protocol {
+  width: 3.3vw;
+  height: 2.037vh;
+  border-radius: 0.83vh;
+  background-color: red;
+}
+
 .chb {
   visibility: hidden;
 }

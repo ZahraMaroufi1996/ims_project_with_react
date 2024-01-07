@@ -40,8 +40,10 @@
   border-radius: 0.83vh;
 }
 
-.P-CSCF-class-content-field4-input1,
-.P-CSCF-class-content-field4-input2 {
+.P-CSCF-class-content-field4-input {
   height: 3.7vh;
   width: 11.61vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

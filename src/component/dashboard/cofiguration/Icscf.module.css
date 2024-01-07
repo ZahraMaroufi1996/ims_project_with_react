@@ -1,0 +1,21 @@
+.I-CSCF-class {
+  width: 36.35vw;
+  height: 6.94vh;
+  margin-top: 3.7vh;
+  margin-left: 1.41vw;
+  /* border: 0.092vh solid #d5e8e1; */
+  border: 0.092vh solid red;
+  border-radius: 0.83vh;
+}
+
+.I-CSCF-class-content-title {
+  color: #83a79a;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.I-CSCF-class-content-input {
+  height: 3.7vh;
+  width: 11.61vw;
+  border: 0.092vh solid red;
+}
