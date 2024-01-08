@@ -4,11 +4,11 @@ import classes from "./Switch.module.css";
 import classNames from "classnames";
 import { InputComponent } from "./InputComponent";
 
-const Switch = ({ title, id, name, className, flag }) => {
+const Switch = ({ title, id, name, flag }) => {
   return (
     <div
       className={classNames(
-        classes[className],
+        classes["P-CSCF-class-content-field1"],
         "d-flex",
         "justify-content-between",
         "align-items-center"
@@ -21,7 +21,7 @@ const Switch = ({ title, id, name, className, flag }) => {
           className={classNames(classes["slider"], classes["round"])}
         ></span>
       </label>
-      {flag === 1 ? (
+      {/* {flag === 1 ? (
         <input
           type="text"
           id="Rx-Source-Port"
@@ -39,7 +39,7 @@ const Switch = ({ title, id, name, className, flag }) => {
         />
       ) : (
         ""
-      )}
+      )} */}
     </div>
   );
 };

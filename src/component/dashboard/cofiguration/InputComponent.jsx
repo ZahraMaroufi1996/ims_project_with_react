@@ -6,7 +6,7 @@ import classNames from "classnames";
 const InputComponent = ({ title, id, name, className, unit }) => {
   return (
     <>
-      <label for={id}>{title}</label>
+      {title ? <label for={id}>{title}</label> : ""}
       <input
         className={classNames(classes[className])}
         id={id}

@@ -123,15 +123,7 @@ const RxConfiguration = () => {
         />
       </div>
 
-      <Switch
-        flag={1}
-        title={"Rx Source Port"}
-        id={"Enable-Rx-Source-Port"}
-        name={"Enable-Rx-Source-Port"}
-        className={"P-CSCF-class-Rx-configuration-field5"}
-      />
-
-      {/* <div
+      <div
         className={classNames(
           classes["P-CSCF-class-Rx-configuration-field5"],
           "d-flex",
@@ -139,18 +131,19 @@ const RxConfiguration = () => {
           "align-items-center"
         )}
       >
-        <span>Rx Source Port</span>
-        <label class="switch">
-          <input
-            type="checkbox"
-            id="Enable-Rx-Source-Port"
-            name="Enable-Rx-Source-Port"
-            disabled
-          />
-          <span class="slider round"></span>
-        </label>
-        <input type="text" id="Rx-Source-Port" name="Rx_Source_Port" disabled />
-      </div> */}
+        <Switch
+          title={"Rx Source Port"}
+          id={"Enable-Rx-Source-Port"}
+          name={"Enable-Rx-Source-Port"}
+        />
+        <input
+          type="text"
+          id="Rx-Source-Port"
+          className={classNames(classes["Rx-Source-Port"])}
+          name="Rx_Source_Port"
+          disabled
+        />
+      </div>
     </div>
   );
 };

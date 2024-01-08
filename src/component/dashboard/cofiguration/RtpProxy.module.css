@@ -1,0 +1,60 @@
+.RTP-Proxy-class {
+  width: 36.35vw;
+  height: 45.09vh;
+  margin-top: 2.59vh;
+  margin-left: 1.41vw;
+  border: 0.092vh solid #d5e8e1;
+  border-radius: 0.83vh;
+}
+.RTP-Proxy-class-content {
+  width: 35.04vw;
+  height: 40.55vh;
+  border: 1px solid red;
+}
+
+.RTP-Proxy-class-content-title {
+  top: 0;
+  left: 0;
+}
+
+.RTP-Proxy-class-content-input1 {
+  width: 29.5vw;
+  height: 2.037vh;
+  border: 1px solid red;
+  margin-left: 5.31vw;
+}
+
+.RTP-Proxy-class-content-input2 {
+  width: 7.57vw;
+  height: 1.94vh;
+  margin-left: 5.31vw;
+}
+
+.RTP-Proxy-class-content-input3,
+.RTP-Proxy-class-content-input4 {
+  width: 29.63vw;
+  height: 6.2vh;
+  margin-left: 5.31vw;
+}
+
+.RTP-Proxy-class-content-input5,
+.RTP-Proxy-class-content-input6 {
+  width: 29.53vw;
+  height: 3.7vh;
+  margin-left: 5.31vw;
+}
+
+.RTP-Proxy-Ports-title {
+  width: 11.61vw;
+  height: 1.94vh;
+  margin-bottom: 5px;
+}
+
+.RTP-Proxy-Ports {
+  width: 29.63vw;
+  height: 3.7vh;
+}
+
+.RTP-Proxy-Ports input {
+  margin-left: 7px;
+}

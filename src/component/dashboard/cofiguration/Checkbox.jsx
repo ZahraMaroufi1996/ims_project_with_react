@@ -7,7 +7,7 @@ const Checkbox = ({ title, id, name, value, className, type }) => {
   return (
     <div
       className={classNames(
-        classes[className],
+        className,
         "d-flex",
         "justify-content-between",
         "align-items-center"

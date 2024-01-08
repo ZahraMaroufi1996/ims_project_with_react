@@ -47,3 +47,9 @@
   border: 1px solid red;
   margin-left: 5px;
 }
+
+.general-class-content-field2-checkbox {
+  height: 2.04vh;
+  width: 4vw;
+  border: 1px solid black;
+}
