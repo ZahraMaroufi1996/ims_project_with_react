@@ -6,17 +6,17 @@ import classNames from "classnames";
 
 const InputComponent = ({ title, id, name, className, unit }) => {
   const { register } = useFormContext();
+  console.log(`${name}`);
 
   return (
     <>
       {title ? <label for={id}>{title}</label> : ""}
       <input
-        {...register(name)}
+        {...register(`${name}`)}
         className={classNames(classes[className])}
         id={id}
         type="text"
         name={name}
-        disabled
       />
       {unit ? <span>MB</span> : ""}
     </>

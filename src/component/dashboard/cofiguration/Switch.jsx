@@ -6,6 +6,8 @@ import classNames from "classnames";
 import { InputComponent } from "./InputComponent";
 
 const Switch = ({ title, id, name, flag }) => {
+  const { register } = useFormContext();
+  console.log(`${name}`);
   return (
     <div
       className={classNames(
@@ -17,7 +19,7 @@ const Switch = ({ title, id, name, flag }) => {
     >
       <span>{title}</span>
       <label className={classNames(classes["switch"])}>
-        <input type="checkbox" name={name} id={id} disabled />
+        <input type="checkbox" {...register(`${name}`)} name={name} id={id} />
         <span
           className={classNames(classes["slider"], classes["round"])}
         ></span>

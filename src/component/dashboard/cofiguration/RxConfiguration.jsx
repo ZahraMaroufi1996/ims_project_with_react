@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import Axios from "axios";
 import classes from "./RxConfiguration.module.css";
 import classNames from "classnames";
@@ -7,6 +8,7 @@ import { Checkbox } from "./Checkbox";
 import { Switch } from "./Switch";
 
 const RxConfiguration = () => {
+  const { register } = useFormContext();
   return (
     <div
       className={classNames(
@@ -75,6 +77,7 @@ const RxConfiguration = () => {
       >
         <InputComponent
           title={"PCRF FQDN*"}
+          name={"PCRF_FQDN"}
           id={"Rx-configuration-field2"}
           className={"rx-configuration-box"}
         />
@@ -90,6 +93,7 @@ const RxConfiguration = () => {
       >
         <InputComponent
           title={"PCRF Realm*"}
+          name={"PCRF_Realm"}
           id={"Rx-configuration-field3"}
           className={"rx-configuration-box"}
         />
@@ -137,6 +141,7 @@ const RxConfiguration = () => {
           name={"Enable-Rx-Source-Port"}
         />
         <input
+          {...register("Rx_Source_Port")}
           type="text"
           id="Rx-Source-Port"
           className={classNames(classes["Rx-Source-Port"])}

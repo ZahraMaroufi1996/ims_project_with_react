@@ -5,6 +5,9 @@ import classes from "./Checkbox.module.css";
 import classNames from "classnames";
 
 const Checkbox = ({ title, id, name, value, className, type }) => {
+  const { register } = useFormContext();
+  console.log(`${name}`);
+
   return (
     <div
       className={classNames(
@@ -20,11 +23,11 @@ const Checkbox = ({ title, id, name, value, className, type }) => {
           classes["chb-1-circle"]
           // classes[`{ type ==="radio"} ? "chb-1-circle" : "chb-1" }`]
         )}
+        {...register(`${name}`)}
         type={type}
         id={id}
         name={name}
         value={value}
-        disabled
       />
       <label for={id}>{title}</label>
     </div>
