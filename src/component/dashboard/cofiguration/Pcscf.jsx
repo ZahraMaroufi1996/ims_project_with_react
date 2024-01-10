@@ -82,6 +82,7 @@ const Pcscf = () => {
           >
             <InputComponent
               title={"Shared Memory*"}
+              type={"number"}
               id={"pcscf-shared-memory"}
               name={"p_shared_memory"}
               className={"memory"}

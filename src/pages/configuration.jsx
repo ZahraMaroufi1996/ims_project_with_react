@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import Axios from "axios";
-
 import { General } from "../component/dashboard/cofiguration/General";
 import { Pcscf } from "../component/dashboard/cofiguration/Pcscf";
 import { Icscf } from "../component/dashboard/cofiguration/Icscf";
@@ -14,12 +13,30 @@ import classNames from "classnames";
 const Configuration = () => {
   const methods = useForm();
 
-  const url = "https://88d188a7-0705-4aa4-b0f9-0d2781378c89.mock.pstmn.io";
+  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
 
   const onSubmit = (data) => {
     const token = localStorage.getItem("token");
-    console.log(data);
-    Axios.post(`${url}/api/configuration/submittForm`, data, {
+    const newData = {
+      ...data,
+      p_private_memory: Number(data.p_private_memory),
+      p_shared_memory: Number(data.p_shared_memory),
+      s_private_memory: Number(data.s_private_memory),
+      s_shared_memory: Number(data.s_shared_memory),
+      i_private_memory: Number(data.i_private_memory),
+      i_shared_memory: Number(data.i_shared_memory),
+      Call_Duration: Number(data.Call_Duration),
+      Inbound_Port_Maximum: Number(data.Inbound_Port_Maximum),
+      Inbound_Port_Minimum: Number(data.Inbound_Port_Minimum),
+      Outbound_Port_Maximum: Number(data.Outbound_Port_Maximum),
+      Outbound_Port_Minimum: Number(data.Outbound_Port_Minimum),
+      Maximum_Register_Time: Number(data.Maximum_Register_Time),
+      Minimum_Register_Time: Number(data.Minimum_Register_Time),
+      RTP_Loss_Timeout: Number(data.RTP_Loss_Timeout),
+      Rx_Source_Port: Number(data.Rx_Source_Port),
+    };
+    console.log(newData);
+    Axios.post(`${url}/api/configuration/submittForm`, newData, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -171,14 +188,5 @@ const Configuration = () => {
     </FormProvider>
   );
 };
-
-// const Configuration = () => {
-//   const methods = useForm();
-//   return (
-//     <FormProvider>
-//       <Configuration11 />
-//     </FormProvider>
-//   );
-// };
 
 export default Configuration;
