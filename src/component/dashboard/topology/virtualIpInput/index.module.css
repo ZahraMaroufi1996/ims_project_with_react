@@ -1,0 +1,37 @@
+.virtual-ips-content {
+  width: 27.083vw;
+  height: 6.29vh;
+  margin-left: 1.46vw;
+  margin-top: 2.22vh;
+  border-radius: 0.65vh;
+  border: 1px solid red;
+}
+
+.virtual-ips-main-text {
+  color: #1a4348;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+  margin-left: 0vw;
+  margin-top: 0.64vh;
+}
+
+.virtual-ips-boxes {
+  width: 12.03vw;
+  height: 3.7vh;
+}
+
+.ip-octet {
+  width: 2.604vw;
+  height: 3.7vh;
+  border-radius: 0.65vh;
+  background-color: #eef5f2;
+  color: black;
+}
+
+.virtual-ips-down-text {
+  color: #1f666e;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+  margin-left: 0vw;
+  margin-bottom: 0vh;
+}

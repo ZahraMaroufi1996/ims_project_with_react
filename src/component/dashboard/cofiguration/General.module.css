@@ -8,7 +8,7 @@
 }
 
 .general-class-content {
-  border: 0.092vh solid red;
+  border: 0.092vh solid green;
   width: 34.48vw;
   height: 8.42vh;
   margin-left: 1.3vw;
@@ -17,7 +17,7 @@
 }
 
 .general-class-content-field1 {
-  border: 0.092vh solid red;
+  border: 0.092vh solid green;
   width: 29.06vw;
   height: 3.7vh;
   margin-left: 3.88vw;

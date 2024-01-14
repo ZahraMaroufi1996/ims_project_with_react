@@ -13,7 +13,7 @@ const InputComponent = ({ title, id, name, className, unit }) => {
       {title ? <label for={id}>{title}</label> : ""}
       <input
         {...register(`${name}`)}
-        className={classNames(classes[className])}
+        className={classNames(className)}
         id={id}
         type="text"
         name={name}

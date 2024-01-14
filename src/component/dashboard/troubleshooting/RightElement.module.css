@@ -1,0 +1,64 @@
+.main-content-left-side {
+  width: 35.52vw;
+  height: 77.64vh;
+}
+
+.right-side-content-title {
+  color: #83a79a;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.right-side-content-title {
+  margin-top: 3.38vh;
+  margin-left: 2.18vw;
+}
+
+input {
+  border: none;
+}
+
+.node {
+  width: 16.61vw;
+  height: 3.7vh;
+  margin-top: 2.59vh;
+  margin-left: 2.18vw;
+}
+
+.interface {
+  width: 15.26vw;
+  height: 3.7vh;
+  margin-top: 2.59vh;
+  margin-left: 2.34vw;
+}
+
+.option {
+  width: 26.04vw;
+  height: 3.7vh;
+  margin-top: 2.59vh;
+  margin-left: 2.18vw;
+}
+
+.start-button {
+  margin-top: 2.59vh;
+  margin-left: 0.94vw;
+}
+
+.node-option-box {
+  width: 22.39vw;
+  height: 3.7vh;
+  border-radius: 0.65vh;
+  background-color: #eef5f2;
+}
+
+.ims-button {
+  width: 7.29vw;
+  height: 3.7vh;
+  border-style: none;
+  border-radius: 0.65vh;
+  background-color: #1f666e;
+  color: white;
+  text-align: center;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+}

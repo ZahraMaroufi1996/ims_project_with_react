@@ -3,7 +3,6 @@ import Axios from "axios";
 import classes from "./General.module.css";
 import { Checkbox } from "./Checkbox";
 import { InputComponent } from "./InputComponent";
-
 import classNames from "classnames";
 
 const General = () => {

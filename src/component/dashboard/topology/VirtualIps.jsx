@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import Axios from "axios";
-import "./VirtualIps.css";
+import classes from "./VirtualIps.module.css";
+import classNames from "classnames";
 import { VirtualIpInput } from "./virtualIpInput";
+import { MyButton } from "../cofiguration/MyButton";
 
 const VirtualIps = () => {
   const [databaseVirtualIp, setDatabaseVirtualIp] = useState();
   const [dnsVirtualIp, setDnsVirtualIp] = useState();
   const [homerVirtualIp, setHomerVirtualIp] = useState();
 
-  const url = "https://88d188a7-0705-4aa4-b0f9-0d2781378c89.mock.pstmn.io";
+  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -41,9 +43,11 @@ const VirtualIps = () => {
   };
   // return <div class="virtual-ips"></div>;
   return (
-    <div class="virtual-ips">
-      <form id="virtual-ips-form" onSubmit={handleSubmit}>
-        <div class="virtual-ips-title">Virtual IPs for Load Balancers</div>
+    <div className={classNames(classes["virtual-ips"])}>
+      <form onSubmit={handleSubmit}>
+        <div className={classNames(classes["virtual-ips-title"])}>
+          Virtual IPs for Load Balancers
+        </div>
         <VirtualIpInput
           mainTitle={"Database Virtual IP*"}
           subTitle={"Main database used by IMS services"}
@@ -60,9 +64,10 @@ const VirtualIps = () => {
           onChange={handleOnChangeHomerVirtualIp}
         />
 
-        <button type="submit" class="virtual-ips-save-button topology-buttton">
-          Save
-        </button>
+        <MyButton
+          title={"Save"}
+          className={classes["virtual-ips-save-button"]}
+        />
       </form>
     </div>
   );

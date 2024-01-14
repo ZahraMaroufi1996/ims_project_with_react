@@ -1,0 +1,35 @@
+.monitoring-content {
+  width: 18.33vw;
+  height: 12.5vh;
+  /* background-color: brown; */
+}
+
+.monitoring-content p {
+  width: 100%;
+  height: 2.22vh;
+  color: #83a79a;
+  margin: 5px 0;
+  font-size: 1.8vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.monitoring-button {
+  color: white;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+  width: 9.58vw;
+  height: 4.5vh;
+  background-color: #1f666e;
+  border: none;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.main-content {
+  width: 78.75vw;
+  height: 84.26vh;
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 1.85vh;
+}

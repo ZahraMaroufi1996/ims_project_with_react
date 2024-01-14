@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import classes from "../NetworkDefinition.module.css";
+import classes from "./index.module.css";
 import classNames from "classnames";
-const IpInput = ({ onChange, title }) => {
+const IpInput = ({ onChange, title, className }) => {
   const [form, setForm] = useState({
     field1: "",
     field2: "",
@@ -17,14 +17,12 @@ const IpInput = ({ onChange, title }) => {
 
   useEffect(() => {
     const ip = `${form.field1}.${form.field2}.${form.field3}.${form.field4}`;
-    onChange(ip);
+    if (onChange) onChange(ip);
   }, [form.field1, form.field2, form.field3, form.field4]);
   return (
     <div
       className={classNames(
-        title === "gateway"
-          ? classes[`network-definition-gateway`]
-          : classes[`network-definition-subnetmask`],
+        className,
         "d-flex",
         "flex-row",
         "justify-content-between",

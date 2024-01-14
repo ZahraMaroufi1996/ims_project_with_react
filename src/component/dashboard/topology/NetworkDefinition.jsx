@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import Axios from "axios";
 import classes from "./NetworkDefinition.module.css";
 import { IpInput } from "./ipInput";
+import { MyButton } from "../cofiguration/MyButton";
 import classNames from "classnames";
 
 const NetworkDefinition = () => {
   const [subnet, setSubnet] = useState();
   const [gateway, setGateWay] = useState();
-  const url = "https://88d188a7-0705-4aa4-b0f9-0d2781378c89.mock.pstmn.io";
+  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -58,18 +59,21 @@ const NetworkDefinition = () => {
           )}
         >
           <span className={classes["title-span"]}>Network Definition</span>
-          <IpInput title={"subnetmask"} onChange={handleOnChangeSubnet} />
-          <IpInput title={"gateway"} onChange={handleOnChangeGateWay} />
+          <IpInput
+            title={"subnetmask"}
+            onChange={handleOnChangeSubnet}
+            className={classes["network-definition-subnetmask"]}
+          />
+          <IpInput
+            title={"gateway"}
+            onChange={handleOnChangeGateWay}
+            className={classes["network-definition-gateway"]}
+          />
         </div>
-        <button
-          type="submit"
-          class={classNames(
-            classes["network-definition-button"],
-            classes["topology-buttton"]
-          )}
-        >
-          Set
-        </button>
+        <MyButton
+          title={"Set"}
+          className={classes["network-definition-button"]}
+        />
         {/* </div> */}
       </form>
     </div>

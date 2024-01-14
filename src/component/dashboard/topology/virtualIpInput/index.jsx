@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import "../VirtualIps.css";
+import classes from "./index.module.css";
+import classNames from "classnames";
+
 const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
   const [form, setForm] = useState({
     field1: "",
@@ -20,42 +22,59 @@ const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
     onChange(ip);
   }, [form.field1, form.field2, form.field3, form.field4]);
   return (
-    <div class="virtual-ips-database virtual-ips-content">
-      <div class="d-flex flex-row justify-content-between align-items-center">
-        <span class="virtual-ips-main-text">{mainTitle}</span>
-        <div class="virtual-ips-boxes d-flex flex-row justify-content-between align-items-center">
+    <div className={classNames(classes["virtual-ips-content"])}>
+      <div
+        className={classNames(
+          "d-flex",
+          "justify-content-between",
+          "align-items-center"
+        )}
+      >
+        <span className={classNames(classes["virtual-ips-main-text"])}>
+          {mainTitle}
+        </span>
+        <div
+          className={classNames(
+            classes["virtual-ips-boxes"],
+            "d-flex",
+            "justify-content-between",
+            "align-items-center"
+          )}
+        >
           <input
             type="text"
             name="field1"
-            class="ip-octet1 ip-octet"
+            className={classNames(classes["ip-octet"])}
             id="virtual-ips-database-octet1"
             onChange={handleChange}
           />
           <input
             type="text"
             name="field2"
-            class="ip-octet2 ip-octet"
+            className={classNames(classes["ip-octet"])}
             id="virtual-ips-database-octet2"
             onChange={handleChange}
           />
           <input
             type="text"
             name="field3"
-            class="ip-octet3 ip-octet"
+            className={classNames(classes["ip-octet"])}
             id="virtual-ips-database-octet3"
             onChange={handleChange}
           />
           <input
             type="text"
             name="field4"
-            class="ip-octet4 ip-octet"
+            className={classNames(classes["ip-octet"])}
             id="virtual-ips-database-octet4"
             onChange={handleChange}
           />
         </div>
       </div>
 
-      <div class="virtual-ips-down-text">{subTitle}</div>
+      <div className={classNames(classes["virtual-ips-down-text"])}>
+        {subTitle}
+      </div>
     </div>
   );
 };

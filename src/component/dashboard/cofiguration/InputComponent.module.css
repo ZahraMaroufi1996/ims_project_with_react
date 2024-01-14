@@ -27,7 +27,8 @@ input[type="text"] {
   height: 3.7vh;
   width: 3.125vw;
   border: none;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background-color: red;
   border-radius: 0.64vh;
 }
 
@@ -59,7 +60,8 @@ input[type="text"] {
 .port {
   width: 4.58vw;
   height: 3.7vh;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background-color: black;
   border: none;
   border-radius: 0.65vh;
 }
