@@ -79,7 +79,7 @@ const RxConfiguration = () => {
           title={"PCRF FQDN*"}
           name={"PCRF_FQDN"}
           id={"Rx-configuration-field2"}
-          className={"rx-configuration-box"}
+          className={classes["rx-configuration-box"]}
         />
       </div>
 
@@ -95,7 +95,7 @@ const RxConfiguration = () => {
           title={"PCRF Realm*"}
           name={"PCRF_Realm"}
           id={"Rx-configuration-field3"}
-          className={"rx-configuration-box"}
+          className={classes["rx-configuration-box"]}
         />
       </div>
 
@@ -114,7 +114,7 @@ const RxConfiguration = () => {
           id={"Transport-Protocol-type-1"}
           name={"Transport_Protocol"}
           value={"SCTP"}
-          className={"transport-protocol"}
+          className={classes["transport-protocol"]}
           type={"radio"}
         />
         <Checkbox
@@ -122,7 +122,7 @@ const RxConfiguration = () => {
           id={"Transport-Protocol-type-2"}
           name={"Transport_Protocol"}
           value={"TCP"}
-          className={"transport-protocol"}
+          className={classes["transport-protocol"]}
           type={"radio"}
         />
       </div>
@@ -144,7 +144,7 @@ const RxConfiguration = () => {
           {...register("Rx_Source_Port")}
           type="text"
           id="Rx-Source-Port"
-          className={classNames(classes["Rx-Source-Port"])}
+          className={classes["Rx-Source-Port"]}
           name="Rx_Source_Port"
           disabled
         />

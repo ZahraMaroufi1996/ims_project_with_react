@@ -47,3 +47,46 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.P-CSCF-class-content-field2-checkbox1 {
+  border: 1px solid red;
+  width: 4.68vw;
+  height: 2.037vh;
+  color: #1a4348;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.P-CSCF-class-content-field2-checkbox2 {
+  border: 1px solid red;
+  width: 6.94vw;
+  height: 2.037vh;
+  color: #1a4348;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.P-CSCF-class-content-field2-checkbox3 {
+  border: 1px solid red;
+  width: 8.92vw;
+  height: 2.037vh;
+  color: #1a4348;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.memory {
+  height: 3.7vh;
+  width: 3.125vw;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 0.64vh;
+}
+
+/* .register-time {
+  height: 3.7vh;
+  width: 2.6vw;
+  border: none;
+  background-color: #eef5f2;
+  border-radius: 0.64vh;
+} */

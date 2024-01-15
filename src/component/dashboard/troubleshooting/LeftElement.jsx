@@ -4,6 +4,7 @@ import classes from "./LeftElement.module.css";
 import classNames from "classnames";
 import { SelectComponent } from "./SelectComponent";
 import { IpInput } from "../topology/ipInput";
+import { MyButton } from "../cofiguration/MyButton";
 
 const LeftElement = () => {
   return (
@@ -41,14 +42,7 @@ const LeftElement = () => {
           >
             <IpInput title={"IP address"} className={classes["ip-address"]} />
 
-            <button
-              className={classNames(
-                classes["run-button"],
-                classes["ims-button"]
-              )}
-            >
-              Run
-            </button>
+            <MyButton title={"Run"} className={classes["run-button"]} />
           </div>
         </div>
         <div

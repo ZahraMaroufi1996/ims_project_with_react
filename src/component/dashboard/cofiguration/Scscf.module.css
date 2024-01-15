@@ -41,3 +41,11 @@
   height: 3.7vh;
   width: 11.61vw;
 }
+
+.register-time {
+  height: 3.7vh;
+  width: 2.6vw;
+  border: none;
+  background-color: #eef5f2;
+  border-radius: 0.64vh;
+}

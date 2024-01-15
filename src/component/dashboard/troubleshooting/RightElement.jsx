@@ -4,6 +4,7 @@ import classes from "./RightElement.module.css";
 import { SelectComponent } from "./SelectComponent";
 import { InputComponent } from "../cofiguration/InputComponent";
 import classNames from "classnames";
+import { MyButton } from "../cofiguration/MyButton";
 
 const RightElement = () => {
   return (
@@ -54,11 +55,7 @@ const RightElement = () => {
             className={"node-option-box"}
           /> */}
         </div>
-        <button
-          className={classNames(classes["start-button"], classes["ims-button"])}
-        >
-          start
-        </button>
+        <MyButton title={"Start"} className={classes["start-button"]} />
       </div>
     </>
   );

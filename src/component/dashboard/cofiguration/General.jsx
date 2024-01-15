@@ -25,7 +25,7 @@ const General = () => {
               title={"IMS Domain*"}
               id={"ims-domain"}
               name={"IMS_Domain"}
-              className={"general-class-content-field1-box"}
+              className={classes["general-class-content-field1-box"]}
             />
           </div>
         </div>
@@ -61,7 +61,7 @@ const General = () => {
               id={"General-type-2"}
               name={"General-type-icon2"}
               value={"s_cscf"}
-              className={"general-class-content-field2-checkbox"}
+              className={classes["general-class-content-field2-checkbox"]}
             />
             <Checkbox
               type={"checkbox"}
@@ -69,7 +69,7 @@ const General = () => {
               id={"General-type-3"}
               name={"General-type-icon3"}
               value={"i_cscf"}
-              className={"general-class-content-field2-checkbox"}
+              className={classes["general-class-content-field2-checkbox"]}
             />
           </div>
         </div>

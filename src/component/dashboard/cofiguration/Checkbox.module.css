@@ -1,4 +1,4 @@
-.P-CSCF-class-content-field2-checkbox1 {
+/* .P-CSCF-class-content-field2-checkbox1 {
   border: 1px solid red;
   width: 4.68vw;
   height: 2.037vh;
@@ -23,14 +23,14 @@
   color: #1a4348;
   font-size: 1.48vh;
   font-family: "FiraGO", sans-serif;
-}
+} */
 
-.transport-protocol {
+/* .transport-protocol {
   width: 3.3vw;
   height: 2.037vh;
   border-radius: 0.83vh;
   background-color: red;
-}
+} */
 
 .chb {
   visibility: hidden;

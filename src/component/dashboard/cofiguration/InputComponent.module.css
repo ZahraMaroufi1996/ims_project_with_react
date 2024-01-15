@@ -1,54 +1,3 @@
-.general-class-content-field1-box {
-  width: 21.125vw;
-  height: 3.7vh;
-  background-color: #eef5f2;
-  border-radius: 0.64vh;
-}
-
-label,
-span,
-p {
-  color: #1a4348;
-  font-size: 1.48vh;
-  font-family: "FiraGO", sans-serif;
-}
-
-input.general-class-content-field1-box {
-  border: none;
-}
-
-input[type="text"] {
-  text-align: center;
-  color: #2fbc8c;
-  border: none;
-}
-
-.memory {
-  height: 3.7vh;
-  width: 3.125vw;
-  border: none;
-  /* background-color: #f9f9f9; */
-  background-color: red;
-  border-radius: 0.64vh;
-}
-
-.register-time {
-  height: 3.7vh;
-  width: 2.6vw;
-  border: none;
-  /* background-color: #eef5f2; */
-  background-color: red;
-  border-radius: 0.64vh;
-}
-
-.rx-configuration-box {
-  width: 12.03vw;
-  height: 3.7vh;
-  border-radius: 0.65vh;
-  background-color: #eef5f2;
-  border: none;
-}
-
 .RTP-Proxy-class-content-input1-checkbox {
   width: 4.81vw;
   height: 2.037vh;
@@ -60,8 +9,7 @@ input[type="text"] {
 .port {
   width: 4.58vw;
   height: 3.7vh;
-  /* background-color: #f9f9f9; */
-  background-color: black;
+  background-color: #f9f9f9;
   border: none;
   border-radius: 0.65vh;
 }

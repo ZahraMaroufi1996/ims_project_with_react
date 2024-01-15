@@ -37,3 +37,18 @@
   border-radius: 0.64vh;
   border: none;
 }
+
+.rx-configuration-box {
+  width: 12.03vw;
+  height: 3.7vh;
+  border-radius: 0.65vh;
+  background-color: #eef5f2;
+  border: none;
+}
+
+.transport-protocol {
+  width: 3.3vw;
+  height: 2.037vh;
+  border-radius: 0.83vh;
+  background-color: red;
+}

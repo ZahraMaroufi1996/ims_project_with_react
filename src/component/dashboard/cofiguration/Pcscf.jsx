@@ -22,7 +22,7 @@ const Pcscf = () => {
           title={"Enable TLS"}
           id={"ipsec"}
           name={"Enable-IPsec"}
-          className={"P-CSCF-class-content-field1"}
+          // className={classes["P-CSCF-class-content-field1"]}
         />
 
         <div
@@ -41,7 +41,7 @@ const Pcscf = () => {
               id={"Encryption-Algorithm-type-1"}
               name={"Encryption-Algorithm-type-icon1"}
               value={"AES_CBC"}
-              className={"P-CSCF-class-content-field2-checkbox1"}
+              className={classes["P-CSCF-class-content-field2-checkbox1"]}
             />
             <Checkbox
               type={"checkbox"}
@@ -49,7 +49,7 @@ const Pcscf = () => {
               id={"Encryption-Algorithm-type-2"}
               name={"Encryption-Algorithm-type-icon2"}
               value={"DES_EDE3_CBC"}
-              className={"P-CSCF-class-content-field2-checkbox2"}
+              className={classes["P-CSCF-class-content-field2-checkbox2"]}
             />
             <Checkbox
               type={"checkbox"}
@@ -57,7 +57,7 @@ const Pcscf = () => {
               id={"Encryption-Algorithm-type-3"}
               name={"Encryption-Algorithm-type-icon3"}
               value={"Plain"}
-              className={"P-CSCF-class-content-field2-checkbox3"}
+              className={classes["P-CSCF-class-content-field2-checkbox3"]}
             />
           </div>
         </div>
@@ -85,7 +85,7 @@ const Pcscf = () => {
               type={"number"}
               id={"pcscf-shared-memory"}
               name={"p_shared_memory"}
-              className={"memory"}
+              className={classes["memory"]}
               unit={"MB"}
             />
           </div>
@@ -97,7 +97,7 @@ const Pcscf = () => {
               title={"Private Memory*"}
               id={"pcscf-private-memory"}
               name={"p_private_memory"}
-              className={"memory"}
+              className={classes["memory"]}
               unit={"MB"}
             />
           </div>

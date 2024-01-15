@@ -57,6 +57,7 @@ const Scscf = () => {
               id={"Maximum-Register-Time"}
               name={"Maximum_Register_Time"}
               className={"register-time"}
+              className={classes["register-time"]}
               unit={"S"}
             />
           </div>

@@ -19,3 +19,10 @@
   width: 11.61vw;
   border: 0.092vh solid red;
 }
+.memory {
+  height: 3.7vh;
+  width: 3.125vw;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 0.64vh;
+}

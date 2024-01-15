@@ -30,7 +30,7 @@ const Icscf = () => {
           title={"Shared Memory*"}
           id={"icscf-shared-memory"}
           name={"i_shared_memory"}
-          className={"memory"}
+          className={classes["memory"]}
           unit={"MB"}
         />
       </div>
@@ -47,7 +47,7 @@ const Icscf = () => {
           title={"Private Memory*"}
           id={"icscf-private-memory"}
           name={"i_private_memory"}
-          className={"memory"}
+          className={classes["memory"]}
           unit={"MB"}
         />
       </div>
