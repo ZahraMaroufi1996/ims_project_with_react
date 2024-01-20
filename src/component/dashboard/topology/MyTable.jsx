@@ -3,6 +3,9 @@ import Axios from "axios";
 import classes from "./MyTable.module.css";
 import classNames from "classnames";
 import { Pencil } from "../../icons/Pencil";
+import { Tick } from "../../icons/Tick";
+import { Close } from "../../icons/Close";
+import { Trash } from "../../icons/Trash";
 
 const MyTable = () => {
   return (
@@ -105,13 +108,15 @@ const MyTable = () => {
               <div
                 className={classNames(
                   classes["node-table-content-icon"],
-                  "d-flex"
+                  "d-flex",
+                  "align-items-center",
+                  "justify-content-around"
                 )}
               >
+                <Close />
+                <Tick />
                 <Pencil />
                 <Trash />
-                <Tick />
-                <Close />
                 {/* <img
                   class="pencil p-1"
                   id="${q.id}p"

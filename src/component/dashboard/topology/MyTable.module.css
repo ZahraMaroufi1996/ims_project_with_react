@@ -66,29 +66,7 @@
   font-family: "FiraGO", sans-serif;
 }
 
-.pencil {
-  right: 1.29vw;
-  top: 0.814vh;
-  position: absolute;
-}
-
-.trash {
-  right: 0.223vw;
-  top: 0.814vh;
-  position: absolute;
-}
-
-.close {
-  right: 4.062vw;
-  top: 0.64vh;
-  position: absolute;
-  display: none;
-}
-
-.tick {
-  right: 2.67vw;
-  top: 0.64vh;
-  position: absolute;
-  border: none;
-  display: none;
+svg {
+  margin-left: 7px;
+  margin-top: 2px;
 }
