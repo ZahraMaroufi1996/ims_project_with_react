@@ -36,7 +36,6 @@ const Configuration = () => {
       RTP_Loss_Timeout: Number(data.RTP_Loss_Timeout),
       Rx_Source_Port: Number(data.Rx_Source_Port),
     };
-    console.log(newData);
     Axios.post(`${url}/api/configuration/submittForm`, newData, {
       headers: {
         "Content-Type": "application/json",
@@ -54,33 +53,32 @@ const Configuration = () => {
   const getConfigInfo = () => {
     Axios.get(`${url}/api/configuration`)
       .then((response) => {
-        console.log(response.data);
         methods.setValue("IMS_Domain", response.data.domain);
-        methods.setValue("General-type-icon1", response.data.homerEnable.pcscf);
-        methods.setValue("General-type-icon2", response.data.homerEnable.scscf);
-        methods.setValue("General-type-icon3", response.data.homerEnable.icscf);
+        methods.setValue("General_type_icon1", response.data.homerEnable.pcscf);
+        methods.setValue("General_type_icon2", response.data.homerEnable.scscf);
+        methods.setValue("General_type_icon3", response.data.homerEnable.icscf);
 
         methods.setValue("p_shared_memory", response.data.pcscf.shareMemory);
         methods.setValue("p_private_memory", response.data.pcscf.privateMemory);
-        methods.setValue("Enable-IPsec", response.data.pcscf.ipSec);
-        methods.setValue("Enable-TLS", response.data.pcscf.tls);
+        methods.setValue("Enable_IPsec", response.data.pcscf.ipSec);
+        methods.setValue("Enable_TLS", response.data.pcscf.tls);
 
         methods.setValue(
-          "Encryption-Algorithm-type-icon1",
+          "Encryption_Algorithm_type_icon1",
           response.data.pcscf.algorithms.aes
         );
         methods.setValue(
-          "Encryption-Algorithm-type-icon2",
+          "Encryption_Algorithm_type_icon2",
           response.data.pcscf.algorithms.des
         );
 
         methods.setValue(
-          "Encryption-Algorithm-type-icon3",
+          "Encryption_Algorithm_type_icon3",
           response.data.pcscf.algorithms.plain
         );
 
         methods.setValue(
-          "Enable-Rx-Source-Port",
+          "Enable_Rx_Source_Port",
           response.data.pcscf.rxConfiguration.sourcePortEnabled
         );
 
@@ -114,19 +112,19 @@ const Configuration = () => {
         );
 
         methods.setValue(
-          "Supported-HD-Codecs-type-icon1",
+          "Supported_HD_Codecs_type_icon1",
           response.data.rtpProxy.supportedHdCoders.g722
         );
         methods.setValue(
-          "Supported-HD-Codecs-type-icon2",
+          "Supported_HD_Codecs_type_icon2",
           response.data.rtpProxy.supportedHdCoders.armwb
         );
 
         methods.setValue(
-          "Enable-Maximum-Call-Duration",
+          "Enable_Maximum_Call_Duration",
           response.data.rtpProxy.maximumCallDurationEnable
         );
-        methods.setValue("Enable-SRTP", response.data.rtpProxy.srtp);
+        methods.setValue("Enable_SRTP", response.data.rtpProxy.srtp);
 
         methods.setValue(
           "Inbound_Port_Minimum",
@@ -153,9 +151,7 @@ const Configuration = () => {
           response.data.rtpProxy.rtpLossTimeout
         );
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => {});
   };
 
   return (

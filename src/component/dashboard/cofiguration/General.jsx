@@ -1,11 +1,16 @@
-import React, { useState } from "react";
-import Axios from "axios";
+import React from "react";
 import classes from "./General.module.css";
 import { Checkbox } from "./Checkbox";
 import { InputComponent } from "./InputComponent";
 import classNames from "classnames";
+import { useFormContext, useWatch } from "react-hook-form";
 
 const General = () => {
+  const { register } = useFormContext();
+  // const { General_type_icon1 } = useWatch();
+
+  // console.log({ General_type_icon1 });
+
   return (
     <div className={classNames(classes["general-class"])}>
       <div className={classNames(classes["general-class-content"])}>
@@ -48,27 +53,28 @@ const General = () => {
             )}
           >
             <Checkbox
+              {...register(`General_type_icon1`)}
               type={"checkbox"}
               title={"P-CSCF"}
-              id={"General-type-1"}
-              name={"General-type-icon1"}
-              value={"p_cscf"}
+              id={"General_type_1"}
+              name={"General_type_icon1"}
               className={classes["general-class-content-field2-checkbox"]}
             />
+
             <Checkbox
+              {...register(`General_type_icon2`)}
               type={"checkbox"}
               title={"S-CSCF"}
               id={"General-type-2"}
-              name={"General-type-icon2"}
-              value={"s_cscf"}
+              name={"General_type_icon2"}
               className={classes["general-class-content-field2-checkbox"]}
             />
             <Checkbox
+              {...register(`General_type_icon3`)}
               type={"checkbox"}
               title={"I-CSCF"}
               id={"General-type-3"}
-              name={"General-type-icon3"}
-              value={"i_cscf"}
+              name={"General_type_icon3"}
               className={classes["general-class-content-field2-checkbox"]}
             />
           </div>

@@ -3,13 +3,3 @@
   height: 2.037vh;
   border: 1px solid red;
 }
-
-.RTP-Loss-Timeout,
-.Call-Duration,
-.port {
-  width: 4.58vw;
-  height: 3.7vh;
-  background-color: #f9f9f9;
-  border: none;
-  border-radius: 0.65vh;
-}

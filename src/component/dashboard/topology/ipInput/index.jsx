@@ -24,7 +24,6 @@ const IpInput = ({ onChange, title, className }) => {
       className={classNames(
         className,
         "d-flex",
-        "flex-row",
         "justify-content-between",
         "align-items-center"
       )}

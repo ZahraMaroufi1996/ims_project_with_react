@@ -1,0 +1,94 @@
+.node-table {
+  border: 1px solid black;
+  width: 42.99vw;
+  height: 20.51vh;
+  margin-top: 8.56vh;
+  margin-left: 2.81vw;
+}
+.node-table-title {
+  width: 14.24vw;
+  height: 4.25vh;
+  border: solid;
+  background-color: #1f666e;
+  color: white;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+  cursor: pointer;
+}
+
+.node-table-title span {
+  font-size: 1.29vh;
+  font-family: "FiraGO", sans-serif;
+  color: white;
+  margin-left: 2.4vw;
+}
+
+.node-table-contentsss {
+  /* border-color: white;
+  background-color: red; */
+  border: 1px solid red;
+  height: 2.77vh;
+}
+
+.node-table-content {
+  /* background-color: green; */
+  border: 1px solid green;
+  width: 42.66vw;
+  height: 2.77vh;
+  /* border-bottom: 0.046vh solid #dfdfdf; */
+}
+
+.node-table-content-name {
+  width: 3.64vw;
+  height: 1.85vh;
+  margin-left: 2.32vw;
+  color: #1a4348;
+  font-size: 1.2vh;
+  font-family: "FiraGO", sans-serif;
+  border-radius: 0.277vh;
+}
+
+.node-table-content-ip {
+  width: 4.68vw;
+  height: 1.85vh;
+  margin-left: 6.61vw;
+  color: #1a4348;
+  font-size: 1.2vh;
+  font-family: "FiraGO", sans-serif;
+  border-radius: 0.277vh;
+}
+
+.node-table-content-status {
+  width: 4.37vw;
+  height: 1.57vh;
+  margin-left: 6.61vw;
+  font-size: 1.2vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.pencil {
+  right: 1.29vw;
+  top: 0.814vh;
+  position: absolute;
+}
+
+.trash {
+  right: 0.223vw;
+  top: 0.814vh;
+  position: absolute;
+}
+
+.close {
+  right: 4.062vw;
+  top: 0.64vh;
+  position: absolute;
+  display: none;
+}
+
+.tick {
+  right: 2.67vw;
+  top: 0.64vh;
+  position: absolute;
+  border: none;
+  display: none;
+}

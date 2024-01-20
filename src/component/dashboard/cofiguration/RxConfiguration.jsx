@@ -110,6 +110,7 @@ const RxConfiguration = () => {
         <span>Transport Protocol</span>
 
         <Checkbox
+          {...register(`Transport_Protocol`)}
           title={"SCTP"}
           id={"Transport-Protocol-type-1"}
           name={"Transport_Protocol"}
@@ -118,6 +119,7 @@ const RxConfiguration = () => {
           type={"radio"}
         />
         <Checkbox
+          {...register(`Transport_Protocol`)}
           title={"TCP"}
           id={"Transport-Protocol-type-2"}
           name={"Transport_Protocol"}
@@ -138,7 +140,7 @@ const RxConfiguration = () => {
         <Switch
           title={"Rx Source Port"}
           id={"Enable-Rx-Source-Port"}
-          name={"Enable-Rx-Source-Port"}
+          name={"Enable_Rx_Source_Port"}
         />
         <input
           {...register("Rx_Source_Port")}

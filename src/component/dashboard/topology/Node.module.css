@@ -1,0 +1,90 @@
+.node {
+  background-color: white;
+  margin-left: 1.45vw;
+  margin-top: 2.6vh;
+  width: 47.39vw;
+  height: 72.31vh;
+  border-radius: 1.85vh;
+  border: 1px solid red;
+}
+
+.node-properties {
+  width: 44.61vw;
+  height: 9.91vh;
+  border: 1px solid red;
+  margin-left: 1.2vw;
+  margin-top: 3.15vh;
+  display: flex;
+}
+
+.node-ip {
+  width: 16.921vw;
+  height: 3.7vh;
+  margin-left: 3.23vw;
+}
+.add-node-button {
+  width: 5.73vw;
+  height: 3.7vh;
+  margin-left: 3.96vw;
+  margin-top: 2.5vh;
+  border-radius: 0.65vh;
+  background-color: #68d5b0;
+  border-style: none;
+  color: white;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.node-name span,
+.node-ip span,
+.node-type span {
+  color: #1a4348;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.node-type {
+  width: 23.1vw;
+  height: 2.04vh;
+  margin-left: 12.2vw;
+  margin-top: 3.24vh;
+}
+
+.add-node-title {
+  width: 9.17vw;
+  height: 2.22vh;
+  /* color: #83a79a; */
+  color: red;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+  margin-top: 0.5vh;
+}
+
+.node-name {
+  width: 13.65vw;
+  height: 3.7vh;
+  margin-left: 3.63vw;
+  margin-right: 0;
+}
+
+.node-name-box {
+  width: 10.42vw;
+  height: 3.7vh;
+  border-radius: 0.65vh;
+  background-color: #eef5f2;
+}
+
+.node-type-core-checkbox {
+  width: 3.19vw;
+  height: 2.04vh;
+}
+
+.node-type-rtp-proxy-checkbox {
+  width: 5.12vw;
+  height: 2.04vh;
+}
+
+.node-type-pcscf-checkbox {
+  width: 4.13vw;
+  height: 2.04vh;
+}

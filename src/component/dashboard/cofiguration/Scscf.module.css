@@ -49,3 +49,11 @@
   background-color: #eef5f2;
   border-radius: 0.64vh;
 }
+
+.memory {
+  height: 3.7vh;
+  width: 3.125vw;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 0.64vh;
+}

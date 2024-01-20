@@ -6,7 +6,6 @@ import classNames from "classnames";
 
 const InputComponent = ({ title, id, name, className, unit }) => {
   const { register } = useFormContext();
-  console.log(`${name}`);
 
   return (
     <>

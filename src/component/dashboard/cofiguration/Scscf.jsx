@@ -39,7 +39,7 @@ const Scscf = () => {
               title={"Minimum Register Time"}
               id={"Minimum-Register-Time"}
               name={"Minimum_Register_Time"}
-              className={"register-time"}
+              className={classes["register-time"]}
               unit={"S"}
             />
           </div>
@@ -56,7 +56,6 @@ const Scscf = () => {
               title={"Maximum Register Time"}
               id={"Maximum-Register-Time"}
               name={"Maximum_Register_Time"}
-              className={"register-time"}
               className={classes["register-time"]}
               unit={"S"}
             />
@@ -83,7 +82,7 @@ const Scscf = () => {
               title={"Shared Memory*"}
               id={"scscf-shared-memory"}
               name={"s_shared_memory"}
-              className={"memory"}
+              className={classes["memory"]}
               unit={"MB"}
             />
           </div>
@@ -100,7 +99,7 @@ const Scscf = () => {
               title={"Private Memory*"}
               id={"scscf-private-memory"}
               name={"s_private_memory"}
-              className={"memory"}
+              className={classes["memory"]}
               unit={"MB"}
             />
           </div>

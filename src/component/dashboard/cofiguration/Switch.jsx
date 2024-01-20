@@ -7,7 +7,6 @@ import { InputComponent } from "./InputComponent";
 
 const Switch = ({ title, id, name, flag }) => {
   const { register } = useFormContext();
-  console.log(`${name}`);
   return (
     <div
       className={classNames(

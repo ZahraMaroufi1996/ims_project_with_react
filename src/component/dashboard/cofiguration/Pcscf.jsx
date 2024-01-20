@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import {
+  useForm,
+  FormProvider,
+  useFormContext,
+  useWatch,
+} from "react-hook-form";
+
 import classes from "./Pcscf.module.css";
 import { Switch } from "./Switch";
 import { Checkbox } from "./Checkbox";
@@ -8,6 +15,11 @@ import classNames from "classnames";
 import { InputComponent } from "./InputComponent";
 
 const Pcscf = () => {
+  const { register } = useFormContext();
+  const { General_type_icon1 } = useWatch();
+
+  console.log({ General_type_icon1 });
+
   return (
     <div className={classNames(classes["P-CSCF-class"])}>
       <div
@@ -21,7 +33,7 @@ const Pcscf = () => {
         <Switch
           title={"Enable TLS"}
           id={"ipsec"}
-          name={"Enable-IPsec"}
+          name={"Enable_IPsec"}
           // className={classes["P-CSCF-class-content-field1"]}
         />
 
@@ -36,27 +48,27 @@ const Pcscf = () => {
           <p>Supported IPsec Encryption Algorithms :</p>
           <div className="d-flex flex-row justify-content-between">
             <Checkbox
+              {...register("Encryption_Algorithm_type_icon1")}
               type={"checkbox"}
               title={"AES-CBC"}
               id={"Encryption-Algorithm-type-1"}
-              name={"Encryption-Algorithm-type-icon1"}
-              value={"AES_CBC"}
+              name={"Encryption_Algorithm_type_icon1"}
               className={classes["P-CSCF-class-content-field2-checkbox1"]}
             />
             <Checkbox
+              {...register("Encryption_Algorithm_type_icon2")}
               type={"checkbox"}
               title={"DES-EDE3-CBC"}
               id={"Encryption-Algorithm-type-2"}
-              name={"Encryption-Algorithm-type-icon2"}
-              value={"DES_EDE3_CBC"}
+              name={"Encryption_Algorithm_type_icon2"}
               className={classes["P-CSCF-class-content-field2-checkbox2"]}
             />
             <Checkbox
+              {...register("Encryption_Algorithm_type_icon3")}
               type={"checkbox"}
               title={"Plain(No encryption)"}
               id={"Encryption-Algorithm-type-3"}
-              name={"Encryption-Algorithm-type-icon3"}
-              value={"Plain"}
+              name={"Encryption_Algorithm_type_icon3"}
               className={classes["P-CSCF-class-content-field2-checkbox3"]}
             />
           </div>
@@ -65,7 +77,7 @@ const Pcscf = () => {
         <Switch
           title={"Enable IPsec"}
           id={"tls"}
-          name={"Enable-TLS"}
+          name={"Enable_TLS"}
           className={"P-CSCF-class-content-field3"}
         />
 
