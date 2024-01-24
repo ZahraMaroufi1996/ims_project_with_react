@@ -1,0 +1,858 @@
+{
+	"info": {
+		"_postman_id": "8dff510d-3e84-46b8-804e-c6c66edc5e39",
+		"name": "reactCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30566559"
+	},
+	"item": [
+		{
+			"name": "topology",
+			"item": [
+				{
+					"name": "Get All Configs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/topology"
+					},
+					"response": [
+						{
+							"name": "Get All Configs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/topology"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"subnetMask\": \"192.168.2.16\",\n    \"gateway\": \"192.168.1.1\",\n    \"databaseVirtualIp\": \"192.168.3.3\",\n    \"dnsVirtualIp\": \"192.168.4.4\",\n    \"homerVirtualIp\": \"192.168.5.5\",\n    \"nodes\": [\n        {\n            \"name\": \"pcscf folan\",\n            \"ip\": \"192.168.11.12\",\n            \"status\": \"connected\",\n            \"type\": \"pcscf\",\n            \"id\": 1\n        },\n        {\n            \"name\": \"pcscf bisar\",\n            \"ip\": \"192.168.11.12\",\n            \"status\": \"notConnected\",\n            \"type\": \"pcscf\",\n            \"id\": 2\n        },\n        {\n            \"name\": \"pcscf bahman\",\n            \"ip\": \"192.168.11.12\",\n            \"status\": \"notConnected\",\n            \"type\": \"pcscf\",\n            \"id\": 3\n        },\n        {\n            \"name\": \"rtp folan\",\n            \"ip\": \"192.168.11.12\",\n            \"status\": \"connected\",\n            \"type\": \"rtpProxy\",\n            \"id\": 4\n        },\n        {\n            \"name\": \"rtp bisar\",\n            \"ip\": \"192.168.11.12\",\n            \"status\": \"notConnected\",\n            \"type\": \"rtpProxy\",\n            \"id\": 5\n        },\n        {\n            \"name\": \"rtp bahman\",\n            \"ip\": \"192.168.11.12\",\n            \"status\": \"notConnected\",\n            \"type\": \"rtpProxy\" ,\n            \"id\":6\n        },\n        {\n            \"name\": \"core folan\",\n            \"ip\": \"192.168.11.12\",\n            \"status\": \"connected\",\n            \"type\": \"core\" ,\n            \"id\":7\n        },\n        {\n            \"name\": \"core bisar\",\n            \"ip\": \"192.168.11.12\",\n            \"status\": \"notConnected\",\n            \"type\": \"core\" ,\n            \"id\":8\n        },\n        {\n            \"name\": \"core bahman\",\n            \"ip\": \"192.168.11.12\",\n            \"status\": \"notConnected\",\n            \"type\": \"core\" ,\n            \"id\":9\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Network Definition",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{url}}/api/topology/networkDefinition"
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"SubnetMask\": \"192.168.2.16\",\r\n    \"Gateway\": \"192.168.1.1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/networkDefinition"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Failed Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"SubnetMask\": \"192.168.3.16\",\r\n    \"Gateway\": \"192.168.1.1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/networkDefinition"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"name\": \"Failed Scenario\",\n         \"message\": \"Status code 400 : Bad Request (Invalid IP)\",\n        \"header\": \"No matching requests\"\n    }\n}\n"
+						}
+					]
+				},
+				{
+					"name": "addNode",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{url}}/api/topology/addNode"
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"pcscf folan2\",\r\n    \"ip\": \"192.168.2.2\",\r\n    \"type\": \"pcscf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/addNode"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"pcscf folan2\",\n    \"ip\": \"192.168.2.2\",\n    \"status\": \"connected\",\n    \"type\": \"pcscf\" ,\n    \"id\" : 10\n}"
+						},
+						{
+							"name": "Failed Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n    \"name\": \"core folan2\",\r\n    \"ip\": \"192.168.3.3\",\r\n    \"type\": \"core\"\r\n  }\r\n        ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/addNode"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"error\": {\r\n        \"name\": \"Failed Scenario\",\r\n        \"message\": \"Status code 400 : Bad Request (Invalid IP)\",\r\n        \"header\": \"No matching requests\"\r\n    }\r\n}\r\n\r\n"
+						}
+					]
+				},
+				{
+					"name": "Virtual IPs for Load Balancers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{url}}/api/topology/virtualIps"
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"databaseVirtualIp\": \"192.168.3.3\",\r\n   \"dnsVirtualIp\": \"192.168.4.4\",\r\n    \"homerVirtualIp\": \"192.168.5.5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/virtualIps"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Failed Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"databaseVirtualIp\": \"192.168.6.6\",\r\n   \"dnsVirtualIp\": \"192.168.4.4\",\r\n    \"homerVirtualIp\": \"192.168.5.5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/virtualIps"
+							},
+							"status": "Not Implemented",
+							"code": 501,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"name\": \"Failed Scenario\",\n        \"message\": \"Status code 501 : Not Implemented\",\n        \"header\": \"No matching requests\"\n    }\n}\n"
+						}
+					]
+				},
+				{
+					"name": "deleteNode",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{url}}/api/topology/deleteNode"
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"pcscf folan\",\r\n    \"ip\": \"192.168.11.12\",\r\n    \"type\": \"pcscf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/deleteNode"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Failed Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"pcscf bahman\",\r\n    \"ip\": \"192.168.11.12\",\r\n    \"type\": \"pcscf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/deleteNode"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"name\": \"Failed Scenario\",\n        \"message\": \"Status code 500 : Internal Server Error\",\n        \"header\": \"No matching requests\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "editNode",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{url}}/api/topology/editNode"
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"pcscf folan\",\r\n    \"ip\": \"192.168.4.4\",\r\n    \"type\": \"pcscf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/editNode"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Failed Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"core folan\",\r\n    \"ip\": \"192.168.5.5\",\r\n    \"type\": \"core\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/topology/editNode"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"name\": \"Failed Scenario\",\n        \"message\": \"Status code 400 : Bad Request\",\n        \"header\": \"No matching requests\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "configuration",
+			"item": [
+				{
+					"name": "Get All Configs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/configuration"
+					},
+					"response": [
+						{
+							"name": "Get All Configs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/configuration"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"domain\": \"IMS Domain\",\n    \"homerEnable\": {\n        \"pcscf\":false,\n        \"scscf\":true,\n        \"icscf\":true\n},\n    \"pcscf\": {\n        \"ipSec\": true,\n        \"algorithms\": {\n            \"aes\" : true,\n            \"des\" : true,\n            \"plain\" : false\n        },\n        \"tls\": true,\n        \"shareMemory\": 4096,\n        \"privateMemory\": 32,\n        \"rxConfiguration\": {\n            \"ip\": \"192.168.2.16\",\n            \"fqdn\": \"https://www.google.com/search?q=fqdn\",\n            \"realm\": \"folan\",\n            \"protocol\": \"TCP\",\n            \"sourcePortEnabled\": true,\n            \"sourcePort\": 3095\n        }\n    },\n    \"icscf\": {\n        \"shareMemory\": 4096,\n        \"privateMemory\": 32\n    },\n    \"scscf\": {\n        \"minimumRegisterTime\": 200,\n        \"maximumRegisterTime\": 2000,\n        \"shareMemory\": 4096,\n        \"privateMemory\": 32\n    },\n    \"rtpProxy\": {\n        \"supportedHdCoders\": {\n            \"armwb\":true,\n            \"g722\":false\n        },\n        \"srtp\": true,\n        \"algorithms\": [\n            \"AES\",\n            \"DES\"\n        ],\n        \"inboundPortMinimum\": 20000,\n        \"inboundPortMaximum\": 39999,\n        \"outboundPortMinimum\": 40000,\n        \"outboundPortMaximum\": 59999,\n        \"maximumCallDurationEnable\": true,\n        \"maximumCallDuration\": 3600,\n        \"rtpLossTimeoutEnable\": true,\n        \"rtpLossTimeout\": 60\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "submittForm",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{url}}/api/configuration/submittForm"
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"IMS_Domain\": \"IMS Domain\",\r\n    \"General_type_icon1\": false,\r\n    \"General_type_icon2\": true,\r\n    \"General_type_icon3\": true,\r\n    \"Enable_IPsec\": true,\r\n    \"Encryption_Algorithm_type_icon1\": true,\r\n    \"Encryption_Algorithm_type_icon2\": true,\r\n    \"Encryption_Algorithm_type_icon3\": false,\r\n    \"Enable_TLS\": true,\r\n    \"p_shared_memory\": 4096,\r\n    \"p_private_memory\": 40,\r\n    \"Transport_Protocol\": \"TCP\",\r\n    \"PCRF_FQDN\": \"https://www.google.com/search?q=fqdn\",\r\n    \"PCRF_Realm\": \"folan\" ,\r\n    \"Enable_Rx_Source_Port\": true,\r\n    \"Rx_Source_Port\": 3095,\r\n    \"i_shared_memory\": 4096,\r\n    \"i_private_memory\": 32,\r\n    \"Minimum_Register_Time\": 200,\r\n    \"Maximum_Register_Time\": 2000,\r\n    \"s_shared_memory\": 4096,\r\n    \"s_private_memory\": 32,\r\n    \"Supported_HD_Codecs_type_icon1\": false,\r\n    \"Supported_HD_Codecs_type_icon2\": true,\r\n    \"Enable_SRTP\": true,\r\n    \"Inbound_Port_Minimum\": 20000,\r\n    \"Inbound_Port_Maximum\": 39999,\r\n    \"Outbound_Port_Minimum\": 40000,\r\n    \"Outbound_Port_Maximum\": 59999,\r\n    \"Enable_Maximum_Call_Duration\": true,\r\n    \"Call_Duration\": 3600,\r\n    \"RTP_Loss_Timeout\": 60\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/configuration/submittForm"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Failed Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"IMS_Domain\": \"IMS Domain\",\r\n    \"General_type_icon1\": false,\r\n    \"General_type_icon2\": true,\r\n    \"General_type_icon3\": true,\r\n    \"Enable_IPsec\": false,\r\n    \"Encryption_Algorithm_type_icon1\": true,\r\n    \"Encryption_Algorithm_type_icon2\": true,\r\n    \"Encryption_Algorithm_type_icon3\": false,\r\n    \"Enable_TLS\": false,\r\n    \"p_shared_memory\": 4096,\r\n    \"p_private_memory\": 60,\r\n    \"Transport_Protocol\": \"TCP\",\r\n    \"PCRF_FQDN\": \"https://www.google.com/search?q=fqdn\",\r\n    \"PCRF_Realm\": \"folan\" ,\r\n    \"Enable_Rx_Source_Port\": false,\r\n    \"Rx_Source_Port\": 3095,\r\n    \"i_shared_memory\": 4096,\r\n    \"i_private_memory\": 32,\r\n    \"Minimum_Register_Time\": 200,\r\n    \"Maximum_Register_Time\": 2000,\r\n    \"s_shared_memory\": 4096,\r\n    \"s_private_memory\": 32,\r\n    \"Supported_HD_Codecs_type_icon1\": false,\r\n    \"Supported_HD_Codecs_type_icon2\": true,\r\n    \"Enable_SRTP\": false,\r\n    \"Inbound_Port_Minimum\": 20000,\r\n    \"Inbound_Port_Maximum\": 39999,\r\n    \"Outbound_Port_Minimum\": 40000,\r\n    \"Outbound_Port_Maximum\": 59999,\r\n    \"Enable_Maximum_Call_Duration\": false,\r\n    \"Call_Duration\": 3600,\r\n    \"RTP_Loss_Timeout\": 60\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/configuration/submittForm"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"name\": \"Failed Scenario\",\n        \"message\": \"Status code 400 : Bad Request\",\n        \"header\": \"No matching requests\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "getTime",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/general"
+					},
+					"response": [
+						{
+							"name": "getTime",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/general"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timeZone\": \"Iran\",\n    \"timeHour\": 12,\n    \"timeMin\": 0,\n    \"timeSec\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{url}}/api/login"
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"root\",\r\n    \"password\" :\"root\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ\"\n}"
+						}
+					]
+				},
+				{
+					"name": "useToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/useToken"
+					},
+					"response": [
+						{
+							"name": "useToken",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpcCI6IjE5Mi4xNjguNS4yMDMiLCJwZXJtaXNzaW9uIjoie1widXNlcklkXCI6MSxcInVzZXJOYW1lXCI6XCJyb290XCIsXCJ1c2VyUGVybWlzc2lvbnNcIjpbXSxcInVzZXJOb2Rlc1wiOlsxLDIsMywxMV0sXCJncm91cFBlcm1pc3Npb25zXCI6W3tcImdyb3VwSWRcIjoxLFwicGVybWlzc2lvbnNcIjpbXSxcIm5vZGVzXCI6WzEsM119XX0iLCJ1c2VyTmFtZSI6InJvb3QiLCJleHAiOjE2OTYwMjE3NzcsImlhdCI6MTY5NTcxOTM3N30.zwBrdgWeaFibdMvdJEY2leyvwUeIdmJvEmMvldz2LdqEt-hKE9xghNWeT2Q1EtLIDKLdaJmIJr0yqnGeYrticQ",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/useToken"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"remindDay\": 366,\n    \"logoutInterval\": -1,\n    \"pwRemainDay\": null,\n    \"userName\": \"root\",\n    \"userId\": 1,\n    \"licenceLoss\": false,\n    \"pwMustChange\": false\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

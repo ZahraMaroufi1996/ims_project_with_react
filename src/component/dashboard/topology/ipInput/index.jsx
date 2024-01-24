@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import Axios from "axios";
 import classes from "./index.module.css";
 import classNames from "classnames";
 const IpInput = ({ onChange, title, className }) => {
+  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
   const [form, setForm] = useState({
     field1: "",
     field2: "",
@@ -15,10 +17,48 @@ const IpInput = ({ onChange, title, className }) => {
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
+  const getNetworkInfo = () => {
+    Axios.get(`${url}/api/topology`)
+      .then((response) => {
+        if (title === "subnetmask")
+          setForm((prevForm) => ({
+            ...prevForm,
+            field1: response.data.subnetMask.split(".")[0],
+            field2: response.data.subnetMask.split(".")[1],
+            field3: response.data.subnetMask.split(".")[2],
+            field4: response.data.subnetMask.split(".")[3],
+          }));
+        else if (title === "gateway")
+          setForm((prevForm) => ({
+            ...prevForm,
+            field1: response.data.gateway.split(".")[0],
+            field2: response.data.gateway.split(".")[1],
+            field3: response.data.gateway.split(".")[2],
+            field4: response.data.gateway.split(".")[3],
+          }));
+        else if (title === "IP address")
+          setForm((prevForm) => ({
+            ...prevForm,
+            field1: "",
+            field2: "",
+            field3: "",
+            field4: "",
+          }));
+      })
+      .catch((err) => {
+        console.log("Problemmm");
+      });
+  };
+
   useEffect(() => {
     const ip = `${form.field1}.${form.field2}.${form.field3}.${form.field4}`;
     if (onChange) onChange(ip);
   }, [form.field1, form.field2, form.field3, form.field4]);
+
+  // useEffect(() => {
+  //   getNetworkInfo();
+  // }, []);
+
   return (
     <div
       className={classNames(
@@ -32,6 +72,7 @@ const IpInput = ({ onChange, title, className }) => {
       <input
         type="text"
         name="field1"
+        value={form.field1}
         class={classes["ip-octet"]}
         id="network-definition-subnetmask-octet1"
         onChange={handleChange}
@@ -39,6 +80,7 @@ const IpInput = ({ onChange, title, className }) => {
       <input
         type="text"
         name="field2"
+        value={form.field2}
         class={classes["ip-octet"]}
         id="network-definition-subnetmask-octet2"
         onChange={handleChange}
@@ -46,6 +88,7 @@ const IpInput = ({ onChange, title, className }) => {
       <input
         type="text"
         name="field3"
+        value={form.field3}
         class={classes["ip-octet"]}
         id="network-definition-subnetmask-octet3"
         onChange={handleChange}
@@ -53,6 +96,7 @@ const IpInput = ({ onChange, title, className }) => {
       <input
         type="text"
         name="field4"
+        value={form.field4}
         class={classes["ip-octet"]}
         id="network-definition-subnetmask-octet4"
         onChange={handleChange}

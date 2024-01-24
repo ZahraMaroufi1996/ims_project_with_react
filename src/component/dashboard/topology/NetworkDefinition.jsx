@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Axios from "axios";
 import classes from "./NetworkDefinition.module.css";
@@ -10,6 +10,21 @@ const NetworkDefinition = () => {
   const [subnet, setSubnet] = useState();
   const [gateway, setGateWay] = useState();
   const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
+
+  const getNetworkInfo = () => {
+    Axios.get(`${url}/api/topology`)
+      .then((response) => {
+        setSubnet(response.data.subnetMask);
+        setGateWay(response.data.gateway);
+      })
+      .catch((err) => {
+        console.log("Problemmm");
+      });
+  };
+
+  useEffect(() => {
+    getNetworkInfo();
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
