@@ -1,0 +1,68 @@
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  width: 47.39vw;
+  height: 72.31vh;
+  right: 36.04vw;
+  top: 20.46vh;
+  border-radius: 1.85vh;
+  overflow: auto;
+  background-color: rgba(31, 102, 110, 0.22);
+  color: white;
+}
+
+.my-modal-content {
+  width: 21.56vw;
+  height: 19.44vh;
+  border-radius: 1.85vh;
+  background-color: #1a4348;
+  opacity: 80%;
+}
+
+.modal-buttons {
+  width: 12.5vw;
+  height: 3.148vh;
+  margin-bottom: 3.88vh;
+}
+
+.modal-button {
+  width: 5vw;
+  height: 3.148vh;
+  top: 0vh;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+  color: white;
+  background-color: #ff8888;
+  border-radius: 0.92vh;
+  border: none;
+}
+
+#modal-cancel-button {
+  /* background-color: #1a4348; */
+  background-color: black;
+}
+
+.modal-title {
+  font-size: 1.29vh;
+  font-family: "FiraGO", sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-question {
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+  text-align: center;
+}
+
+.modal-close {
+  color: #a6d4c4;
+  font-size: 28px;
+  text-align: end;
+  width: 100%;
+  margin-right: 1.32vw;
+  margin-bottom: 0;
+  height: 1.27vh;
+  cursor: pointer;
+}

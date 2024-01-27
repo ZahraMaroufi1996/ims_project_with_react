@@ -23,16 +23,17 @@
   margin-left: 2.4vw;
 }
 
-.node-table-contentsss {
+.node-table-contents {
   /* border-color: white;
   background-color: red; */
-  border: 1px solid red;
+  border: 1px solid green;
   height: 2.77vh;
+  width: 42.66vw;
 }
 
 .node-table-content {
   /* background-color: green; */
-  border: 1px solid green;
+  border: 1px solid red;
   width: 42.66vw;
   height: 2.77vh;
   /* border-bottom: 0.046vh solid #dfdfdf; */

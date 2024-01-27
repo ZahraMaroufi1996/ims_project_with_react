@@ -15,9 +15,10 @@ const Configuration = () => {
   const methods = useForm();
 
   const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
+  const token = localStorage.getItem("token");
 
   const onSubmit = (data) => {
-    const token = localStorage.getItem("token");
+    // const token = localStorage.getItem("token");
     const newData = {
       ...data,
       p_private_memory: Number(data.p_private_memory),
@@ -51,7 +52,12 @@ const Configuration = () => {
   }, []);
 
   const getConfigInfo = () => {
-    Axios.get(`${url}/api/configuration`)
+    Axios.get(`${url}/api/configuration`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
       .then((response) => {
         methods.setValue("IMS_Domain", response.data.domain);
         methods.setValue("General_type_icon1", response.data.homerEnable.pcscf);
