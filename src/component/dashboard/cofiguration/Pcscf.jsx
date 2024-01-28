@@ -16,9 +16,9 @@ import { InputComponent } from "./InputComponent";
 
 const Pcscf = () => {
   const { register } = useFormContext();
-  const { General_type_icon1 } = useWatch();
+  // const { General_type_icon1 } = useWatch();
 
-  console.log({ General_type_icon1 });
+  // console.log(useWatch());
 
   return (
     <div className={classNames(classes["P-CSCF-class"])}>
@@ -34,6 +34,7 @@ const Pcscf = () => {
           title={"Enable TLS"}
           id={"ipsec"}
           name={"Enable_IPsec"}
+          {...register("Enable_IPsec")}
           // className={classes["P-CSCF-class-content-field1"]}
         />
 
@@ -49,7 +50,6 @@ const Pcscf = () => {
           <div className="d-flex flex-row justify-content-between">
             <Checkbox
               {...register("Encryption_Algorithm_type_icon1")}
-              type={"checkbox"}
               title={"AES-CBC"}
               id={"Encryption-Algorithm-type-1"}
               name={"Encryption_Algorithm_type_icon1"}
@@ -57,7 +57,6 @@ const Pcscf = () => {
             />
             <Checkbox
               {...register("Encryption_Algorithm_type_icon2")}
-              type={"checkbox"}
               title={"DES-EDE3-CBC"}
               id={"Encryption-Algorithm-type-2"}
               name={"Encryption_Algorithm_type_icon2"}
@@ -65,7 +64,6 @@ const Pcscf = () => {
             />
             <Checkbox
               {...register("Encryption_Algorithm_type_icon3")}
-              type={"checkbox"}
               title={"Plain(No encryption)"}
               id={"Encryption-Algorithm-type-3"}
               name={"Encryption_Algorithm_type_icon3"}
@@ -79,6 +77,7 @@ const Pcscf = () => {
           id={"tls"}
           name={"Enable_TLS"}
           className={"P-CSCF-class-content-field3"}
+          {...register("Enable_TLS")}
         />
 
         <div
@@ -94,11 +93,11 @@ const Pcscf = () => {
           >
             <InputComponent
               title={"Shared Memory*"}
-              type={"number"}
               id={"pcscf-shared-memory"}
               name={"p_shared_memory"}
               className={classes["memory"]}
               unit={"MB"}
+              {...register("p_shared_memory")}
             />
           </div>
 
@@ -111,6 +110,7 @@ const Pcscf = () => {
               name={"p_private_memory"}
               className={classes["memory"]}
               unit={"MB"}
+              {...register("p_private_memory")}
             />
           </div>
         </div>

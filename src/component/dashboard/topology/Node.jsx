@@ -1,203 +1,145 @@
-import React from "react";
+import React, { useState } from "react";
+import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import Axios from "axios";
 import classes from "./Node.module.css";
 import { IpInput } from "../topology/ipInput";
 import { Checkbox } from "../cofiguration/Checkbox";
+import { Radio } from "../topology/Radio";
 import classNames from "classnames";
 import { MyButton } from "../cofiguration/MyButton";
 import { MyTable } from "./MyTable";
+import { NodeContext } from "../../../context/NodeContext";
 
 const Node = () => {
+  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
+
+  const { register, handleSubmit } = useForm();
+  const [ipAddress, setIpAddress] = useState();
+  const [nodes, setNodes] = useState([]);
+
+  const handleOnChangeIpAddress = (value) => {
+    setIpAddress(value);
+  };
+
+  const toggleNodes = (nodes) => {
+    setNodes(nodes);
+  };
+
+  const onSubmit = (data) => {
+    const token = localStorage.getItem("token");
+    console.log(data);
+    const formData = {
+      name: data.node_name,
+      ip: ipAddress,
+      type: data.node_type_icon,
+    };
+    Axios.post(`${url}/api/topology/addNode`, formData, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        if (response.status == 200) {
+          toggleNodes(response.data.nodes);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
-    <div className={classNames(classes["node"], "d-flex", "flex-column ")}>
-      <form
-        id="add-node-form"
-        className={classNames(
-          classes["node-properties"],
-          "d-flex",
-          "flex-column"
-        )}
-      >
-        <div className={classNames("d-flex")}>
-          <span className={classNames(classes["add-node-title"])}>
-            Nodes IP Addresses
-          </span>
-          <div
-            className={classNames(
-              classes["node-name"],
-              "d-flex",
-              "justify-content-between",
-              "align-items-center"
-            )}
-          >
-            <span>Name</span>
-            <input
-              type="text"
-              name="node_name"
-              className={classNames(classes["node-name-box"])}
-            />
-          </div>
-          {/* <div class="node-ip d-flex flex-row justify-content-between align-items-center">
-              <span>IP Address</span>
+    <NodeContext.Provider value={{ nodes, toggleNodes }}>
+      <div className={classNames(classes["node"], "d-flex", "flex-column ")}>
+        <form
+          id="add-node-form"
+          onSubmit={handleSubmit(onSubmit)}
+          className={classNames(
+            classes["node-properties"],
+            "d-flex",
+            "flex-column"
+          )}
+        >
+          <div className={classNames("d-flex")}>
+            <span className={classNames(classes["add-node-title"])}>
+              Nodes IP Addresses
+            </span>
+            <div
+              className={classNames(
+                classes["node-name"],
+                "d-flex",
+                "justify-content-between",
+                "align-items-center"
+              )}
+            >
+              <span>Name</span>
               <input
                 type="text"
-                name="IP_Address_field4"
-                class="ip-octet"
-                id="node-ip-octet1"
+                name="node_name"
+                className={classNames(classes["node-name-box"])}
+                {...register(`node_name`)}
               />
-              <input
-                type="text"
-                name="IP_Address_field3"
-                class="ip-octet"
-                id="node-ip-octet2"
-              />
-              <input
-                type="text"
-                name="IP_Address_field2"
-                class="ip-octet"
-                id="node-ip-octet3"
-              />
-              <input
-                type="text"
-                name="IP_Address_field1"
-                class="ip-octet"
-                id="node-ip-octet4"
-              />
-            </div> */}
-          <IpInput title={"IP address"} className={classes["node-ip"]} />
-        </div>
+            </div>
 
-        <div className={classNames("d-flex")}>
-          <div
-            className={classNames(
-              classes["node-type"],
-              "d-flex",
-              "justify-content-between",
-              "align-items-center"
-            )}
-          >
-            <span>Node Types :</span>
-
-            <Checkbox
-              type={"radio"}
-              title={"Core"}
-              id={"node-type-1"}
-              name={"node_type_icon"}
-              value={"core"}
-              className={classes["node-type-core-checkbox"]}
-            />
-
-            <Checkbox
-              type={"radio"}
-              title={"RTP Proxy"}
-              id={"node-type-2"}
-              name={"node_type_icon"}
-              value={"rtpProxy"}
-              className={classes["node-type-rtp-proxy-checkbox"]}
-            />
-
-            <Checkbox
-              type={"radio"}
-              title={"P-CSCF"}
-              id={"node-type-3"}
-              name={"node_type_icon"}
-              value={"pcscf"}
-              className={classes["node-type-pcscf-checkbox"]}
+            <IpInput
+              title={"IP address"}
+              className={classes["node-ip"]}
+              onChange={handleOnChangeIpAddress}
             />
           </div>
 
-          <button
-            type="submit"
-            className={classNames(classes["add-node-button"])}
-          >
-            Add Node
-          </button>
-        </div>
-      </form>
+          <div className={classNames("d-flex")}>
+            <div
+              className={classNames(
+                classes["node-type"],
+                "d-flex",
+                "justify-content-between",
+                "align-items-center"
+              )}
+            >
+              <span>Node Types :</span>
 
-      <MyTable />
+              <Radio
+                {...register(`node_type_icon`)}
+                title={"P-CSCF"}
+                id={"node-type-1"}
+                value="pcscf"
+                name={"node_type_icon"}
+                className={classes["node-type-core-checkbox"]}
+              />
 
-      {/* <table class="node-table">
-          <tr class="d-flex flex-row justify-content-around">
-            <th class="node-table-title d-flex justify-content-center align-items-center">
-              P-CSCF Nodes
-            </th>
-            <th class="node-table-title d-flex justify-content-center align-items-center">
-              RTP Proxy Nodes
-            </th>
-            <th class="node-table-title d-flex justify-content-center align-items-center">
-              Core Nodes
-            </th>
-          </tr>
+              <Radio
+                {...register(`node_type_icon`)}
+                title={"RTP Proxy"}
+                id={"node-type-2"}
+                value="rtpProxy"
+                name={"node_type_icon"}
+                className={classes["node-type-rtp-proxy-checkbox"]}
+              />
 
-          <tr class="d-flex flex-row justify-content-center">
-            <th class="node-table-title d-flex flex-row align-items-center">
-              <span> Node Name </span>
-            </th>
-            <th class="node-table-title d-flex flex-row align-items-center">
-              <span> IP Address </span>
-            </th>
-            <th class="node-table-title d-flex flex-row align-items-center">
-              <span> Status </span>
-            </th>
-          </tr>
+              <Radio
+                {...register(`node_type_icon`)}
+                title={"Core"}
+                id={"node-type-3"}
+                value="core"
+                name={"node_type_icon"}
+                className={classes["node-type-pcscf-checkbox"]}
+              />
+            </div>
+            <button
+              type="submit"
+              className={classNames(classes["add-node-button"])}
+            >
+              Add Node
+            </button>
+          </div>
+        </form>
 
-          <tr id="node-table-contents">
-            <td>
-              <div class="node-table-content">
-                <form
-                  id="1edit-form"
-                  class="d-flex flex-row justify-content-between align-items-center"
-                >
-                  <input
-                    type="text"
-                    id="pname"
-                    class="node-table-content-name"
-                    value="aaaa"
-                    disabled
-                  />
-                  <input
-                    type="text"
-                    id="pip"
-                    class="node-table-content-ip"
-                    value="bbbb"
-                    disabled
-                  />
-                  <input
-                    type="text"
-                    id="pstatus"
-                    class="node-table-content-status"
-                    value="cccc"
-                    disabled
-                  />
-                  <div class="node-table-content-icon d-flex flex-row">
-                    <img
-                      class="pencil p-1"
-                      id="${q.id}p"
-                      src="images/IMS_TOPOLOGY_images/pencil.svg"
-                    />
-                    <img
-                      class="trash p-1"
-                      id="${q.id}"
-                      src="images/IMS_TOPOLOGY_images/trash-simple.svg"
-                    />
-                    <img
-                      class="tick p-1"
-                      id="${q.id}pt"
-                      src="images/IMS_TOPOLOGY_images/tick.svg"
-                    />
-                    <img
-                      class="close"
-                      id="${q.id}pc"
-                      src="images/IMS_TOPOLOGY_images/close.svg"
-                    />
-                  </div>
-                </form>
-              </div>
-            </td>
-          </tr>
-        </table> */}
-      {/* <MyButton title={"Save"} className={classes["save-node-button"]} /> */}
-    </div>
+        <MyTable />
+      </div>
+    </NodeContext.Provider>
   );
 };
 

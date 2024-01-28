@@ -1,10 +1,10 @@
 import React, { forwardRef } from "react";
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import Axios from "axios";
-import classes from "./Checkbox.module.css";
+import classes from "./Radio.module.css";
 import classNames from "classnames";
 
-const Checkbox = forwardRef(({ title, id, name, className, ...rest }, ref) => {
+const Radio = forwardRef(({ title, id, name, className, ...rest }, ref) => {
   return (
     <div
       className={classNames(
@@ -20,8 +20,8 @@ const Checkbox = forwardRef(({ title, id, name, className, ...rest }, ref) => {
           rest.onChange(e);
         }}
         ref={ref}
-        className={classNames(classes["chb"], classes["chb-1"])}
-        type="checkbox"
+        className={classNames(classes["chb"], classes["chb-1-circle"])}
+        type="radio"
         id={id}
         name={name}
         // disabled
@@ -31,4 +31,4 @@ const Checkbox = forwardRef(({ title, id, name, className, ...rest }, ref) => {
   );
 });
 
-export { Checkbox };
+export { Radio };

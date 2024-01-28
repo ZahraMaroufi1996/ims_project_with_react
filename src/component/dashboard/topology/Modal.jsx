@@ -3,7 +3,7 @@ import React from "react";
 import classes from "./Modal.module.css";
 import classNames from "classnames";
 
-const Modal = ({ product, onClose, onConfirm }) => {
+const Modal = ({ node, onClose, onConfirm }) => {
   const handleConfirm = (event) => {
     onConfirm?.(event);
   };

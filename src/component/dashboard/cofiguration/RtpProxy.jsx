@@ -15,9 +15,9 @@ import classNames from "classnames";
 
 const RtpProxy = () => {
   const { register } = useFormContext();
-  const { General_type_icon1 } = useWatch();
+  const { Enable_Maximum_Call_Duration } = useWatch();
 
-  console.log({ General_type_icon1 });
+  console.log({ Enable_Maximum_Call_Duration });
   return (
     <div
       className={classNames(
@@ -46,7 +46,6 @@ const RtpProxy = () => {
           <span>Supported HD Codecs :</span>
           <Checkbox
             {...register("Supported_HD_Codecs_type_icon1")}
-            type={"checkbox"}
             title={"G.722"}
             id={"Supported-HD-Codecs-type-1"}
             name={"Supported_HD_Codecs_type_icon1"}
@@ -54,14 +53,18 @@ const RtpProxy = () => {
           />
           <Checkbox
             {...register("Supported_HD_Codecs_type_icon2")}
-            type={"checkbox"}
             title={"AMR-WB"}
             id={"Supported-HD-Codecs-type-2"}
             name={"Supported_HD_Codecs_type_icon2"}
             className={classes["RTP-Proxy-class-content-input1-checkbox"]}
           />
         </div>
-        <Switch title={"Enable SRTP"} id={"srtp"} name={"Enable_SRTP"} />
+        <Switch
+          title={"Enable SRTP"}
+          id={"srtp"}
+          name={"Enable_SRTP"}
+          {...register("Enable_SRTP")}
+        />
         <div
           className={classNames(
             classes["RTP-Proxy-class-content-input3"],
@@ -93,6 +96,7 @@ const RtpProxy = () => {
                 id={"Inbound-Port-Minimum"}
                 className={classes["port"]}
                 name={"Inbound_Port_Minimum"}
+                {...register("Inbound_Port_Minimum")}
               />
             </div>
 
@@ -108,6 +112,7 @@ const RtpProxy = () => {
                 id={"Inbound-Port-Maximum"}
                 className={classes["port"]}
                 name={"Inbound_Port_Maximum"}
+                {...register("Inbound_Port_Maximum")}
               />
             </div>
           </div>
@@ -143,6 +148,7 @@ const RtpProxy = () => {
                 id={"Outbound-Port-Minimum"}
                 className={classes["port"]}
                 name={"Outbound_Port_Minimum"}
+                {...register("Outbound_Port_Minimum")}
               />
             </div>
 
@@ -158,6 +164,7 @@ const RtpProxy = () => {
                 id={"Outbound-Port-Maximum"}
                 className={classes["port"]}
                 name={"Outbound_Port_Maximum"}
+                {...register("Outbound_Port_Maximum")}
               />
             </div>
           </div>
@@ -175,6 +182,7 @@ const RtpProxy = () => {
             title={"Enable Maximum Call Duration :"}
             id={"Enable-Call-Duration"}
             name={"Enable_Maximum_Call_Duration"}
+            {...register("Enable_Maximum_Call_Duration")}
           />
 
           <div
@@ -189,6 +197,7 @@ const RtpProxy = () => {
               className={classes["Call-Duration"]}
               name={"Call_Duration"}
               unit={"Second"}
+              {...register("Call_Duration")}
             />
           </div>
         </div>
@@ -207,6 +216,7 @@ const RtpProxy = () => {
             className={classes["RTP-Loss-Timeout"]}
             name={"RTP_Loss_Timeout"}
             unit={"Second"}
+            {...register("RTP_Loss_Timeout")}
           />
         </div>
       </div>

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useFormContext, useWatch } from "react-hook-form";
 import Axios from "axios";
 import classes from "./Scscf.module.css";
 import { InputComponent } from "./InputComponent";
 import classNames from "classnames";
 
 const Scscf = () => {
+  const { register } = useFormContext();
   return (
     <div
       className={classNames(
@@ -41,6 +43,7 @@ const Scscf = () => {
               name={"Minimum_Register_Time"}
               className={classes["register-time"]}
               unit={"S"}
+              {...register("Minimum_Register_Time")}
             />
           </div>
 
@@ -58,6 +61,7 @@ const Scscf = () => {
               name={"Maximum_Register_Time"}
               className={classes["register-time"]}
               unit={"S"}
+              {...register("Maximum_Register_Time")}
             />
           </div>
         </div>
@@ -84,6 +88,7 @@ const Scscf = () => {
               name={"s_shared_memory"}
               className={classes["memory"]}
               unit={"MB"}
+              {...register("s_shared_memory")}
             />
           </div>
 
@@ -101,6 +106,7 @@ const Scscf = () => {
               name={"s_private_memory"}
               className={classes["memory"]}
               unit={"MB"}
+              {...register("s_private_memory")}
             />
           </div>
         </div>

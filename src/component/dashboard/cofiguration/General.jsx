@@ -9,7 +9,7 @@ const General = () => {
   const { register } = useFormContext();
   // const { General_type_icon1 } = useWatch();
 
-  // console.log({ General_type_icon1 });
+  // console.log(useWatch());
 
   return (
     <div className={classNames(classes["general-class"])}>
@@ -27,6 +27,7 @@ const General = () => {
             )}
           >
             <InputComponent
+              {...register("IMS_Domain")}
               title={"IMS Domain*"}
               id={"ims-domain"}
               name={"IMS_Domain"}
@@ -54,7 +55,6 @@ const General = () => {
           >
             <Checkbox
               {...register(`General_type_icon1`)}
-              type={"checkbox"}
               title={"P-CSCF"}
               id={"General_type_1"}
               name={"General_type_icon1"}
@@ -63,7 +63,6 @@ const General = () => {
 
             <Checkbox
               {...register(`General_type_icon2`)}
-              type={"checkbox"}
               title={"S-CSCF"}
               id={"General-type-2"}
               name={"General_type_icon2"}
@@ -71,7 +70,6 @@ const General = () => {
             />
             <Checkbox
               {...register(`General_type_icon3`)}
-              type={"checkbox"}
               title={"I-CSCF"}
               id={"General-type-3"}
               name={"General_type_icon3"}

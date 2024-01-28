@@ -1,4 +1,6 @@
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import { useContext } from "react";
+import { NodeContext } from "../../../context/NodeContext";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import classes from "./MyTable.module.css";
@@ -11,15 +13,40 @@ import { Trash } from "../../icons/Trash";
 
 const MyTable = () => {
   const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
-  // const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token");
   const nodeTypeName = ["pcscf", "rtpProxy", "core"];
   const [curNode, setCurNode] = useState("");
   const [modal, setModal] = useState(false);
-  const [nodes, setNodes] = useState([]);
+  // const [nodes, setNodes] = useState([]);
 
-  useEffect(() => {
-    getTableInfo();
-  }, []);
+  const [selectedNode, setSelectedNode] = useState(null);
+  const { nodes, toggleNodes } = useContext(NodeContext);
+
+  const onModalConfirm = (node) => {
+    const data = {
+      id: Number(node.id),
+    };
+    setSelectedNode(null);
+    Axios.post(`${url}/api/topology/reactDeleteNode`, data, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        if (response.status == 200) {
+          toggleNodes(response.data.nodes);
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  // useEffect(() => {
+  //   getTableInfo();
+  // }, []);
 
   function getTableInfo() {
     Axios.get(`${url}/api/topology`, {
@@ -29,7 +56,7 @@ const MyTable = () => {
     })
       .then((response) => {
         const nodes = response.data.nodes;
-        setNodes(nodes);
+        toggleNodes(nodes);
         setCurNode("pcscf");
       })
       .catch((err) => {
@@ -167,10 +194,9 @@ const MyTable = () => {
                         <Pencil />
                       </div>
 
-                      <div onClick={() => setModal(true)}>
+                      <div onClick={() => setSelectedNode(item)}>
                         <Trash />
                       </div>
-                      {/* <Trash /> */}
                     </div>
                   </form>
                 </div>
@@ -179,7 +205,13 @@ const MyTable = () => {
           })}
         </tr>
       </table>
-      {modal && <Modal />}
+      {selectedNode && (
+        <Modal
+          node={selectedNode}
+          onClose={() => setSelectedNode(null)}
+          onConfirm={() => onModalConfirm(selectedNode)}
+        />
+      )}
     </>
   );
 };

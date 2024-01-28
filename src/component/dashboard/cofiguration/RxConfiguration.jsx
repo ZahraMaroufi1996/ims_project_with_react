@@ -5,6 +5,7 @@ import classes from "./RxConfiguration.module.css";
 import classNames from "classnames";
 import { InputComponent } from "./InputComponent";
 import { Checkbox } from "./Checkbox";
+import { Radio } from "../topology/Radio";
 import { Switch } from "./Switch";
 
 const RxConfiguration = () => {
@@ -80,6 +81,7 @@ const RxConfiguration = () => {
           name={"PCRF_FQDN"}
           id={"Rx-configuration-field2"}
           className={classes["rx-configuration-box"]}
+          {...register("PCRF_FQDN")}
         />
       </div>
 
@@ -96,6 +98,7 @@ const RxConfiguration = () => {
           name={"PCRF_Realm"}
           id={"Rx-configuration-field3"}
           className={classes["rx-configuration-box"]}
+          {...register("PCRF_Realm")}
         />
       </div>
 
@@ -109,23 +112,21 @@ const RxConfiguration = () => {
       >
         <span>Transport Protocol</span>
 
-        <Checkbox
+        <Radio
           {...register(`Transport_Protocol`)}
           title={"SCTP"}
           id={"Transport-Protocol-type-1"}
           name={"Transport_Protocol"}
           value={"SCTP"}
           className={classes["transport-protocol"]}
-          type={"radio"}
         />
-        <Checkbox
+        <Radio
           {...register(`Transport_Protocol`)}
           title={"TCP"}
           id={"Transport-Protocol-type-2"}
           name={"Transport_Protocol"}
           value={"TCP"}
           className={classes["transport-protocol"]}
-          type={"radio"}
         />
       </div>
 
@@ -141,6 +142,7 @@ const RxConfiguration = () => {
           title={"Rx Source Port"}
           id={"Enable-Rx-Source-Port"}
           name={"Enable_Rx_Source_Port"}
+          {...register("Enable_Rx_Source_Port")}
         />
         <input
           {...register("Rx_Source_Port")}
