@@ -8,6 +8,7 @@ import { Radio } from "../topology/Radio";
 import classNames from "classnames";
 import { MyButton } from "../cofiguration/MyButton";
 import { MyTable } from "./MyTable";
+import { ErrorShow } from "../ErrorShow";
 import { NodeContext } from "../../../context/NodeContext";
 
 const Node = () => {
@@ -33,7 +34,7 @@ const Node = () => {
       ip: ipAddress,
       type: data.node_type_icon,
     };
-    Axios.post(`${url}/api/topology/addNode`, formData, {
+    Axios.post(`${url}/api/topology/reactAddNode`, formData, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -138,6 +139,7 @@ const Node = () => {
         </form>
 
         <MyTable />
+        <ErrorShow />
       </div>
     </NodeContext.Provider>
   );

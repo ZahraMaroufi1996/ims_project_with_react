@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Axios from "axios";
 import classes from "./index.module.css";
 import classNames from "classnames";
@@ -11,11 +11,29 @@ const IpInput = ({ onChange, title, className }) => {
     field4: "",
   });
 
+  // const input1Ref = useRef(null);
+  // const input2Ref = useRef(null);
+  // const input3Ref = useRef(null);
+  // const input4Ref = useRef(null);
+
   const handleChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
+
+  // // Function to move focus to the next input field
+  // function moveFocus(nextInputRef) {
+  //   nextInputRef.current.focus();
+  // }
+
+  // // Function to handle the Enter key press
+  // function handleKeyPress(event, nextInputRef) {
+  //   if (event.key === "Enter") {
+  //     // Move focus to the next input field
+  //     moveFocus(nextInputRef);
+  //   }
+  // }
 
   const getNetworkInfo = () => {
     Axios.get(`${url}/api/topology`)
@@ -70,6 +88,8 @@ const IpInput = ({ onChange, title, className }) => {
     >
       <span>{title}</span>
       <input
+        // ref={input1Ref}
+        // onKeyDown={(event) => handleKeyPress(event, input2Ref)}
         type="text"
         name="field1"
         value={form.field1}
@@ -78,6 +98,8 @@ const IpInput = ({ onChange, title, className }) => {
         onChange={handleChange}
       />
       <input
+        // ref={input2Ref}
+        // onKeyDown={(event) => handleKeyPress(event, input3Ref)}
         type="text"
         name="field2"
         value={form.field2}
@@ -86,6 +108,8 @@ const IpInput = ({ onChange, title, className }) => {
         onChange={handleChange}
       />
       <input
+        // ref={input3Ref}
+        // onKeyDown={(event) => handleKeyPress(event, input4Ref)}
         type="text"
         name="field3"
         value={form.field3}
@@ -94,6 +118,8 @@ const IpInput = ({ onChange, title, className }) => {
         onChange={handleChange}
       />
       <input
+        // ref={input4Ref}
+        // onKeyDown={(event) => handleKeyPress(event, input1Ref)}
         type="text"
         name="field4"
         value={form.field4}

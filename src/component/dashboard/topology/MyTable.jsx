@@ -44,9 +44,9 @@ const MyTable = () => {
       });
   };
 
-  // useEffect(() => {
-  //   getTableInfo();
-  // }, []);
+  useEffect(() => {
+    getTableInfo();
+  }, []);
 
   function getTableInfo() {
     Axios.get(`${url}/api/topology`, {
