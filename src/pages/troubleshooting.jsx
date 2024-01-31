@@ -1,10 +1,8 @@
 import React from "react";
 import classes from "./troubleshooting.module.css";
 import classNames from "classnames";
-import { LeftElement } from "../component/dashboard/troubleshooting/LeftElement";
-import { RightElement } from "../component/dashboard/troubleshooting/RightElement";
-
-// import { TopologyIcon } from "../icons/TopologyIcon";
+import { PingElement } from "../component/dashboard/troubleshooting/PingElement";
+import { PacketElement } from "../component/dashboard/troubleshooting/PacketElement";
 
 const Troubleshooting = () => {
   return (
@@ -17,13 +15,13 @@ const Troubleshooting = () => {
           "align-items-center"
         )}
       >
-        <LeftElement />
+        <PingElement />
       </div>
 
       <div
         className={classNames(classes["main-content"], "d-flex", "flex-column")}
       >
-        <RightElement />
+        <PacketElement />
       </div>
     </div>
   );

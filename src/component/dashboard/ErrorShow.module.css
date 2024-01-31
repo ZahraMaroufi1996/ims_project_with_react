@@ -2,15 +2,20 @@
   z-index: 1;
   width: 20.83vw;
   height: 9.26vh;
-  background-color: #1a4348;
   right: 4.166vw;
   bottom: 7.41vh;
   position: fixed;
-  background-color: rgba(198, 81, 97);
   border-radius: 0.65vh;
-  /* display: none; */
+  display: block;
 }
 
+.success-color {
+  background-color: #58cc87;
+}
+
+.error-color {
+  background-color: rgba(198, 81, 97);
+}
 .error-close-icon {
   color: white;
   font-size: 20px;

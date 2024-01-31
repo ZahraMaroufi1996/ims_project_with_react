@@ -139,7 +139,6 @@ const Node = () => {
         </form>
 
         <MyTable />
-        <ErrorShow />
       </div>
     </NodeContext.Provider>
   );

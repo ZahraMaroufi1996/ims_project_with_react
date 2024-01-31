@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Axios from "axios";
-import classes from "./RightElement.module.css";
+import classes from "./PacketElement.module.css";
 import { SelectComponent } from "./SelectComponent";
 import { InputComponent } from "../cofiguration/InputComponent";
 import classNames from "classnames";
 import { MyButton } from "../cofiguration/MyButton";
 
-const RightElement = () => {
+const PacketElement = () => {
   return (
     <>
       <span className={classNames(classes["right-side-content-title"])}>
@@ -61,4 +61,4 @@ const RightElement = () => {
   );
 };
 
-export { RightElement };
+export { PacketElement };

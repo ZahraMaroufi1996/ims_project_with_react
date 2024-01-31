@@ -5,10 +5,10 @@ import { VirtualIps } from "../component/dashboard/topology/VirtualIps";
 import { ErrorContext } from "../../src/context/ErrorContext";
 
 const Topology = () => {
-  const [error, setError] = useState({ hasError: false });
+  const [error, setError] = useState();
 
-  const toggleError = () => {
-    setError((oldTheme) => ({ ...oldTheme, isDarkMode: !oldTheme.isDarkMode }));
+  const toggleError = (value) => {
+    setError(value);
   };
 
   return (

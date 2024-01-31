@@ -1,12 +1,28 @@
-import React, { forwardRef } from "react";
+import React, { useRef } from "react";
 import classes from "./ErrorShow.module.css";
 import classNames from "classnames";
 import { Error } from "../icons/Error";
 import { Success } from "../icons/Success";
 
-const ErrorShow = ({ errorMessage = "Hiiiiii" }) => {
+const ErrorShow = ({ errorMessage }) => {
+  const errorBox = useRef(null);
+  const style = { display: "block" };
+
+  function hanleOnClick() {
+    console.log(errorBox.current);
+    errorBox.current.style.display = "none";
+  }
+
   return (
-    <div className={classNames(classes["show-error"])}>
+    <div
+      style={style}
+      className={
+        errorMessage !== "success"
+          ? classNames(classes["show-error"], classes["error-color"])
+          : classNames(classes["show-error"], classes["success-color"])
+      }
+      ref={errorBox}
+    >
       <div
         className={classNames(
           "h-100",
@@ -17,7 +33,12 @@ const ErrorShow = ({ errorMessage = "Hiiiiii" }) => {
           "align-items-center"
         )}
       >
-        <span className={classNames(classes["error-close-icon"])}>&times;</span>
+        <span
+          className={classNames(classes["error-close-icon"])}
+          onClick={hanleOnClick}
+        >
+          &times;
+        </span>
 
         <div
           id="error-content"
@@ -28,11 +49,7 @@ const ErrorShow = ({ errorMessage = "Hiiiiii" }) => {
             "align-items-center"
           )}
         >
-          {/* <img
-            src="images/success Icon.svg"
-            className={classNames(classes["error-icon"])}
-          /> */}
-          {errorMessage ? (
+          {errorMessage !== "success" ? (
             <>
               <Error />
               <p
@@ -44,7 +61,7 @@ const ErrorShow = ({ errorMessage = "Hiiiiii" }) => {
             </>
           ) : (
             <>
-              <Success />{" "}
+              <Success />
               <p
                 id="error-message"
                 className={classNames(classes["error-message"])}
@@ -53,14 +70,6 @@ const ErrorShow = ({ errorMessage = "Hiiiiii" }) => {
               </p>
             </>
           )}
-          {/* <Error />
-          <Success />
-          <p
-            id="error-message"
-            className={classNames(classes["error-message"])}
-          >
-            successfull message!
-          </p> */}
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import { useContext } from "react";
 import { NodeContext } from "../../../context/NodeContext";
+import { ErrorContext } from "../../../../src/context/ErrorContext";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import classes from "./MyTable.module.css";
@@ -17,10 +18,10 @@ const MyTable = () => {
   const nodeTypeName = ["pcscf", "rtpProxy", "core"];
   const [curNode, setCurNode] = useState("");
   const [modal, setModal] = useState(false);
-  // const [nodes, setNodes] = useState([]);
 
   const [selectedNode, setSelectedNode] = useState(null);
   const { nodes, toggleNodes } = useContext(NodeContext);
+  const { error, toggleError } = useContext(ErrorContext);
 
   const onModalConfirm = (node) => {
     const data = {
@@ -37,10 +38,12 @@ const MyTable = () => {
         console.log(response);
         if (response.status == 200) {
           toggleNodes(response.data.nodes);
+          toggleError("success");
         }
       })
       .catch((error) => {
         console.log(error.message);
+        toggleError(error.message);
       });
   };
 
