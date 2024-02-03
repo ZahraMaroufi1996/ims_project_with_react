@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import Axios from "axios";
 import classes from "./PingElement.module.css";
 import classNames from "classnames";
@@ -8,36 +9,72 @@ import { MyButton } from "../cofiguration/MyButton";
 
 const PingElement = () => {
   const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+  } = useForm();
   const [ipAddress, setIpAddress] = useState();
   const [node, setNode] = useState();
+  const [commandResult, setCommandResult] = useState("");
 
   const handleOnChangeIpAddress = (value) => {
     setIpAddress(value);
   };
 
-  const handleOnChangeNode = (value) => {
-    setNode(value);
-  };
+  // const handleOnChangeNode = (value) => {
+  //   setNode(value);
+  // };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const token = localStorage.getItem("token");
+
+  //   const formData = {
+  //     ip: ipAddress,
+  //     node: node,
+  //   };
+
+  //   // console.log(formData);
+  //   Axios.post(`${url}/api/troubleshooting/ping`, formData, {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Authorization: `Bearer ${token}`,
+  //     },
+  //   })
+  //     .then((response) => {
+  //       if (response.status == 200)
+  //         // toggleError("success");
+  //         setCommandResult(response.data.commandResult);
+  //       console.log("success");
+  //     })
+  //     .catch((error) => {
+  //       // toggleError(error.message);
+  //       console.log(error);
+  //     });
+  // };
+
+  const onSubmit = (data) => {
     const token = localStorage.getItem("token");
-
     const formData = {
-      SubnetMask: ipAddress,
+      ...data,
+      ping_ip: ipAddress,
     };
-
-    Axios.post(`${url}/api/topology/networkDefinition`, formData, {
+    // console.log(data);
+    Axios.post(`${url}/api/troubleshooting/ping`, formData, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
     })
       .then((response) => {
-        if (response.status == 200) toggleError("success");
+        // console.log(response);
+        setCommandResult(response.data.commandResult);
+        console.log("success");
       })
       .catch((error) => {
-        toggleError(error.message);
+        console.log(error);
       });
   };
 
@@ -61,16 +98,22 @@ const PingElement = () => {
             "justify-content-between",
             "align-items-start"
           )}
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <div
             className={classNames(
               classes["node"],
               "d-flex",
-              "align-items-center"
+              "align-items-center",
+              "justify-content-start"
             )}
           >
-            <SelectComponent onChange={handleOnChangeNode} />
+            <SelectComponent
+              title={"Node"}
+              {...register(`node_type`)}
+              id={"ping-node-id"}
+              {...register(`ping_node_type`)}
+            />
           </div>
           <div
             className={classNames("d-flex", "flex-column", "align-items-end")}
@@ -95,7 +138,11 @@ const PingElement = () => {
           <span className={classNames(classes["command-result-title"])}>
             Command result
           </span>
-          <div className={classNames(classes["command-result-content"])}></div>
+          <div className={classNames(classes["command-result-content"])}>
+            <p p className={classNames(classes["scrollable-text"])}>
+              {commandResult}
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ const InputComponent = forwardRef(
             rest.onChange(e);
           }}
         />
-        {unit ? <span>MB</span> : ""}
+        {unit ? <span>{unit}</span> : ""}
       </>
     );
   }
