@@ -9,7 +9,7 @@ const SelectComponent = forwardRef(({ title, id, replace, ...rest }, ref) => {
 
   return (
     <>
-      <label htmlForfor="nodes">{title}</label>
+      <label htmlForfor={id}>{title}</label>
       <select
         // name="nodes"
         // id="nodes"

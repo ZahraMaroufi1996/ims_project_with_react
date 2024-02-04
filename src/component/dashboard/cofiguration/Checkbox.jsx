@@ -10,7 +10,7 @@ const Checkbox = forwardRef(({ title, id, name, className, ...rest }, ref) => {
       className={classNames(
         className,
         "d-flex",
-        "justify-content-between",
+        "justify-content-around",
         "align-items-center"
       )}
     >
@@ -26,7 +26,9 @@ const Checkbox = forwardRef(({ title, id, name, className, ...rest }, ref) => {
         name={name}
         // disabled
       />
-      <label for={id}>{title}</label>
+      <label for={id} className={classNames(classes["checkbox-label"])}>
+        {title}
+      </label>
     </div>
   );
 });

@@ -20,11 +20,12 @@
   border: 0.092vh solid green;
   width: 29.06vw;
   height: 3.7vh;
-  margin-left: 3.88vw;
+  /* margin-left: 3.88vw; */
+  margin-left: 2.5vw;
 }
 
 .general-class-content-title {
-  margin-top: 0.98vh;
+  /* margin-top: 0.98vh; */
   margin-left: 0;
   width: 3.17vw;
   height: 2.22vh;
@@ -41,18 +42,22 @@
   margin-left: 5.57vw;
 }
 
-.general-class-content-field2-checkboxes {
+/* .general-class-content-field2-checkboxes {
   height: 2.037vh;
   width: 22.45vw;
   border: 1px solid green;
   margin-left: 5px;
-}
+} */
 
 .general-class-content-field2-checkbox {
   height: 2.04vh;
   width: 4vw;
   border: 1px solid black;
 }
+
+/* label.general-class-content-field2-checkbox {
+  color: red;
+} */
 
 .general-class-content-field1-box {
   width: 21.125vw;
@@ -76,4 +81,9 @@ input[type="text"] {
   text-align: center;
   color: #2fbc8c;
   border: none;
+}
+
+.enable-homer-title {
+  height: 2.037vh;
+  width: 6.51vw;
 }

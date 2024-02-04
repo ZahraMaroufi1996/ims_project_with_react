@@ -110,7 +110,6 @@ const PingElement = () => {
           >
             <SelectComponent
               title={"Node"}
-              {...register(`node_type`)}
               id={"ping-node-id"}
               {...register(`ping_node_type`)}
             />

@@ -21,3 +21,9 @@
 .chb-1:checked + label::before {
   background-color: #68d5b0;
 }
+
+.checkbox-label {
+  color: #1a4348;
+  font-size: 1.3vh;
+  font-family: "FiraGO", sans-serif;
+}

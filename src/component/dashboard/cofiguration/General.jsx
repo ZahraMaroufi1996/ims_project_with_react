@@ -44,38 +44,32 @@ const General = () => {
             "align-items-center"
           )}
         >
-          <span>Enable Homer In :</span>
-          <div
-            className={classNames(
-              classes["general-class-content-field2-checkboxes"],
-              "d-flex",
-              "justify-content-around",
-              "align-items-center"
-            )}
-          >
-            <Checkbox
-              {...register(`General_type_icon1`)}
-              title={"P-CSCF"}
-              id={"General_type_1"}
-              name={"General_type_icon1"}
-              className={classes["general-class-content-field2-checkbox"]}
-            />
+          <span className={classNames(classes["enable-homer-title"])}>
+            Enable Homer In :
+          </span>
 
-            <Checkbox
-              {...register(`General_type_icon2`)}
-              title={"S-CSCF"}
-              id={"General-type-2"}
-              name={"General_type_icon2"}
-              className={classes["general-class-content-field2-checkbox"]}
-            />
-            <Checkbox
-              {...register(`General_type_icon3`)}
-              title={"I-CSCF"}
-              id={"General-type-3"}
-              name={"General_type_icon3"}
-              className={classes["general-class-content-field2-checkbox"]}
-            />
-          </div>
+          <Checkbox
+            {...register(`General_type_icon1`)}
+            title={"P-CSCF"}
+            id={"General_type_1"}
+            name={"General_type_icon1"}
+            className={classes["general-class-content-field2-checkbox"]}
+          />
+
+          <Checkbox
+            {...register(`General_type_icon2`)}
+            title={"S-CSCF"}
+            id={"General-type-2"}
+            name={"General_type_icon2"}
+            className={classes["general-class-content-field2-checkbox"]}
+          />
+          <Checkbox
+            {...register(`General_type_icon3`)}
+            title={"I-CSCF"}
+            id={"General-type-3"}
+            name={"General_type_icon3"}
+            className={classes["general-class-content-field2-checkbox"]}
+          />
         </div>
       </div>
     </div>
