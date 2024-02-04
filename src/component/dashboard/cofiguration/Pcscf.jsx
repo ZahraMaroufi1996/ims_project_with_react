@@ -30,13 +30,18 @@ const Pcscf = () => {
           "justify-content-between"
         )}
       >
-        <Switch
-          title={"Enable TLS"}
-          id={"ipsec"}
-          name={"Enable_IPsec"}
-          {...register("Enable_IPsec")}
-          // className={classes["P-CSCF-class-content-field1"]}
-        />
+        <div className={classNames("d-flex" , "align-item-center")}>
+          <span className={classNames(classes["P-CSCF-class-content-title"])}>
+            P-CSCF
+          </span>
+          <Switch
+            title={"Enable TLS"}
+            id={"ipsec"}
+            name={"Enable_IPsec"}
+            {...register("Enable_IPsec")}
+            className={classes["P-CSCF-class-content-field1"]}
+          />
+        </div>
 
         <div
           className={classNames(
@@ -76,7 +81,7 @@ const Pcscf = () => {
           title={"Enable IPsec"}
           id={"tls"}
           name={"Enable_TLS"}
-          className={"P-CSCF-class-content-field3"}
+          className={classes["P-CSCF-class-content-field3"]}
           {...register("Enable_TLS")}
         />
 

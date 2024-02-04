@@ -35,35 +35,41 @@ const RtpProxy = () => {
           "justify-content-between"
         )}
       >
-        <div
-          className={classNames(
-            classes["RTP-Proxy-class-content-input1"],
-            "d-flex",
-            "align-items-center",
-            "justify-content-between"
-          )}
-        >
-          <span>Supported HD Codecs :</span>
-          <Checkbox
-            {...register("Supported_HD_Codecs_type_icon1")}
-            title={"G.722"}
-            id={"Supported-HD-Codecs-type-1"}
-            name={"Supported_HD_Codecs_type_icon1"}
-            className={classes["RTP-Proxy-class-content-input1-checkbox"]}
-          />
-          <Checkbox
-            {...register("Supported_HD_Codecs_type_icon2")}
-            title={"AMR-WB"}
-            id={"Supported-HD-Codecs-type-2"}
-            name={"Supported_HD_Codecs_type_icon2"}
-            className={classes["RTP-Proxy-class-content-input1-checkbox"]}
-          />
+        <div className={classNames("d-flex", "align-item-center")}>
+          <span className={classNames(classes["RTP-Proxy-class-content-title"])}>
+            RTP Proxy
+          </span>
+          <div
+            className={classNames(
+              classes["RTP-Proxy-class-content-input1"],
+              "d-flex",
+              "align-items-center",
+              "justify-content-between"
+            )}
+          >
+            <span>Supported HD Codecs :</span>
+            <Checkbox
+              {...register("Supported_HD_Codecs_type_icon1")}
+              title={"G.722"}
+              id={"Supported-HD-Codecs-type-1"}
+              name={"Supported_HD_Codecs_type_icon1"}
+              className={classes["RTP-Proxy-class-content-input1-checkbox"]}
+            />
+            <Checkbox
+              {...register("Supported_HD_Codecs_type_icon2")}
+              title={"AMR-WB"}
+              id={"Supported-HD-Codecs-type-2"}
+              name={"Supported_HD_Codecs_type_icon2"}
+              className={classes["RTP-Proxy-class-content-input1-checkbox"]}
+            />
+          </div>
         </div>
         <Switch
           title={"Enable SRTP"}
           id={"srtp"}
           name={"Enable_SRTP"}
           {...register("Enable_SRTP")}
+          className={classes["RTP-Proxy-class-content-input2"]}
         />
         <div
           className={classNames(
@@ -183,6 +189,7 @@ const RtpProxy = () => {
             id={"Enable-Call-Duration"}
             name={"Enable_Maximum_Call_Duration"}
             {...register("Enable_Maximum_Call_Duration")}
+            className={classes["RTP-Proxy-class-content-input5-switch"]}
           />
 
           <div
@@ -210,14 +217,16 @@ const RtpProxy = () => {
             "justify-content-between"
           )}
         >
-          <InputComponent
-            title={"RTP Loss Timeout :"}
-            id={"RTP-Loss-Timeout"}
-            className={classes["RTP-Loss-Timeout"]}
-            name={"RTP_Loss_Timeout"}
-            unit={"Second"}
-            {...register("RTP_Loss_Timeout")}
-          />
+          <label for={"RTP-Loss-Timeout"}>{"RTP Loss Timeout :"}</label>
+          <div>
+            <InputComponent
+              id={"RTP-Loss-Timeout"}
+              className={classes["RTP-Loss-Timeout"]}
+              name={"RTP_Loss_Timeout"}
+              unit={"Second"}
+              {...register("RTP_Loss_Timeout")}
+            />
+          </div>
         </div>
       </div>
     </div>

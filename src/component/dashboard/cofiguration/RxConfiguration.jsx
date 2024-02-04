@@ -143,14 +143,22 @@ const RxConfiguration = () => {
           id={"Enable-Rx-Source-Port"}
           name={"Enable_Rx_Source_Port"}
           {...register("Enable_Rx_Source_Port")}
+          className={classes["P-CSCF-class-Rx-configuration-field5-switch"]}
+          
         />
-        <input
+        {/* <input
           {...register("Rx_Source_Port")}
           type="text"
           id="Rx-Source-Port"
           className={classes["Rx-Source-Port"]}
           name="Rx_Source_Port"
           disabled
+        /> */}
+           <InputComponent
+          name={"Rx_Source_Port"}
+          id={"Rx-Source-Port"}
+          className={classes["Rx-Source-Port"]}
+          {...register("Rx_Source_Port")}
         />
       </div>
     </div>

@@ -27,7 +27,14 @@
   width: 19.27vw;
   height: 3.7vh;
   border-radius: 0.83vh;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.P-CSCF-class-Rx-configuration-field5-switch {
+  width: 9.5vw;
+  height: 1.94vh;
+  border-radius: 0.83vh;
+  /* background-color: red; */
 }
 
 .Rx-Source-Port {
@@ -50,5 +57,5 @@
   width: 3.3vw;
   height: 2.037vh;
   border-radius: 0.83vh;
-  background-color: red;
+  /* background-color: red; */
 }

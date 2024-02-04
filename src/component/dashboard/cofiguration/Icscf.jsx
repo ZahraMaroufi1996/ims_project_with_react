@@ -22,38 +22,47 @@ const Icscf = () => {
 
       <div
         className={classNames(
-          classes["I-CSCF-class-content-input"],
+          classes["I-CSCF-class-content-inputs"],
           "d-flex",
-          "justify-content-between ",
+          "justify-content-between",
           "align-items-center"
         )}
       >
-        <InputComponent
-          title={"Shared Memory*"}
-          id={"icscf-shared-memory"}
-          name={"i_shared_memory"}
-          className={classes["memory"]}
-          unit={"MB"}
-          {...register("i_shared_memory")}
-        />
-      </div>
+        <div
+          className={classNames(
+            classes["I-CSCF-class-content-input"],
+            "d-flex",
+            "justify-content-between ",
+            "align-items-center"
+          )}
+        >
+          <InputComponent
+            title={"Shared Memory*"}
+            id={"icscf-shared-memory"}
+            name={"i_shared_memory"}
+            className={classes["memory"]}
+            unit={"MB"}
+            {...register("i_shared_memory")}
+          />
+        </div>
 
-      <div
-        className={classNames(
-          classes["I-CSCF-class-content-input"],
-          "d-flex",
-          "justify-content-between ",
-          "align-items-center"
-        )}
-      >
-        <InputComponent
-          title={"Private Memory*"}
-          id={"icscf-private-memory"}
-          name={"i_private_memory"}
-          className={classes["memory"]}
-          unit={"MB"}
-          {...register("i_private_memory")}
-        />
+        <div
+          className={classNames(
+            classes["I-CSCF-class-content-input"],
+            "d-flex",
+            "justify-content-between ",
+            "align-items-center"
+          )}
+        >
+          <InputComponent
+            title={"Private Memory*"}
+            id={"icscf-private-memory"}
+            name={"i_private_memory"}
+            className={classes["memory"]}
+            unit={"MB"}
+            {...register("i_private_memory")}
+          />
+        </div>
       </div>
     </div>
   );

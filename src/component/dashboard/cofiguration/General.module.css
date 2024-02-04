@@ -67,7 +67,7 @@
 }
 
 label,
-span {
+span , p{
   color: #1a4348;
   font-size: 1.48vh;
   font-family: "FiraGO", sans-serif;

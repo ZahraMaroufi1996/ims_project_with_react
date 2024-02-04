@@ -20,6 +20,29 @@
   border-radius: 0.83vh;
 }
 
+.P-CSCF-class-content-title{
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+  color: #83a79a;
+  width: 3.5vw;
+  height: 2.22vh;
+  margin-left: 0.1vw;
+}
+
+.P-CSCF-class-content-field1,
+.P-CSCF-class-content-field3 {
+  width: 8.62vw;
+  height: 1.94vh;
+  border-radius: 0.83vh;
+}
+
+.P-CSCF-class-content-field1{
+  margin-left: 2.12vw;
+}
+
+.P-CSCF-class-content-field3{
+  margin-left: 5.51vw;
+}
 .P-CSCF-class-content-field2 {
   border: 1px solid red;
   width: 28.82vw;
@@ -33,7 +56,7 @@
 }
 
 .P-CSCF-class-content-field4 {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 28.95vw;
   height: 3.7vh;
   margin-left: 5.51vw;

@@ -31,38 +31,47 @@ const Scscf = () => {
 
           <div
             className={classNames(
-              classes["S-CSCF-class-content-input"],
+              classes["S-CSCF-class-content-input12"],
               "d-flex",
               "justify-content-between ",
               "align-items-center"
             )}
           >
-            <InputComponent
-              title={"Minimum Register Time"}
-              id={"Minimum-Register-Time"}
-              name={"Minimum_Register_Time"}
-              className={classes["register-time"]}
-              unit={"S"}
-              {...register("Minimum_Register_Time")}
-            />
-          </div>
+            <div
+              className={classNames(
+                classes["S-CSCF-class-content-input1"],
+                "d-flex",
+                "justify-content-between ",
+                "align-items-center"
+              )}
+            >
+              <InputComponent
+                title={"Minimum Register Time"}
+                id={"Minimum-Register-Time"}
+                name={"Minimum_Register_Time"}
+                className={classes["register-time"]}
+                unit={"S"}
+                {...register("Minimum_Register_Time")}
+              />
+            </div>
 
-          <div
-            className={classNames(
-              classes["S-CSCF-class-content-input"],
-              "d-flex",
-              "justify-content-between ",
-              "align-items-center"
-            )}
-          >
-            <InputComponent
-              title={"Maximum Register Time"}
-              id={"Maximum-Register-Time"}
-              name={"Maximum_Register_Time"}
-              className={classes["register-time"]}
-              unit={"S"}
-              {...register("Maximum_Register_Time")}
-            />
+            <div
+              className={classNames(
+                classes["S-CSCF-class-content-input2"],
+                "d-flex",
+                "justify-content-between ",
+                "align-items-center"
+              )}
+            >
+              <InputComponent
+                title={"Maximum Register Time"}
+                id={"Maximum-Register-Time"}
+                name={"Maximum_Register_Time"}
+                className={classes["register-time"]}
+                unit={"S"}
+                {...register("Maximum_Register_Time")}
+              />
+            </div>
           </div>
         </div>
 

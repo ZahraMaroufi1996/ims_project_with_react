@@ -23,7 +23,7 @@ const InputComponent = forwardRef(
             rest.onChange(e);
           }}
         />
-        {unit ? <span>{unit}</span> : ""}
+        {unit ? <span className={classNames(classes["unit"])}>{unit}</span> : ""}
       </>
     );
   }
