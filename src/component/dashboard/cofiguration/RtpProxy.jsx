@@ -17,7 +17,9 @@ const RtpProxy = () => {
   const { register } = useFormContext();
   const { Enable_Maximum_Call_Duration } = useWatch();
 
-  console.log({ Enable_Maximum_Call_Duration });
+  // console.log({ Enable_Maximum_Call_Duration });
+  console.log(useWatch());
+
   return (
     <div
       className={classNames(
@@ -36,7 +38,9 @@ const RtpProxy = () => {
         )}
       >
         <div className={classNames("d-flex", "align-item-center")}>
-          <span className={classNames(classes["RTP-Proxy-class-content-title"])}>
+          <span
+            className={classNames(classes["RTP-Proxy-class-content-title"])}
+          >
             RTP Proxy
           </span>
           <div

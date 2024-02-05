@@ -4,12 +4,20 @@ import Axios from "axios";
 import classes from "./RxConfiguration.module.css";
 import classNames from "classnames";
 import { InputComponent } from "./InputComponent";
+import { IpInput } from "../topology/ipInput";
 import { Checkbox } from "./Checkbox";
 import { Radio } from "../topology/Radio";
 import { Switch } from "./Switch";
 
 const RxConfiguration = () => {
   const { register } = useFormContext();
+
+  const [pcrfIpAddress, setPcrfIpAddress] = useState("");
+
+  const handleOnChangeIpAddress = (value) => {
+    setPcrfIpAddress(value);
+  };
+
   return (
     <div
       className={classNames(
@@ -20,54 +28,16 @@ const RxConfiguration = () => {
         "align-items-center"
       )}
     >
-      {/* <div class="P-CSCF-class-Rx-configuration-field1 d-flex flex-row justify-content-between align-items-center">
-        <span>PCRF IP Address*</span>
-
-        <input
-          type="text"
-          name="PCRF_IP_Address_box4"
-          class="ip-octet"
-          id="PCRF-IP-Address-box1"
-          disabled
-        />
-        <input
-          type="text"
-          name="PCRF_IP_Address_box3"
-          class="ip-octet"
-          id="PCRF-IP-Address-box2"
-          disabled
-        />
-        <input
-          type="text"
-          name="PCRF_IP_Address_box2"
-          class="ip-octet"
-          id="PCRF-IP-Address-box3"
-          disabled
-        />
-        <input
-          type="text"
-          name="PCRF_IP_Address-box1"
-          class="ip-octet"
-          id="PCRF-IP-Address-box4"
-          disabled
+      <div className={classNames("d-flex", "align-item-center")}>
+        <span className={classNames(classes["RTP-Proxy-class-content-title"])}>
+          Rx Configuration
+        </span>
+        <IpInput
+          title={"PCRF IP Address"}
+          className={classes["P-CSCF-class-Rx-configuration-field1"]}
+          onChange={handleOnChangeIpAddress}
         />
       </div>
-
-
-      <div class="P-CSCF-class-Rx-configuration-field5 d-flex justify-content-between align-items-center">
-        <span>Rx Source Port</span>
-        <label class="switch">
-          <input
-            type="checkbox"
-            id="Enable-Rx-Source-Port"
-            name="Enable-Rx-Source-Port"
-            disabled
-          />
-          <span class="slider round"></span>
-        </label>
-        <input type="text" id="Rx-Source-Port" name="Rx_Source_Port" disabled />
-      </div> */}
-
       <div
         className={classNames(
           classes["P-CSCF-class-Rx-configuration-field2"],
@@ -144,17 +114,8 @@ const RxConfiguration = () => {
           name={"Enable_Rx_Source_Port"}
           {...register("Enable_Rx_Source_Port")}
           className={classes["P-CSCF-class-Rx-configuration-field5-switch"]}
-          
         />
-        {/* <input
-          {...register("Rx_Source_Port")}
-          type="text"
-          id="Rx-Source-Port"
-          className={classes["Rx-Source-Port"]}
-          name="Rx_Source_Port"
-          disabled
-        /> */}
-           <InputComponent
+        <InputComponent
           name={"Rx_Source_Port"}
           id={"Rx-Source-Port"}
           className={classes["Rx-Source-Port"]}

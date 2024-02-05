@@ -2,6 +2,7 @@ import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import { useContext } from "react";
 import { NodeContext } from "../../../context/NodeContext";
 import { ErrorContext } from "../../../../src/context/ErrorContext";
+import { TopologyDataContext } from "../../../context/TopologyDataContext";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import classes from "./MyTable.module.css";
@@ -13,15 +14,15 @@ import { Close } from "../../icons/Close";
 import { Trash } from "../../icons/Trash";
 
 const MyTable = () => {
-  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
+  const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
   const token = localStorage.getItem("token");
   const nodeTypeName = ["pcscf", "rtpProxy", "core"];
   const [curNode, setCurNode] = useState("");
   const [modal, setModal] = useState(false);
-
   const [selectedNode, setSelectedNode] = useState(null);
   const { nodes, toggleNodes } = useContext(NodeContext);
   const { error, toggleError } = useContext(ErrorContext);
+  const { topologyData, toggleTopologyData } = useContext(TopologyDataContext);
 
   const onModalConfirm = (node) => {
     const data = {
@@ -52,19 +53,9 @@ const MyTable = () => {
   }, []);
 
   function getTableInfo() {
-    Axios.get(`${url}/api/topology`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        const nodes = response.data.nodes;
-        toggleNodes(nodes);
-        setCurNode("pcscf");
-      })
-      .catch((err) => {
-        console.log("Problemmm");
-      });
+    const nodes = topologyData?.nodes;
+    toggleNodes(nodes);
+    setCurNode("pcscf");
   }
 
   const pcscf = nodes.filter((q) => q.type === "pcscf");

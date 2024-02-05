@@ -14,7 +14,7 @@ import classNames from "classnames";
 const Configuration = () => {
   const methods = useForm();
 
-  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
+  const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
   const token = localStorage.getItem("token");
 
   const onSubmit = (data) => {
@@ -47,6 +47,100 @@ const Configuration = () => {
       .catch((error) => {});
   };
 
+  const setInputValue = (response) => {
+    methods.setValue("IMS_Domain", response.data.domain);
+    methods.setValue("General_type_icon1", response.data.homerEnable.pcscf);
+    methods.setValue("General_type_icon2", response.data.homerEnable.scscf);
+    methods.setValue("General_type_icon3", response.data.homerEnable.icscf);
+
+    methods.setValue("p_shared_memory", response.data.pcscf.shareMemory);
+    methods.setValue("p_private_memory", response.data.pcscf.privateMemory);
+    methods.setValue("Enable_IPsec", response.data.pcscf.ipSec);
+    methods.setValue("Enable_TLS", response.data.pcscf.tls);
+
+    methods.setValue(
+      "Encryption_Algorithm_type_icon1",
+      response.data.pcscf.algorithms.aes
+    );
+    methods.setValue(
+      "Encryption_Algorithm_type_icon2",
+      response.data.pcscf.algorithms.des
+    );
+
+    methods.setValue(
+      "Encryption_Algorithm_type_icon3",
+      response.data.pcscf.algorithms.plain
+    );
+
+    methods.setValue(
+      "Enable_Rx_Source_Port",
+      response.data.pcscf.rxConfiguration.sourcePortEnabled
+    );
+
+    methods.setValue(
+      "Rx_Source_Port",
+      response.data.pcscf.rxConfiguration.sourcePort
+    );
+    methods.setValue("PCRF_FQDN", response.data.pcscf.rxConfiguration.fqdn);
+    methods.setValue("PCRF_Realm", response.data.pcscf.rxConfiguration.realm);
+
+    methods.setValue(
+      "Transport_Protocol",
+      response.data.pcscf.rxConfiguration.protocol
+    );
+
+    methods.setValue("i_shared_memory", response.data.icscf.shareMemory);
+    methods.setValue("i_private_memory", response.data.icscf.privateMemory);
+
+    methods.setValue("s_shared_memory", response.data.scscf.shareMemory);
+    methods.setValue("s_private_memory", response.data.scscf.privateMemory);
+    methods.setValue(
+      "Maximum_Register_Time",
+      response.data.scscf.maximumRegisterTime
+    );
+    methods.setValue(
+      "Minimum_Register_Time",
+      response.data.scscf.minimumRegisterTime
+    );
+
+    methods.setValue(
+      "Supported_HD_Codecs_type_icon1",
+      response.data.rtpProxy.supportedHdCoders.g722
+    );
+    methods.setValue(
+      "Supported_HD_Codecs_type_icon2",
+      response.data.rtpProxy.supportedHdCoders.armwb
+    );
+
+    methods.setValue(
+      "Enable_Maximum_Call_Duration",
+      response.data.rtpProxy.maximumCallDurationEnable
+    );
+    methods.setValue("Enable_SRTP", response.data.rtpProxy.srtp);
+
+    methods.setValue(
+      "Inbound_Port_Minimum",
+      response.data.rtpProxy.inboundPortMinimum
+    );
+    methods.setValue(
+      "Inbound_Port_Maximum",
+      response.data.rtpProxy.inboundPortMaximum
+    );
+    methods.setValue(
+      "Outbound_Port_Minimum",
+      response.data.rtpProxy.outboundPortMinimum
+    );
+    methods.setValue(
+      "Outbound_Port_Maximum",
+      response.data.rtpProxy.outboundPortMaximum
+    );
+    methods.setValue(
+      "Call_Duration",
+      response.data.rtpProxy.maximumCallDuration
+    );
+    methods.setValue("RTP_Loss_Timeout", response.data.rtpProxy.rtpLossTimeout);
+  };
+
   useEffect(() => {
     getConfigInfo();
   }, []);
@@ -59,103 +153,7 @@ const Configuration = () => {
       },
     })
       .then((response) => {
-        methods.setValue("IMS_Domain", response.data.domain);
-        methods.setValue("General_type_icon1", response.data.homerEnable.pcscf);
-        methods.setValue("General_type_icon2", response.data.homerEnable.scscf);
-        methods.setValue("General_type_icon3", response.data.homerEnable.icscf);
-
-        methods.setValue("p_shared_memory", response.data.pcscf.shareMemory);
-        methods.setValue("p_private_memory", response.data.pcscf.privateMemory);
-        methods.setValue("Enable_IPsec", response.data.pcscf.ipSec);
-        methods.setValue("Enable_TLS", response.data.pcscf.tls);
-
-        methods.setValue(
-          "Encryption_Algorithm_type_icon1",
-          response.data.pcscf.algorithms.aes
-        );
-        methods.setValue(
-          "Encryption_Algorithm_type_icon2",
-          response.data.pcscf.algorithms.des
-        );
-
-        methods.setValue(
-          "Encryption_Algorithm_type_icon3",
-          response.data.pcscf.algorithms.plain
-        );
-
-        methods.setValue(
-          "Enable_Rx_Source_Port",
-          response.data.pcscf.rxConfiguration.sourcePortEnabled
-        );
-
-        methods.setValue(
-          "Rx_Source_Port",
-          response.data.pcscf.rxConfiguration.sourcePort
-        );
-        methods.setValue("PCRF_FQDN", response.data.pcscf.rxConfiguration.fqdn);
-        methods.setValue(
-          "PCRF_Realm",
-          response.data.pcscf.rxConfiguration.realm
-        );
-
-        methods.setValue(
-          "Transport_Protocol",
-          response.data.pcscf.rxConfiguration.protocol
-        );
-
-        methods.setValue("i_shared_memory", response.data.icscf.shareMemory);
-        methods.setValue("i_private_memory", response.data.icscf.privateMemory);
-
-        methods.setValue("s_shared_memory", response.data.scscf.shareMemory);
-        methods.setValue("s_private_memory", response.data.scscf.privateMemory);
-        methods.setValue(
-          "Maximum_Register_Time",
-          response.data.scscf.maximumRegisterTime
-        );
-        methods.setValue(
-          "Minimum_Register_Time",
-          response.data.scscf.minimumRegisterTime
-        );
-
-        methods.setValue(
-          "Supported_HD_Codecs_type_icon1",
-          response.data.rtpProxy.supportedHdCoders.g722
-        );
-        methods.setValue(
-          "Supported_HD_Codecs_type_icon2",
-          response.data.rtpProxy.supportedHdCoders.armwb
-        );
-
-        methods.setValue(
-          "Enable_Maximum_Call_Duration",
-          response.data.rtpProxy.maximumCallDurationEnable
-        );
-        methods.setValue("Enable_SRTP", response.data.rtpProxy.srtp);
-
-        methods.setValue(
-          "Inbound_Port_Minimum",
-          response.data.rtpProxy.inboundPortMinimum
-        );
-        methods.setValue(
-          "Inbound_Port_Maximum",
-          response.data.rtpProxy.inboundPortMaximum
-        );
-        methods.setValue(
-          "Outbound_Port_Minimum",
-          response.data.rtpProxy.outboundPortMinimum
-        );
-        methods.setValue(
-          "Outbound_Port_Maximum",
-          response.data.rtpProxy.outboundPortMaximum
-        );
-        methods.setValue(
-          "Call_Duration",
-          response.data.rtpProxy.maximumCallDuration
-        );
-        methods.setValue(
-          "RTP_Loss_Timeout",
-          response.data.rtpProxy.rtpLossTimeout
-        );
+        setInputValue(response);
       })
       .catch((err) => {});
   };

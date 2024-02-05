@@ -8,7 +8,6 @@
 }
 
 .general-class-content {
-  border: 0.092vh solid green;
   width: 34.48vw;
   height: 8.42vh;
   margin-left: 1.3vw;
@@ -17,15 +16,12 @@
 }
 
 .general-class-content-field1 {
-  border: 0.092vh solid green;
   width: 29.06vw;
   height: 3.7vh;
-  /* margin-left: 3.88vw; */
   margin-left: 2.5vw;
 }
 
 .general-class-content-title {
-  /* margin-top: 0.98vh; */
   margin-left: 0;
   width: 3.17vw;
   height: 2.22vh;
@@ -67,7 +63,8 @@
 }
 
 label,
-span , p{
+span,
+p {
   color: #1a4348;
   font-size: 1.48vh;
   font-family: "FiraGO", sans-serif;

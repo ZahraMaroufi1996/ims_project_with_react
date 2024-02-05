@@ -9,10 +9,9 @@
 .RTP-Proxy-class-content {
   width: 35.04vw;
   height: 40.55vh;
-  border: 1px solid red;
 }
 
-.RTP-Proxy-class-content-title{
+.RTP-Proxy-class-content-title {
   font-size: 1.66vh;
   font-family: "FiraGO", sans-serif;
   color: #83a79a;
@@ -48,7 +47,7 @@
   margin-left: 5.31vw;
 }
 
-.RTP-Proxy-class-content-input5-switch{
+.RTP-Proxy-class-content-input5-switch {
   width: 14.36vw;
   height: 1.94vh;
   border-radius: 0.83vh;

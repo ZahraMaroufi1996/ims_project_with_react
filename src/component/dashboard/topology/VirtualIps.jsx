@@ -10,7 +10,7 @@ const VirtualIps = () => {
   const [dnsVirtualIp, setDnsVirtualIp] = useState();
   const [homerVirtualIp, setHomerVirtualIp] = useState();
 
-  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
+  const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -49,17 +49,17 @@ const VirtualIps = () => {
           Virtual IPs for Load Balancers
         </div>
         <VirtualIpInput
-          mainTitle={"Database Virtual IP*"}
+          mainTitle={"Database Virtual IP"}
           subTitle={"Main database used by IMS services"}
           onChange={handleOnChangeDatabaseVirtualIp}
         />
         <VirtualIpInput
-          mainTitle={"DNS Server Virtual IP*"}
+          mainTitle={"DNS Server Virtual IP"}
           subTitle={"Internal DNS server used by IMS services"}
           onChange={handleOnChangeDnsVirtualIp}
         />
         <VirtualIpInput
-          mainTitle={"Homer Virtual IP*"}
+          mainTitle={"Homer Virtual IP"}
           subTitle={"Used for monitoring SIP flows"}
           onChange={handleOnChangeHomerVirtualIp}
         />

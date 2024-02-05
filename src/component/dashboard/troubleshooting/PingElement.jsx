@@ -23,45 +23,13 @@ const PingElement = () => {
     setIpAddress(value);
   };
 
-  // const handleOnChangeNode = (value) => {
-  //   setNode(value);
-  // };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const token = localStorage.getItem("token");
-
-  //   const formData = {
-  //     ip: ipAddress,
-  //     node: node,
-  //   };
-
-  //   // console.log(formData);
-  //   Axios.post(`${url}/api/troubleshooting/ping`, formData, {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Authorization: `Bearer ${token}`,
-  //     },
-  //   })
-  //     .then((response) => {
-  //       if (response.status == 200)
-  //         // toggleError("success");
-  //         setCommandResult(response.data.commandResult);
-  //       console.log("success");
-  //     })
-  //     .catch((error) => {
-  //       // toggleError(error.message);
-  //       console.log(error);
-  //     });
-  // };
-
   const onSubmit = (data) => {
     const token = localStorage.getItem("token");
     const formData = {
       ...data,
       ping_ip: ipAddress,
     };
-    // console.log(data);
+
     Axios.post(`${url}/api/troubleshooting/ping`, formData, {
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +37,6 @@ const PingElement = () => {
       },
     })
       .then((response) => {
-        // console.log(response);
         setCommandResult(response.data.commandResult);
         console.log("success");
       })

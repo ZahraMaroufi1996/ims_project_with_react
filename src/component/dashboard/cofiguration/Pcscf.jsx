@@ -17,7 +17,6 @@ import { InputComponent } from "./InputComponent";
 const Pcscf = () => {
   const { register } = useFormContext();
   // const { General_type_icon1 } = useWatch();
-
   // console.log(useWatch());
 
   return (
@@ -30,7 +29,7 @@ const Pcscf = () => {
           "justify-content-between"
         )}
       >
-        <div className={classNames("d-flex" , "align-item-center")}>
+        <div className={classNames("d-flex", "align-item-center")}>
           <span className={classNames(classes["P-CSCF-class-content-title"])}>
             P-CSCF
           </span>

@@ -3,8 +3,7 @@
   height: 6.94vh;
   margin-top: 3.7vh;
   margin-left: 1.41vw;
-  /* border: 0.092vh solid #d5e8e1; */
-  border: 0.092vh solid red;
+  border: 0.092vh solid #d5e8e1;
   border-radius: 0.83vh;
 }
 
@@ -17,7 +16,7 @@
   margin-left: 0.42vw;
 }
 
-.I-CSCF-class-content-inputs{
+.I-CSCF-class-content-inputs {
   /* border: 1px solid black; */
   width: 28.95vw;
   height: 3.7vh;

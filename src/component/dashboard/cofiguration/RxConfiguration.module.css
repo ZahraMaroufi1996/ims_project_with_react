@@ -4,9 +4,23 @@
   margin-left: 6.72vw;
   margin-top: 2.96vh;
   border-radius: 0.83vh;
-  border: 0.092vh solid red;
+  border: 0.092vh solid #d5e8e1;
 }
 
+.P-CSCF-class-Rx-configuration-title {
+  width: 6.14vw;
+  height: 1.94vh;
+  font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif;
+  color: #83a79a;
+}
+
+.P-CSCF-class-Rx-configuration-field1 {
+  width: 19.43vw;
+  height: 3.7vh;
+  margin-left: 2.9vw;
+  border-radius: 0.83vh;
+}
 .P-CSCF-class-Rx-configuration-field2,
 .P-CSCF-class-Rx-configuration-field3 {
   width: 19.63vw;
