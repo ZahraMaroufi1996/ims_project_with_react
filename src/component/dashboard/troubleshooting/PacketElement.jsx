@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import classes from "./PacketElement.module.css";
 import { SelectComponent } from "./SelectComponent";
 import { InputComponent } from "../cofiguration/InputComponent";
@@ -26,10 +28,10 @@ const PacketElement = () => {
       },
     })
       .then((response) => {
-        console.log(response);
+        toast("Your request was done successfully!");
       })
       .catch((error) => {
-        console.log(error);
+        toast(error.message);
       });
   };
 

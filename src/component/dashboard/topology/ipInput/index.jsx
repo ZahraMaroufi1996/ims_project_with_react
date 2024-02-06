@@ -3,11 +3,10 @@ import { TopologyDataContext } from "../../../../context/TopologyDataContext";
 import Axios from "axios";
 import classes from "./index.module.css";
 import classNames from "classnames";
+
 const IpInput = ({ onChange, title, className }) => {
   const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
   const { topologyData, toggleTopologyData } = useContext(TopologyDataContext);
-
-  console.log(topologyData);
   const [form, setForm] = useState({
     field1: "",
     field2: "",

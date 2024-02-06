@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import classes from "./PingElement.module.css";
 import classNames from "classnames";
 import { SelectComponent } from "./SelectComponent";
@@ -27,7 +29,7 @@ const PingElement = () => {
     const token = localStorage.getItem("token");
     const formData = {
       ...data,
-      ping_ip: ipAddress,
+      ping_node_ip: ipAddress,
     };
 
     Axios.post(`${url}/api/troubleshooting/ping`, formData, {
@@ -38,10 +40,10 @@ const PingElement = () => {
     })
       .then((response) => {
         setCommandResult(response.data.commandResult);
-        console.log("success");
+        toast("Your request was done successfully!");
       })
       .catch((error) => {
-        console.log(error);
+        toast(error.message);
       });
   };
 
@@ -111,6 +113,7 @@ const PingElement = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

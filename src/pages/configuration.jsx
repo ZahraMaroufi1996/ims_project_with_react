@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import Axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { General } from "../component/dashboard/cofiguration/General";
 import { Pcscf } from "../component/dashboard/cofiguration/Pcscf";
 import { Icscf } from "../component/dashboard/cofiguration/Icscf";
@@ -43,8 +45,14 @@ const Configuration = () => {
         Authorization: `Bearer ${token}`,
       },
     })
-      .then((response) => {})
-      .catch((error) => {});
+      .then((response) => {
+        if (response.status == 200) {
+          toast("Your request was done successfully!");
+        }
+      })
+      .catch((error) => {
+        toast(error.message);
+      });
   };
 
   const setInputValue = (response) => {
@@ -155,7 +163,9 @@ const Configuration = () => {
       .then((response) => {
         setInputValue(response);
       })
-      .catch((err) => {});
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -185,6 +195,7 @@ const Configuration = () => {
           </div>
         </div>
       </form>
+      <ToastContainer />
     </FormProvider>
   );
 };

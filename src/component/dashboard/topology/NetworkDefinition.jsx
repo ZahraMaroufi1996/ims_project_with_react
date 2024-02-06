@@ -1,14 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import { ErrorContext } from "../../../context/ErrorContext";
-// import { TopologyDataContext } from "../../../context/TopologyDataContext";
 import Axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import classes from "./NetworkDefinition.module.css";
 import { IpInput } from "./ipInput";
 import { MyButton } from "../cofiguration/MyButton";
 import classNames from "classnames";
-// import { toast } from "../../toast/index";
-import ReactDOM from "react-dom";
-import { ErrorShow } from "../ErrorShow";
 
 const NetworkDefinition = () => {
   const [isShow, setShow] = useState(null);
@@ -33,11 +31,11 @@ const NetworkDefinition = () => {
       },
     })
       .then((response) => {
-        if (response.status == 200) setShow("success");
+        if (response.status == 200)
+          toast("Your request was done successfully!");
       })
       .catch((error) => {
-        setShow("sdfsdf");
-        // toggleError(error.message);
+        toast(error.message);
       });
   };
 
@@ -47,28 +45,6 @@ const NetworkDefinition = () => {
   const handleOnChangeGateWay = (value) => {
     setGateWay(value);
   };
-
-  // const callToast = () => {
-  //   console.log("Sdfsdf");
-  //   const x = document.getElementById("root");
-  //   console.log(x);
-  //   ReactDOM.createPortal(
-  //     <div
-  //       style={{
-  //         width: 100,
-  //         height: 100,
-  //         border: "1px solid red",
-  //         bottom: 20,
-  //         left: 30,
-  //         backgroundColor: "red",
-  //         position: "absolute",
-  //       }}
-  //     >
-  //       error message
-  //     </div>,
-  //     x
-  //   );
-  // };
 
   return (
     <>
@@ -108,18 +84,9 @@ const NetworkDefinition = () => {
             title={"Set"}
             className={classes["network-definition-button"]}
           />
-          {/* </div> */}
         </form>
       </div>
-      {/* <button onClick={callToast}>test</button> */}
-      {isShow ? (
-        <ErrorShow
-          errorMessage={isShow}
-          onClose={() => {
-            setShow(null);
-          }}
-        />
-      ) : null}
+      <ToastContainer />
     </>
   );
 };

@@ -10,8 +10,6 @@ const ErrorShow = ({ errorMessage, onClose }) => {
   const style = { display: "block" };
 
   function hanleOnClick() {
-    // console.log(errorBox.current);
-    // errorBox.current.style.display = "none";
     onClose();
   }
 

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import classes from "./VirtualIps.module.css";
 import classNames from "classnames";
 import { VirtualIpInput } from "./virtualIpInput";
@@ -28,8 +30,14 @@ const VirtualIps = () => {
         Authorization: `Bearer ${token}`,
       },
     })
-      .then((response) => {})
-      .catch((error) => {});
+      .then((response) => {
+        if (response.status == 200) {
+          toast("Your request was done successfully!");
+        }
+      })
+      .catch((error) => {
+        toast(error.message);
+      });
   };
 
   const handleOnChangeDatabaseVirtualIp = (value) => {
@@ -41,7 +49,7 @@ const VirtualIps = () => {
   const handleOnChangeHomerVirtualIp = (value) => {
     setHomerVirtualIp(value);
   };
-  // return <div class="virtual-ips"></div>;
+
   return (
     <div className={classNames(classes["virtual-ips"])}>
       <form onSubmit={handleSubmit}>

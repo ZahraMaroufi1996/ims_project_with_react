@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import Axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import classes from "./Node.module.css";
 import { IpInput } from "../topology/ipInput";
 import { Checkbox } from "../cofiguration/Checkbox";
@@ -12,8 +14,7 @@ import { ErrorShow } from "../ErrorShow";
 import { NodeContext } from "../../../context/NodeContext";
 
 const Node = () => {
-  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
-
+  const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
   const { register, handleSubmit } = useForm();
   const [ipAddress, setIpAddress] = useState();
   const [nodes, setNodes] = useState([]);
@@ -41,13 +42,13 @@ const Node = () => {
       },
     })
       .then((response) => {
-        console.log(response);
         if (response.status == 200) {
           toggleNodes(response.data.nodes);
+          toast("Your request was done successfully!");
         }
       })
       .catch((error) => {
-        console.log(error);
+        toast(error.message);
       });
   };
 
