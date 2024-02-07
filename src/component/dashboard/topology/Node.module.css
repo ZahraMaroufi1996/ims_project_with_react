@@ -5,13 +5,12 @@
   width: 47.39vw;
   height: 72.31vh;
   border-radius: 1.85vh;
-  border: 1px solid red;
 }
 
 .node-properties {
   width: 44.61vw;
   height: 9.91vh;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-left: 1.2vw;
   margin-top: 3.15vh;
   display: flex;
@@ -53,8 +52,7 @@
 .add-node-title {
   width: 9.17vw;
   height: 2.22vh;
-  /* color: #83a79a; */
-  color: red;
+  color: #83a79a;
   font-size: 1.66vh;
   font-family: "FiraGO", sans-serif;
   margin-top: 0.5vh;

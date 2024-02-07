@@ -19,7 +19,7 @@
 }
 
 .login-content {
-  background-color: black;
+  /* background-color: black; */
   height: 100%;
   width: 17.71vw;
   margin: 0 auto;
@@ -73,23 +73,13 @@
   opacity: 20%;
 }
 
-/* .username-container {
-  top: 11.11vh;
-  right: 0;
-  position: absolute;
-} */
-
-/* .password-container {
-  top: 20vh;
-  right: 0;
-  position: absolute;
-} */
+.username-input,
+.password-input {
+  margin-left: 60px;
+}
 
 input {
   height: 5.175vh;
-  /* width: 90%; */
-  /* left: 0;
-  top: 0; */
   background-color: inherit;
   border: none;
   text-align: center;

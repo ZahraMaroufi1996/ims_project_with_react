@@ -5,7 +5,6 @@
   margin-left: 1.45vw;
   margin-top: 2.6vh;
   border-radius: 20px;
-  border: 1px solid red;
 }
 
 .network-definition {
@@ -28,17 +27,10 @@
   height: 3.7vh;
 }
 
-.network-definition span {
+span.network-definition-title {
   color: #83a79a;
   font-size: 1.66vh;
   text-align: center;
-}
-
-label,
-.network span {
-  color: #1a4348;
-  font-size: 1.48vh;
-  font-family: "FiraGO", sans-serif;
 }
 
 .network-definition-button {

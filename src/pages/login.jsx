@@ -9,8 +9,8 @@ import { UserIcon } from "../component/login/UserIcon.jsx";
 import { PassIcon } from "../component/login/PassIcon";
 
 const Login = () => {
-  const url = "https://c6059f0c-d4f4-45f8-9187-a1d3da3b8645.mock.pstmn.io";
-  let my_token;
+  const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
+  // let token;
 
   const [form, setForm] = useState({
     username: "",
@@ -30,9 +30,9 @@ const Login = () => {
     // loginAPI(form)
     Axios.post(`${url}/api/login?Content-Type=application/json`, form)
       .then((response) => {
-        my_token = response.data.token;
-        localStorage.setItem("token", my_token);
-        console.log(my_token);
+        const token = response.data.token;
+        localStorage.setItem("token", token);
+        console.log(token);
         history("/dashboard/topology");
       })
       .catch((error) => {});
@@ -50,9 +50,9 @@ const Login = () => {
             id="login-form"
             onSubmit={handleSubmit}
           >
-            <div className="username-container d-flex flex-row justify-content-around">
+            <div className="username-container d-flex justify-content-around">
               <input
-                className="username-btn"
+                className="username-input"
                 type="text"
                 name="username"
                 placeholder="نام کاربری"
@@ -60,9 +60,9 @@ const Login = () => {
               />
               <UserIcon />
             </div>
-            <div className="password-container">
+            <div className="password-container d-flex justify-content-around">
               <input
-                class="password-btn"
+                class="password-input"
                 type="password"
                 name="password"
                 placeholder="رمز عبور"

@@ -68,7 +68,9 @@ const NetworkDefinition = () => {
               "align-items-center"
             )}
           >
-            <span className={classes["title-span"]}>Network Definition</span>
+            <span className={classNames(classes["network-definition-title"])}>
+              Network Definition
+            </span>
             <IpInput
               title={"subnetmask"}
               onChange={handleOnChangeSubnet}

@@ -29,7 +29,9 @@ const RxConfiguration = () => {
       )}
     >
       <div className={classNames("d-flex", "align-item-center")}>
-        <span className={classNames(classes["RTP-Proxy-class-content-title"])}>
+        <span
+          className={classNames(classes["P-CSCF-class-Rx-configuration-title"])}
+        >
           Rx Configuration
         </span>
         <IpInput
