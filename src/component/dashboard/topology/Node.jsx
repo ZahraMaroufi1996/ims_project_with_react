@@ -10,7 +10,6 @@ import { Radio } from "../topology/Radio";
 import classNames from "classnames";
 import { MyButton } from "../cofiguration/MyButton";
 import { MyTable } from "./MyTable";
-import { ErrorShow } from "../ErrorShow";
 import { NodeContext } from "../../../context/NodeContext";
 
 const Node = () => {
@@ -29,7 +28,6 @@ const Node = () => {
 
   const onSubmit = (data) => {
     const token = localStorage.getItem("token");
-    console.log(data);
     const formData = {
       name: data.node_name,
       ip: ipAddress,
@@ -43,7 +41,7 @@ const Node = () => {
     })
       .then((response) => {
         if (response.status == 200) {
-          toggleNodes(response.data.nodes);
+          toggleNodes([...nodes, response.data]);
           toast("Your request was done successfully!");
         }
       })
@@ -109,7 +107,7 @@ const Node = () => {
                 id={"node-type-1"}
                 value="pcscf"
                 name={"node_type_icon"}
-                className={classes["node-type-core-checkbox"]}
+                className={classes["node-type-pcscf-checkbox"]}
               />
 
               <Radio
@@ -127,7 +125,7 @@ const Node = () => {
                 id={"node-type-3"}
                 value="core"
                 name={"node_type_icon"}
-                className={classes["node-type-pcscf-checkbox"]}
+                className={classes["node-type-core-checkbox"]}
               />
             </div>
             <button

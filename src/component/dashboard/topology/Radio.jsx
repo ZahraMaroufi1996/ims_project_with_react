@@ -26,7 +26,9 @@ const Radio = forwardRef(({ title, id, name, className, ...rest }, ref) => {
         name={name}
         // disabled
       />
-      <label for={id}>{title}</label>
+      <label for={id} className={classNames(classes["radio-label"])}>
+        {title}
+      </label>
     </div>
   );
 });

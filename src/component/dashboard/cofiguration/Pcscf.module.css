@@ -41,7 +41,6 @@
   margin-left: 5.51vw;
 }
 .P-CSCF-class-content-field2 {
-  border: 1px solid red;
   width: 28.82vw;
   height: 5.69vh;
   margin-left: 5.51vw;
@@ -69,30 +68,21 @@
 }
 
 .P-CSCF-class-content-field2-checkbox1 {
-  border: 1px solid red;
-  width: 4.68vw;
+  width: 4.9vw;
+  /* width: 4.68vw; */
   height: 2.037vh;
-  color: #1a4348;
-  font-size: 1.48vh;
-  font-family: "FiraGO", sans-serif;
 }
 
 .P-CSCF-class-content-field2-checkbox2 {
-  border: 1px solid red;
-  width: 6.94vw;
+  /* width: 6.94vw; */
+  width: 7.2vw;
   height: 2.037vh;
-  color: #1a4348;
-  font-size: 1.48vh;
-  font-family: "FiraGO", sans-serif;
 }
 
 .P-CSCF-class-content-field2-checkbox3 {
-  border: 1px solid red;
-  width: 8.92vw;
+  /* width: 8.92vw; */
+  width: 9.2vw;
   height: 2.037vh;
-  color: #1a4348;
-  font-size: 1.48vh;
-  font-family: "FiraGO", sans-serif;
 }
 
 .memory {

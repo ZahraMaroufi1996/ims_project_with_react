@@ -17,7 +17,7 @@ const MyTable = () => {
   const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
   const token = localStorage.getItem("token");
   const nodeTypeName = ["pcscf", "rtpProxy", "core"];
-  const [curNode, setCurNode] = useState("");
+  const [nodeType, setNodeType] = useState("");
   const [modal, setModal] = useState(false);
   const [selectedNode, setSelectedNode] = useState(null);
   const { nodes, toggleNodes } = useContext(NodeContext);
@@ -36,7 +36,8 @@ const MyTable = () => {
     })
       .then((response) => {
         if (response.status == 200) {
-          toggleNodes(response.data.nodes);
+          const currentNode = nodes?.filter((item) => item.id !== data.id);
+          toggleNodes(currentNode);
           toast("Your request was done successfully!");
         }
       })
@@ -50,9 +51,8 @@ const MyTable = () => {
   }, [topologyData]);
 
   function getTableInfo() {
-    const nodes = topologyData?.nodes;
-    toggleNodes(nodes);
-    setCurNode("pcscf");
+    toggleNodes(topologyData?.nodes);
+    setNodeType("pcscf");
   }
 
   const pcscf = nodes?.filter((q) => q.type === "pcscf");
@@ -60,7 +60,7 @@ const MyTable = () => {
   const core = nodes?.filter((q) => q.type === "core");
 
   const desiredNodes =
-    curNode === "pcscf" ? pcscf : curNode === "rtpProxy" ? rtpProxy : core;
+    nodeType === "pcscf" ? pcscf : nodeType === "rtpProxy" ? rtpProxy : core;
 
   return (
     <>
@@ -68,7 +68,7 @@ const MyTable = () => {
         <tr className={classNames("d-flex", "justify-content-around")}>
           <th
             onClick={() => {
-              setCurNode("pcscf");
+              setNodeType("pcscf");
             }}
             className={classNames(
               classes["node-table-title"],
@@ -81,7 +81,7 @@ const MyTable = () => {
           </th>
           <th
             onClick={() => {
-              setCurNode("rtpProxy");
+              setNodeType("rtpProxy");
             }}
             className={classNames(
               classes["node-table-title"],
@@ -94,7 +94,7 @@ const MyTable = () => {
           </th>
           <th
             onClick={() => {
-              setCurNode("core");
+              setNodeType("core");
             }}
             className={classNames(
               classes["node-table-title"],

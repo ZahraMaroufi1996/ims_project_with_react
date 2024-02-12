@@ -27,7 +27,6 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // loginAPI(form)
     Axios.post(`${url}/api/login?Content-Type=application/json`, form)
       .then((response) => {
         const token = response.data.token;

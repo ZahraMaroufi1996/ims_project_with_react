@@ -44,6 +44,7 @@
 }
 
 .modal-title {
+  color: white;
   font-size: 1.29vh;
   font-family: "FiraGO", sans-serif;
   text-align: center;
@@ -51,6 +52,7 @@
 }
 
 .modal-question {
+  color: white;
   font-size: 1.66vh;
   font-family: "FiraGO", sans-serif;
   text-align: center;

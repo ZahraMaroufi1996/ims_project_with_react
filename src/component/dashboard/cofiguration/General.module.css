@@ -33,27 +33,14 @@
 
 .general-class-content-field2 {
   height: 2.037vh;
-  border: 1px solid green;
   margin-top: 2.66vh;
   margin-left: 5.57vw;
 }
 
-/* .general-class-content-field2-checkboxes {
-  height: 2.037vh;
-  width: 22.45vw;
-  border: 1px solid green;
-  margin-left: 5px;
-} */
-
 .general-class-content-field2-checkbox {
   height: 2.04vh;
-  width: 4vw;
-  border: 1px solid black;
+  width: 4.5vw;
 }
-
-/* label.general-class-content-field2-checkbox {
-  color: red;
-} */
 
 .general-class-content-field1-box {
   width: 21.125vw;

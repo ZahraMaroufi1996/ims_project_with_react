@@ -1,28 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import Axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ConfigDataContext } from "../../src/context/ConfigDataContext";
 import { General } from "../component/dashboard/cofiguration/General";
 import { Pcscf } from "../component/dashboard/cofiguration/Pcscf";
 import { Icscf } from "../component/dashboard/cofiguration/Icscf";
 import { Scscf } from "../component/dashboard/cofiguration/Scscf";
 import { MyButton } from "../component/dashboard/cofiguration/MyButton";
 import { RtpProxy } from "../component/dashboard/cofiguration/RtpProxy";
-
 import classes from "./configuration.module.css";
 import classNames from "classnames";
 
 const Configuration = () => {
   const methods = useForm();
-
+  const [pcrfIpAddress, setPcrfIpAddress] = useState();
+  const [configData, setConfigData] = useState(undefined);
   const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
   const token = localStorage.getItem("token");
+  const handleOnChangeIpAddress = (value) => {
+    setPcrfIpAddress(value);
+  };
 
+  const toggleConfigData = (value) => {
+    setConfigData(value);
+  };
   const onSubmit = (data) => {
     // const token = localStorage.getItem("token");
     const newData = {
       ...data,
+      pcrfIp: pcrfIpAddress,
       p_private_memory: Number(data.p_private_memory),
       p_shared_memory: Number(data.p_shared_memory),
       s_private_memory: Number(data.s_private_memory),
@@ -147,6 +155,8 @@ const Configuration = () => {
       response.data.rtpProxy.maximumCallDuration
     );
     methods.setValue("RTP_Loss_Timeout", response.data.rtpProxy.rtpLossTimeout);
+
+    handleOnChangeIpAddress(response.data.pcscf.rxConfiguration.pcrfIp);
   };
 
   useEffect(() => {
@@ -161,6 +171,7 @@ const Configuration = () => {
       },
     })
       .then((response) => {
+        setConfigData(response.data);
         setInputValue(response);
       })
       .catch((err) => {
@@ -169,34 +180,36 @@ const Configuration = () => {
   };
 
   return (
-    <FormProvider {...methods}>
-      <form
-        onSubmit={methods.handleSubmit(onSubmit)}
-        id="total-form"
-        className={classNames(classes["main-content"], "d-flex", "flex-row ")}
-      >
-        <div className="d-flex flex-column">
-          <General />
-          <Pcscf />
-        </div>
-        <div className="d-flex flex-column">
-          <Icscf />
-          <Scscf />
-          <RtpProxy />
-          <div className="d-flex">
-            <MyButton
-              title={"Save"}
-              className={classes["information-save-button"]}
-            />
-            <MyButton
-              title={"Edit"}
-              className={classes["information-edit-button"]}
-            />
+    <ConfigDataContext.Provider value={{ configData, toggleConfigData }}>
+      <FormProvider {...methods}>
+        <form
+          onSubmit={methods.handleSubmit(onSubmit)}
+          id="total-form"
+          className={classNames(classes["main-content"], "d-flex", "flex-row ")}
+        >
+          <div className="d-flex flex-column">
+            <General />
+            <Pcscf onChange={handleOnChangeIpAddress} />
           </div>
-        </div>
-      </form>
-      <ToastContainer />
-    </FormProvider>
+          <div className="d-flex flex-column">
+            <Icscf />
+            <Scscf />
+            <RtpProxy />
+            <div className="d-flex">
+              <MyButton
+                title={"Save"}
+                className={classes["information-save-button"]}
+              />
+              <MyButton
+                title={"Edit"}
+                className={classes["information-edit-button"]}
+              />
+            </div>
+          </div>
+        </form>
+        <ToastContainer />
+      </FormProvider>
+    </ConfigDataContext.Provider>
   );
 };
 

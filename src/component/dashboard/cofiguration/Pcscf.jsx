@@ -14,7 +14,7 @@ import { RxConfiguration } from "./RxConfiguration";
 import classNames from "classnames";
 import { InputComponent } from "./InputComponent";
 
-const Pcscf = () => {
+const Pcscf = ({ onChange }) => {
   const { register } = useFormContext();
   // const { General_type_icon1 } = useWatch();
   // console.log(useWatch());
@@ -119,7 +119,7 @@ const Pcscf = () => {
           </div>
         </div>
       </div>
-      <RxConfiguration />
+      <RxConfiguration onChange={onChange} />
     </div>
   );
 };

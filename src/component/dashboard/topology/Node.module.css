@@ -73,16 +73,19 @@
 }
 
 .node-type-core-checkbox {
-  width: 3.19vw;
+  /* width: 3.19vw; */
+  width: 3.4vw;
   height: 2.04vh;
 }
 
 .node-type-rtp-proxy-checkbox {
-  width: 5.12vw;
+  /* width: 5.12vw; */
+  width: 5.4vw;
   height: 2.04vh;
 }
 
 .node-type-pcscf-checkbox {
-  width: 4.13vw;
+  /* width: 4.13vw; */
+  width: 4.4vw;
   height: 2.04vh;
 }

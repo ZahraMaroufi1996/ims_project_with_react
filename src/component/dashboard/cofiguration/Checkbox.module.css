@@ -4,7 +4,8 @@
 
 .chb + label {
   position: relative;
-  padding-right: 5px;
+  padding-right: 1px;
+  margin-left: 5px;
 }
 
 .chb-1 + label::before {
@@ -24,6 +25,6 @@
 
 .checkbox-label {
   color: #1a4348;
-  font-size: 1.3vh;
+  font-size: 1.5vh;
   font-family: "FiraGO", sans-serif;
 }

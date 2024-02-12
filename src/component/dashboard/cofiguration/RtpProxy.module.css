@@ -23,7 +23,6 @@
 .RTP-Proxy-class-content-input1 {
   width: 29.5vw;
   height: 2.037vh;
-  border: 1px solid red;
   margin-left: 0.54vw;
 }
 
@@ -79,7 +78,6 @@
 }
 
 .RTP-Proxy-class-content-input1-checkbox {
-  width: 4.81vw;
+  width: 5.1vw;
   height: 2.037vh;
-  border: 1px solid red;
 }

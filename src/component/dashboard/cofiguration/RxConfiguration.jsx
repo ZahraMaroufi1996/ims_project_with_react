@@ -9,7 +9,7 @@ import { Checkbox } from "./Checkbox";
 import { Radio } from "../topology/Radio";
 import { Switch } from "./Switch";
 
-const RxConfiguration = () => {
+const RxConfiguration = ({ onChange }) => {
   const { register } = useFormContext();
 
   const [pcrfIpAddress, setPcrfIpAddress] = useState("");
@@ -37,7 +37,7 @@ const RxConfiguration = () => {
         <IpInput
           title={"PCRF IP Address"}
           className={classes["P-CSCF-class-Rx-configuration-field1"]}
-          onChange={handleOnChangeIpAddress}
+          onChange={onChange}
         />
       </div>
       <div

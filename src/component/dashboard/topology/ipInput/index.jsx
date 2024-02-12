@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef, useContext } from "react";
 import { TopologyDataContext } from "../../../../context/TopologyDataContext";
+import { ConfigDataContext } from "../../../../context/ConfigDataContext";
 import Axios from "axios";
 import classes from "./index.module.css";
 import classNames from "classnames";
@@ -7,6 +8,7 @@ import classNames from "classnames";
 const IpInput = ({ onChange, title, className }) => {
   const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
   const { topologyData, toggleTopologyData } = useContext(TopologyDataContext);
+  const { configData, toggleConfigData } = useContext(ConfigDataContext);
   const [form, setForm] = useState({
     field1: "",
     field2: "",
@@ -55,7 +57,16 @@ const IpInput = ({ onChange, title, className }) => {
         field3: topologyData?.gateway.split(".")[2],
         field4: topologyData?.gateway.split(".")[3],
       }));
-    else if (title === "IP address")
+    else if (title === "PCRF IP Address") {
+      console.log(configData?.pcscf.rxConfiguration.pcrfIp);
+      setForm((prevForm) => ({
+        ...prevForm,
+        field1: configData?.pcscf.rxConfiguration.pcrfIp.split(".")[0],
+        field2: configData?.pcscf.rxConfiguration.pcrfIp.split(".")[1],
+        field3: configData?.pcscf.rxConfiguration.pcrfIp.split(".")[2],
+        field4: configData?.pcscf.rxConfiguration.pcrfIp.split(".")[3],
+      }));
+    } else if (title === "IP address")
       setForm((prevForm) => ({
         ...prevForm,
         field1: "",
@@ -72,7 +83,7 @@ const IpInput = ({ onChange, title, className }) => {
 
   useEffect(() => {
     getNetworkInfo();
-  }, [topologyData]);
+  }, [topologyData, configData]);
 
   return (
     <div

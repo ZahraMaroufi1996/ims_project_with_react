@@ -1,5 +1,4 @@
 .node-table {
-  border: 1px solid black;
   width: 42.99vw;
   height: 20.51vh;
   margin-top: 8.56vh;
@@ -24,19 +23,14 @@
 }
 
 .node-table-contents {
-  /* border-color: white;
-  background-color: red; */
-  border: 1px solid green;
   height: 2.77vh;
   width: 42.66vw;
 }
 
 .node-table-content {
-  /* background-color: green; */
-  border: 1px solid red;
   width: 42.66vw;
   height: 2.77vh;
-  /* border-bottom: 0.046vh solid #dfdfdf; */
+  border-bottom: 0.046vh solid #dfdfdf;
 }
 
 .node-table-content-name {

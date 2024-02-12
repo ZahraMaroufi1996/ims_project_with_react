@@ -8,8 +8,6 @@ import { ConfigurationIcon } from "../icons/ConfigurationIcon";
 import { MonitoringIcon } from "../icons/MonitoringIcon";
 import { TroubleshootingIcon } from "../icons/TroubleshootingIcon";
 
-import { Test } from "../icons/test";
-
 const Sidebar = () => {
   return (
     <div class="sidebar" className={classNames(classes["sidebar"])}>
@@ -59,7 +57,7 @@ const Sidebar = () => {
         )}
       >
         <Link
-          to="/topology"
+          to="/dashboard/topology"
           className={classNames(
             classes["sidebar-topology-icon-content"],
             "d-flex",
@@ -80,7 +78,7 @@ const Sidebar = () => {
         )}
       >
         <Link
-          to="/configuration"
+          to="/dashboard/configuration"
           className={classNames(
             classes["sidebar-configuration-icon-content"],
             "d-flex",
@@ -102,7 +100,7 @@ const Sidebar = () => {
         )}
       >
         <Link
-          to="/monitoring"
+          to="/dashboard/monitoring"
           className={classNames(
             classes["sidebar-monitoring-icon-content"],
             "d-flex",
@@ -123,7 +121,7 @@ const Sidebar = () => {
         )}
       >
         <Link
-          to="/troubleshooting"
+          to="/dashboard/troubleshooting"
           className={classNames(
             classes["sidebar-troubleshooting-icon-content"],
             "d-flex",

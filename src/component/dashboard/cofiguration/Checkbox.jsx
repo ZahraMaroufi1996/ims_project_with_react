@@ -10,7 +10,7 @@ const Checkbox = forwardRef(({ title, id, name, className, ...rest }, ref) => {
       className={classNames(
         className,
         "d-flex",
-        "justify-content-around",
+        "justify-content-between",
         "align-items-center"
       )}
     >

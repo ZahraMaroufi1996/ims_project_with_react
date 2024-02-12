@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import { ErrorContext } from "../../../context/ErrorContext";
 import Axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,7 +9,6 @@ import classNames from "classnames";
 
 const NetworkDefinition = () => {
   const [isShow, setShow] = useState(null);
-  const { error, toggleError } = useContext(ErrorContext);
   const [subnet, setSubnet] = useState();
   const [gateway, setGateWay] = useState();
   const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";

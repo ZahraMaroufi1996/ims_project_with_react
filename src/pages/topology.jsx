@@ -6,7 +6,6 @@ import { TopologyDataContext } from "../../src/context/TopologyDataContext";
 import Axios from "axios";
 
 const Topology = () => {
-  const [error, setError] = useState();
   const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
   const [topologyData, setTopologyData] = useState(undefined);
 
@@ -24,9 +23,9 @@ const Topology = () => {
       });
   };
 
-  // useEffect(() => {
-  //   getNetworkInfo();
-  // }, []);
+  useEffect(() => {
+    getNetworkInfo();
+  }, []);
 
   return (
     <TopologyDataContext.Provider value={{ topologyData, toggleTopologyData }}>
