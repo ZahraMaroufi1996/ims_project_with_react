@@ -3,6 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+It is necessary to download and install node and npm (or yarn if needed) on your system.
 
 To launch the project, you must first install the relevant packages. In the project directory , we use the following command
 ### `npm install`
