@@ -94,7 +94,6 @@ const IpInput = ({ onChange, title, className }) => {
           type="number"
           name="field1"
           value={form.field1}
-          // class={classes["ip-octet"]}
           className={classNames(
             classes["ip-octet"],
             `form-control${errors.field1 ? " is-invalid" : ""}`
@@ -114,7 +113,7 @@ const IpInput = ({ onChange, title, className }) => {
         />
         {errors.field1 && (
           <div
-            style={{ top: 30, left: 0, position: "absolute" }}
+            style={{ top: 20, left: 0, position: "absolute" }}
             className="invalid-feedback"
           >
             {errors.field1.message}

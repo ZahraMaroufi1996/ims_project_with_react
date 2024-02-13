@@ -11,18 +11,26 @@ const InputComponent = forwardRef(
     ref
   ) => {
     return (
-      <>
-        {title ? <label for={id}>{title}</label> : ""}
+      <div
+        className={classNames(
+          "w-100",
+          "d-flex",
+          "justify-content-between",
+          "align-items-center"
+        )}
+      >
         <div
           style={{
+            width: "100%",
             display: "flex",
-            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
             position: "relative",
           }}
         >
+          {title ? <label for={id}>{title}</label> : ""}
           <input
             className={classNames(
-              classes["input"],
               className,
               `form-control${isError ? " is-invalid" : ""}`
             )}
@@ -37,19 +45,21 @@ const InputComponent = forwardRef(
           />
           {isError && (
             <div
-              style={{ top: 30, left: 0, position: "absolute" }}
+              style={{ top: 20, left: 0, position: "absolute" }}
               className="invalid-feedback"
+              // className={classNames(classes["invalid-message"])}
             >
               {errorMessage}
             </div>
           )}
         </div>
+        {/* </div> */}
         {unit ? (
           <span className={classNames(classes["unit"])}>{unit}</span>
         ) : (
           ""
         )}
-      </>
+      </div>
     );
   }
 );

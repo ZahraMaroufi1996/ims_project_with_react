@@ -69,7 +69,6 @@ const RxConfiguration = ({ onChange }) => {
         className={classNames(
           classes["P-CSCF-class-Rx-configuration-field3"],
           "d-flex",
-          "justify-content-between",
           "align-items-center"
         )}
       >

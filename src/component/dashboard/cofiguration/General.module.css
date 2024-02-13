@@ -61,14 +61,6 @@ input.general-class-content-field1-box {
   border: none;
 }
 
-input[type="text"] {
-  text-align: center;
-  color: #2fbc8c;
-  border: none;
-  font-size: 1.66vh;
-  font-family: "FiraGO", sans-serif;
-}
-
 .enable-homer-title {
   height: 2.037vh;
   width: 6.51vw;

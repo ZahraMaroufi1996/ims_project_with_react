@@ -2,6 +2,20 @@
   margin-left: 8px;
 }
 
-.input {
-  appearance: textfield;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  /* color: #2fbc8c; */
+  /* font-size: 1.66vh;
+  font-family: "FiraGO", sans-serif; */
+}
+
+input {
+  text-align: center;
+  border: none;
+  font-size: 1.4vh;
+  font-family: "FiraGO", sans-serif;
+  color: #2fbc8c !important;
 }
