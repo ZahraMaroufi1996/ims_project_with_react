@@ -14,10 +14,10 @@ import classes from "./configuration.module.css";
 import classNames from "classnames";
 
 const Configuration = () => {
-  const methods = useForm();
+  const methods = useForm({ mode: "onChange" });
   const [pcrfIpAddress, setPcrfIpAddress] = useState();
   const [configData, setConfigData] = useState(undefined);
-  const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
+  const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
   const token = localStorage.getItem("token");
   const handleOnChangeIpAddress = (value) => {
     setPcrfIpAddress(value);
@@ -27,10 +27,8 @@ const Configuration = () => {
     setConfigData(value);
   };
   const onSubmit = (data) => {
-    // const token = localStorage.getItem("token");
     const newData = {
       ...data,
-      pcrfIp: pcrfIpAddress,
       p_private_memory: Number(data.p_private_memory),
       p_shared_memory: Number(data.p_shared_memory),
       s_private_memory: Number(data.s_private_memory),
@@ -46,7 +44,9 @@ const Configuration = () => {
       Minimum_Register_Time: Number(data.Minimum_Register_Time),
       RTP_Loss_Timeout: Number(data.RTP_Loss_Timeout),
       Rx_Source_Port: Number(data.Rx_Source_Port),
+      PCRF_IP: pcrfIpAddress,
     };
+    console.log(newData);
     Axios.post(`${url}/api/configuration/submittForm`, newData, {
       headers: {
         "Content-Type": "application/json",

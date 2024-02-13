@@ -1,3 +1,7 @@
-.unit{
+.unit {
   margin-left: 8px;
+}
+
+.input {
+  appearance: textfield;
 }

@@ -6,7 +6,11 @@ import { InputComponent } from "./InputComponent";
 import classNames from "classnames";
 
 const Icscf = () => {
-  const { register } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+
   return (
     <div
       className={classNames(
@@ -42,7 +46,16 @@ const Icscf = () => {
             name={"i_shared_memory"}
             className={classes["memory"]}
             unit={"MB"}
-            {...register("i_shared_memory")}
+            type={"number"}
+            {...register("i_shared_memory", {
+              required: "وارد کردن این فیلد اجباری است",
+              min: {
+                value: 5,
+                message: "مقدار این فیلد باید حداقل 5 باشد",
+              },
+            })}
+            isError={Boolean(errors?.i_shared_memory)}
+            errorMessage={errors?.i_shared_memory?.message}
           />
         </div>
 
@@ -60,7 +73,16 @@ const Icscf = () => {
             name={"i_private_memory"}
             className={classes["memory"]}
             unit={"MB"}
-            {...register("i_private_memory")}
+            type={"number"}
+            {...register("i_private_memory", {
+              required: "وارد کردن این فیلد اجباری است",
+              min: {
+                value: 5,
+                message: "مقدار این فیلد باید حداقل 5 باشد",
+              },
+            })}
+            isError={Boolean(errors?.i_private_memory)}
+            errorMessage={errors?.i_private_memory?.message}
           />
         </div>
       </div>

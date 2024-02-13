@@ -1,4 +1,5 @@
-import { useEffect, useState, useRef, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
+import { useForm } from "react-hook-form";
 import { TopologyDataContext } from "../../../../context/TopologyDataContext";
 import { ConfigDataContext } from "../../../../context/ConfigDataContext";
 import Axios from "axios";
@@ -6,39 +7,27 @@ import classes from "./index.module.css";
 import classNames from "classnames";
 
 const IpInput = ({ onChange, title, className }) => {
-  const url = "https://cdfb4ab4-65e8-498e-890c-570e0ade6a15.mock.pstmn.io";
+  const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
   const { topologyData, toggleTopologyData } = useContext(TopologyDataContext);
   const { configData, toggleConfigData } = useContext(ConfigDataContext);
+  const {
+    register,
+    formState: { errors },
+  } = useForm({ mode: "onChange" });
+
   const [form, setForm] = useState({
     field1: "",
     field2: "",
     field3: "",
     field4: "",
   });
-
-  // const input1Ref = useRef(null);
-  // const input2Ref = useRef(null);
-  // const input3Ref = useRef(null);
-  // const input4Ref = useRef(null);
+  console.log(errors);
 
   const handleChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
-
-  // // Function to move focus to the next input field
-  // function moveFocus(nextInputRef) {
-  //   nextInputRef.current.focus();
-  // }
-
-  // // Function to handle the Enter key press
-  // function handleKeyPress(event, nextInputRef) {
-  //   if (event.key === "Enter") {
-  //     // Move focus to the next input field
-  //     moveFocus(nextInputRef);
-  //   }
-  // }
 
   const getNetworkInfo = () => {
     if (title === "subnetmask")
@@ -58,7 +47,6 @@ const IpInput = ({ onChange, title, className }) => {
         field4: topologyData?.gateway.split(".")[3],
       }));
     else if (title === "PCRF IP Address") {
-      console.log(configData?.pcscf.rxConfiguration.pcrfIp);
       setForm((prevForm) => ({
         ...prevForm,
         field1: configData?.pcscf.rxConfiguration.pcrfIp.split(".")[0],
@@ -95,42 +83,161 @@ const IpInput = ({ onChange, title, className }) => {
       )}
     >
       <span>{title}</span>
-      <input
-        // ref={input1Ref}
-        // onKeyDown={(event) => handleKeyPress(event, input2Ref)}
-        type="text"
-        name="field1"
-        value={form.field1}
-        class={classes["ip-octet"]}
-        onChange={handleChange}
-      />
-      <input
-        // ref={input2Ref}
-        // onKeyDown={(event) => handleKeyPress(event, input3Ref)}
-        type="text"
-        name="field2"
-        value={form.field2}
-        class={classes["ip-octet"]}
-        onChange={handleChange}
-      />
-      <input
-        // ref={input3Ref}
-        // onKeyDown={(event) => handleKeyPress(event, input4Ref)}
-        type="text"
-        name="field3"
-        value={form.field3}
-        class={classes["ip-octet"]}
-        onChange={handleChange}
-      />
-      <input
-        // ref={input4Ref}
-        // onKeyDown={(event) => handleKeyPress(event, input1Ref)}
-        type="text"
-        name="field4"
-        value={form.field4}
-        class={classes["ip-octet"]}
-        onChange={handleChange}
-      />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          position: "relative",
+        }}
+      >
+        <input
+          type="number"
+          name="field1"
+          value={form.field1}
+          // class={classes["ip-octet"]}
+          className={classNames(
+            classes["ip-octet"],
+            `form-control${errors.field1 ? " is-invalid" : ""}`
+          )}
+          onChange={handleChange}
+          {...register("field1", {
+            required: "وارد کردن این فیلد اجباری است",
+            min: {
+              value: 1,
+              message: "مقدار این فیلد باید حداقل 1 باشد",
+            },
+            max: {
+              value: 192,
+              message: "مقدار این فیلد باید حداکثر 192 باشد",
+            },
+          })}
+        />
+        {errors.field1 && (
+          <div
+            style={{ top: 30, left: 0, position: "absolute" }}
+            className="invalid-feedback"
+          >
+            {errors.field1.message}
+          </div>
+        )}
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          position: "relative",
+        }}
+      >
+        <input
+          type="number"
+          name="field2"
+          value={form.field2}
+          // class={classes["ip-octet"]}
+          className={classNames(
+            classes["ip-octet"],
+            `form-control${errors.field2 ? " is-invalid" : ""}`
+          )}
+          onChange={handleChange}
+          {...register("field2", {
+            required: "وارد کردن این فیلد اجباری است",
+            min: {
+              value: 1,
+              message: "مقدار این فیلد باید حداقل 1 باشد",
+            },
+            max: {
+              value: 192,
+              message: "مقدار این فیلد باید حداکثر 192 باشد",
+            },
+          })}
+        />
+        {errors.field2 && (
+          <div
+            style={{ top: 30, left: 0, position: "absolute" }}
+            className="invalid-feedback"
+          >
+            {errors.field2.message}
+          </div>
+        )}
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          position: "relative",
+        }}
+      >
+        <input
+          type="number"
+          name="field3"
+          value={form.field3}
+          // class={classes["ip-octet"]}
+          className={classNames(
+            classes["ip-octet"],
+            `form-control${errors.field3 ? " is-invalid" : ""}`
+          )}
+          onChange={handleChange}
+          {...register("field3", {
+            required: "وارد کردن این فیلد اجباری است",
+            min: {
+              value: 1,
+              message: "مقدار این فیلد باید حداقل 1 باشد",
+            },
+            max: {
+              value: 192,
+              message: "مقدار این فیلد باید حداکثر 192 باشد",
+            },
+          })}
+        />
+        {errors.field3 && (
+          <div
+            style={{ top: 30, left: 0, position: "absolute" }}
+            className="invalid-feedback"
+          >
+            {errors.field3.message}
+          </div>
+        )}
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          position: "relative",
+        }}
+      >
+        <input
+          type="number"
+          name="field4"
+          value={form.field4}
+          // class={classes["ip-octet"]}
+          className={classNames(
+            classes["ip-octet"],
+            `form-control${errors.field4 ? " is-invalid" : ""}`
+          )}
+          onChange={handleChange}
+          {...register("field4", {
+            required: "وارد کردن این فیلد اجباری است",
+            min: {
+              value: 1,
+              message: "مقدار این فیلد باید حداقل 1 باشد",
+            },
+            max: {
+              value: 192,
+              message: "مقدار این فیلد باید حداکثر 192 باشد",
+            },
+          })}
+        />
+        {errors.field4 && (
+          <div
+            style={{ top: 30, left: 0, position: "absolute" }}
+            className="invalid-feedback"
+          >
+            {errors.field4.message}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

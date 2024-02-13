@@ -10,7 +10,10 @@ import { Radio } from "../topology/Radio";
 import { Switch } from "./Switch";
 
 const RxConfiguration = ({ onChange }) => {
-  const { register } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   const [pcrfIpAddress, setPcrfIpAddress] = useState("");
 
@@ -53,7 +56,12 @@ const RxConfiguration = ({ onChange }) => {
           name={"PCRF_FQDN"}
           id={"Rx-configuration-field2"}
           className={classes["rx-configuration-box"]}
-          {...register("PCRF_FQDN")}
+          type={"text"}
+          {...register("PCRF_FQDN", {
+            required: "وارد کردن این فیلد اجباری است",
+          })}
+          isError={Boolean(errors?.PCRF_FQDN)}
+          errorMessage={errors?.PCRF_FQDN?.message}
         />
       </div>
 
@@ -70,7 +78,12 @@ const RxConfiguration = ({ onChange }) => {
           name={"PCRF_Realm"}
           id={"Rx-configuration-field3"}
           className={classes["rx-configuration-box"]}
-          {...register("PCRF_Realm")}
+          type={"text"}
+          {...register("PCRF_Realm", {
+            required: "وارد کردن این فیلد اجباری است",
+          })}
+          isError={Boolean(errors?.PCRF_Realm)}
+          errorMessage={errors?.PCRF_Realm?.message}
         />
       </div>
 
@@ -121,7 +134,16 @@ const RxConfiguration = ({ onChange }) => {
           name={"Rx_Source_Port"}
           id={"Rx-Source-Port"}
           className={classes["Rx-Source-Port"]}
-          {...register("Rx_Source_Port")}
+          type={"number"}
+          {...register("Rx_Source_Port", {
+            required: "وارد کردن این فیلد اجباری است",
+            min: {
+              value: 1000,
+              message: "مقدار این فیلد باید حداقل 1000 باشد",
+            },
+          })}
+          isError={Boolean(errors?.Rx_Source_Port)}
+          errorMessage={errors?.Rx_Source_Port?.message}
         />
       </div>
     </div>

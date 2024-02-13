@@ -14,11 +14,10 @@ import { Switch } from "./Switch";
 import classNames from "classnames";
 
 const RtpProxy = () => {
-  const { register } = useFormContext();
-  const { Enable_Maximum_Call_Duration } = useWatch();
-
-  // console.log({ Enable_Maximum_Call_Duration });
-  console.log(useWatch());
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   return (
     <div
@@ -106,7 +105,16 @@ const RtpProxy = () => {
                 id={"Inbound-Port-Minimum"}
                 className={classes["port"]}
                 name={"Inbound_Port_Minimum"}
-                {...register("Inbound_Port_Minimum")}
+                type={"number"}
+                {...register("Inbound_Port_Minimum", {
+                  required: "وارد کردن این فیلد اجباری است",
+                  min: {
+                    value: 10000,
+                    message: "مقدار این فیلد باید حداقل 10000 باشد",
+                  },
+                })}
+                isError={Boolean(errors?.Inbound_Port_Minimum)}
+                errorMessage={errors?.Inbound_Port_Minimum?.message}
               />
             </div>
 
@@ -122,7 +130,16 @@ const RtpProxy = () => {
                 id={"Inbound-Port-Maximum"}
                 className={classes["port"]}
                 name={"Inbound_Port_Maximum"}
-                {...register("Inbound_Port_Maximum")}
+                type={"number"}
+                {...register("Inbound_Port_Maximum", {
+                  required: "وارد کردن این فیلد اجباری است",
+                  min: {
+                    value: 10000,
+                    message: "مقدار این فیلد باید حداقل 10000 باشد",
+                  },
+                })}
+                isError={Boolean(errors?.Inbound_Port_Maximum)}
+                errorMessage={errors?.Inbound_Port_Maximum?.message}
               />
             </div>
           </div>
@@ -158,7 +175,16 @@ const RtpProxy = () => {
                 id={"Outbound-Port-Minimum"}
                 className={classes["port"]}
                 name={"Outbound_Port_Minimum"}
-                {...register("Outbound_Port_Minimum")}
+                type={"number"}
+                {...register("Outbound_Port_Minimum", {
+                  required: "وارد کردن این فیلد اجباری است",
+                  min: {
+                    value: 10000,
+                    message: "مقدار این فیلد باید حداقل 10000 باشد",
+                  },
+                })}
+                isError={Boolean(errors?.Outbound_Port_Minimum)}
+                errorMessage={errors?.Outbound_Port_Minimum?.message}
               />
             </div>
 
@@ -174,7 +200,16 @@ const RtpProxy = () => {
                 id={"Outbound-Port-Maximum"}
                 className={classes["port"]}
                 name={"Outbound_Port_Maximum"}
-                {...register("Outbound_Port_Maximum")}
+                type={"number"}
+                {...register("Outbound_Port_Maximum", {
+                  required: "وارد کردن این فیلد اجباری است",
+                  min: {
+                    value: 10000,
+                    message: "مقدار این فیلد باید حداقل 10000 باشد",
+                  },
+                })}
+                isError={Boolean(errors?.Outbound_Port_Maximum)}
+                errorMessage={errors?.Outbound_Port_Maximum?.message}
               />
             </div>
           </div>
@@ -209,6 +244,16 @@ const RtpProxy = () => {
               name={"Call_Duration"}
               unit={"Second"}
               {...register("Call_Duration")}
+              type={"number"}
+              {...register("Call_Duration", {
+                required: "وارد کردن این فیلد اجباری است",
+                min: {
+                  value: 100,
+                  message: "مقدار این فیلد باید حداقل 100 باشد",
+                },
+              })}
+              isError={Boolean(errors?.Call_Duration)}
+              errorMessage={errors?.Call_Duration?.message}
             />
           </div>
         </div>
@@ -228,7 +273,16 @@ const RtpProxy = () => {
               className={classes["RTP-Loss-Timeout"]}
               name={"RTP_Loss_Timeout"}
               unit={"Second"}
-              {...register("RTP_Loss_Timeout")}
+              type={"number"}
+              {...register("RTP_Loss_Timeout", {
+                required: "وارد کردن این فیلد اجباری است",
+                min: {
+                  value: 10,
+                  message: "مقدار این فیلد باید حداقل 10 باشد",
+                },
+              })}
+              isError={Boolean(errors?.RTP_Loss_Timeout)}
+              errorMessage={errors?.RTP_Loss_Timeout?.message}
             />
           </div>
         </div>

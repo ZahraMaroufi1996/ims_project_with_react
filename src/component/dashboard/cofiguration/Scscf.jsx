@@ -6,7 +6,11 @@ import { InputComponent } from "./InputComponent";
 import classNames from "classnames";
 
 const Scscf = () => {
-  const { register } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+
   return (
     <div
       className={classNames(
@@ -52,6 +56,16 @@ const Scscf = () => {
                 className={classes["register-time"]}
                 unit={"S"}
                 {...register("Minimum_Register_Time")}
+                type={"number"}
+                {...register("Minimum_Register_Time", {
+                  required: "وارد کردن این فیلد اجباری است",
+                  min: {
+                    value: 10,
+                    message: "مقدار این فیلد باید حداقل 10 باشد",
+                  },
+                })}
+                isError={Boolean(errors?.Minimum_Register_Time)}
+                errorMessage={errors?.Minimum_Register_Time?.message}
               />
             </div>
 
@@ -69,7 +83,16 @@ const Scscf = () => {
                 name={"Maximum_Register_Time"}
                 className={classes["register-time"]}
                 unit={"S"}
-                {...register("Maximum_Register_Time")}
+                type={"number"}
+                {...register("Maximum_Register_Time", {
+                  required: "وارد کردن این فیلد اجباری است",
+                  min: {
+                    value: 30,
+                    message: "مقدار این فیلد باید حداقل 30 باشد",
+                  },
+                })}
+                isError={Boolean(errors?.Maximum_Register_Time)}
+                errorMessage={errors?.Maximum_Register_Time?.message}
               />
             </div>
           </div>
@@ -97,7 +120,16 @@ const Scscf = () => {
               name={"s_shared_memory"}
               className={classes["memory"]}
               unit={"MB"}
-              {...register("s_shared_memory")}
+              type={"number"}
+              {...register("s_shared_memory", {
+                required: "وارد کردن این فیلد اجباری است",
+                min: {
+                  value: 5,
+                  message: "مقدار این فیلد باید حداقل 5 باشد",
+                },
+              })}
+              isError={Boolean(errors?.s_shared_memory)}
+              errorMessage={errors?.s_shared_memory?.message}
             />
           </div>
 
@@ -115,7 +147,16 @@ const Scscf = () => {
               name={"s_private_memory"}
               className={classes["memory"]}
               unit={"MB"}
-              {...register("s_private_memory")}
+              type={"number"}
+              {...register("s_private_memory", {
+                required: "وارد کردن این فیلد اجباری است",
+                min: {
+                  value: 5,
+                  message: "مقدار این فیلد باید حداقل 5 باشد",
+                },
+              })}
+              isError={Boolean(errors?.s_private_memory)}
+              errorMessage={errors?.s_private_memory?.message}
             />
           </div>
         </div>

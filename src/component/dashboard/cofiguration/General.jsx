@@ -6,10 +6,10 @@ import classNames from "classnames";
 import { useFormContext, useWatch } from "react-hook-form";
 
 const General = () => {
-  const { register } = useFormContext();
-  // const { General_type_icon1 } = useWatch();
-
-  // console.log(useWatch());
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   return (
     <div className={classNames(classes["general-class"])}>
@@ -27,11 +27,15 @@ const General = () => {
             )}
           >
             <InputComponent
-              {...register("IMS_Domain")}
+              {...register("IMS_Domain", {
+                required: "وارد کردن این فیلد اجباری است",
+              })}
               title={"IMS Domain*"}
               id={"ims-domain"}
               name={"IMS_Domain"}
               className={classes["general-class-content-field1-box"]}
+              isError={Boolean(errors?.IMS_Domain)}
+              errorMessage={errors?.IMS_Domain?.message}
             />
           </div>
         </div>

@@ -15,9 +15,10 @@ import classNames from "classnames";
 import { InputComponent } from "./InputComponent";
 
 const Pcscf = ({ onChange }) => {
-  const { register } = useFormContext();
-  // const { General_type_icon1 } = useWatch();
-  // console.log(useWatch());
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   return (
     <div className={classNames(classes["P-CSCF-class"])}>
@@ -101,7 +102,16 @@ const Pcscf = ({ onChange }) => {
               name={"p_shared_memory"}
               className={classes["memory"]}
               unit={"MB"}
-              {...register("p_shared_memory")}
+              type={"number"}
+              {...register("p_shared_memory", {
+                required: "وارد کردن این فیلد اجباری است",
+                min: {
+                  value: 5,
+                  message: "مقدار این فیلد باید حداقل 5 باشد",
+                },
+              })}
+              isError={Boolean(errors?.p_shared_memory)}
+              errorMessage={errors?.p_shared_memory?.message}
             />
           </div>
 
@@ -114,7 +124,16 @@ const Pcscf = ({ onChange }) => {
               name={"p_private_memory"}
               className={classes["memory"]}
               unit={"MB"}
-              {...register("p_private_memory")}
+              type={"number"}
+              {...register("p_private_memory", {
+                required: "وارد کردن این فیلد اجباری است",
+                min: {
+                  value: 5,
+                  message: "مقدار این فیلد باید حداقل 5 باشد",
+                },
+              })}
+              isError={Boolean(errors?.p_private_memory)}
+              errorMessage={errors?.p_private_memory?.message}
             />
           </div>
         </div>
