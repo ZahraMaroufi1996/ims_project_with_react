@@ -18,7 +18,6 @@ const Login = () => {
   });
 
   const history = useNavigate();
-  // const [error, setError] = useState(undefined);
   const handleChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;

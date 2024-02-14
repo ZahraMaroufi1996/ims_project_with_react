@@ -1,18 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Harchi } from "./root";
+import Default from "./default";
 import Login from "./pages/login";
 import Dashboard from "./component/dashboard/Dashboard";
-
+import NotFound from "./notFound";
 import AppRoutes from "./routes";
-// import "./App.css";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="login" element={<Login />} />
-        <Route path="dashboard/*" element={<Dashboard />} />
-        <Route path="*" element={<Harchi />} />
+        <Route path="/" element={<Default />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

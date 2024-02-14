@@ -14,7 +14,11 @@ import { NodeContext } from "../../../context/NodeContext";
 
 const Node = () => {
   const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm({ mode: "onChange" });
   const [ipAddress, setIpAddress] = useState();
   const [nodes, setNodes] = useState([]);
 
@@ -75,12 +79,34 @@ const Node = () => {
               )}
             >
               <span>Name</span>
-              <input
-                type="text"
-                name="node_name"
-                className={classNames(classes["node-name-box"])}
-                {...register(`node_name`)}
-              />
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  position: "relative",
+                }}
+              >
+                <input
+                  type="text"
+                  name="node_name"
+                  className={classNames(
+                    classes["node-name-box"],
+                    `form-control${errors.node_name ? " is-invalid" : ""}`
+                  )}
+                  {...register("node_name", {
+                    required: "وارد کردن این فیلد اجباری است",
+                  })}
+                />
+                {errors.node_name && (
+                  <div
+                    style={{ top: 30, left: 0, position: "absolute" }}
+                    className="invalid-feedback"
+                  >
+                    {errors.node_name.message}
+                  </div>
+                )}
+              </div>
             </div>
 
             <IpInput

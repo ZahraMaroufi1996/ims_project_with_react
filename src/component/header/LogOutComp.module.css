@@ -1,0 +1,68 @@
+.log-out {
+  /* display: none; */
+  width: 20.31vw;
+  height: 20.01vh;
+  right: 3.96vw;
+  top: 5.37vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border: 0.49vw solid transparent;
+  border-top: 0;
+  border-bottom: 1.32vh solid #1f666e;
+  float: right;
+  margin-right: 4.125vw;
+}
+
+/*.profile-triangle {
+  right: 6.6vw;
+}*/
+.log-out-content {
+  width: 18.48vw;
+  height: 17.037vh;
+  margin: 0 auto;
+  margin-top: 1.29vh;
+  background-color: #1f666e;
+  border-radius: 1.38vh;
+}
+
+.toolbar-buttons {
+  width: 15.73vw;
+  height: 3.15vh;
+  margin-bottom: 10px;
+}
+
+.toolbar-button {
+  width: 6.77vw;
+  height: 3.15vh;
+  border-radius: 0.65vh;
+  border: none;
+  color: white;
+  font-size: 1.48vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.log-out-cancel-button {
+  background-color: #313f68;
+  opacity: 100%;
+}
+
+.log-out-confirm-button {
+  background-color: #ff8946;
+  opacity: 100%;
+}
+
+.log-out-title,
+.log-out-question {
+  color: white;
+  font-size: 1.5vh;
+  font-family: "FiraGO", sans-serif;
+}
+
+.log-out-title {
+  margin-top: 10px;
+}

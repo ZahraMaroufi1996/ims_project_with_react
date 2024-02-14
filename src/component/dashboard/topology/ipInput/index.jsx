@@ -21,7 +21,7 @@ const IpInput = ({ onChange, title, className }) => {
     field3: "",
     field4: "",
   });
-  console.log(errors);
+  // console.log(errors);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -83,160 +83,159 @@ const IpInput = ({ onChange, title, className }) => {
       )}
     >
       <span>{title}</span>
-      <div
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "column",
           position: "relative",
         }}
-      >
-        <input
-          type="number"
-          name="field1"
-          value={form.field1}
-          className={classNames(
-            classes["ip-octet"],
-            `form-control${errors.field1 ? " is-invalid" : ""}`
-          )}
-          onChange={handleChange}
-          {...register("field1", {
-            required: "وارد کردن این فیلد اجباری است",
-            min: {
-              value: 1,
-              message: "مقدار این فیلد باید حداقل 1 باشد",
-            },
-            max: {
-              value: 192,
-              message: "مقدار این فیلد باید حداکثر 192 باشد",
-            },
-          })}
-        />
-        {errors.field1 && (
+      > */}
+      <input
+        type="number"
+        name="field1"
+        value={form.field1}
+        class={classes["ip-octet"]}
+        onChange={handleChange}
+        // className={classNames(
+        //   classes["ip-octet"],
+        //   `form-control${errors.field1 ? " is-invalid" : ""}`
+        // )}
+        // {...register("field1", {
+        //   required: "وارد کردن این فیلد اجباری است",
+        //   min: {
+        //     value: 1,
+        //     message: "مقدار این فیلد باید حداقل 1 باشد",
+        //   },
+        //   max: {
+        //     value: 192,
+        //     message: "مقدار این فیلد باید حداکثر 192 باشد",
+        //   },
+        // })}
+      />
+      {/* {errors.field1 && (
           <div
             style={{ top: 20, left: 0, position: "absolute" }}
             className="invalid-feedback"
           >
             {errors.field1.message}
           </div>
-        )}
-      </div>
-
-      <div
+        )} */}
+      {/* </div> */}
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "column",
           position: "relative",
         }}
-      >
-        <input
-          type="number"
-          name="field2"
-          value={form.field2}
-          // class={classes["ip-octet"]}
-          className={classNames(
-            classes["ip-octet"],
-            `form-control${errors.field2 ? " is-invalid" : ""}`
-          )}
-          onChange={handleChange}
-          {...register("field2", {
-            required: "وارد کردن این فیلد اجباری است",
-            min: {
-              value: 1,
-              message: "مقدار این فیلد باید حداقل 1 باشد",
-            },
-            max: {
-              value: 192,
-              message: "مقدار این فیلد باید حداکثر 192 باشد",
-            },
-          })}
-        />
-        {errors.field2 && (
+      > */}
+      <input
+        type="number"
+        name="field2"
+        value={form.field2}
+        class={classes["ip-octet"]}
+        onChange={handleChange}
+        // className={classNames(
+        //   classes["ip-octet"],
+        //   `form-control${errors.field2 ? " is-invalid" : ""}`
+        // )}
+        // {...register("field2", {
+        //   required: "وارد کردن این فیلد اجباری است",
+        //   min: {
+        //     value: 1,
+        //     message: "مقدار این فیلد باید حداقل 1 باشد",
+        //   },
+        //   max: {
+        //     value: 192,
+        //     message: "مقدار این فیلد باید حداکثر 192 باشد",
+        //   },
+        // })}
+      />
+      {/* {errors.field2 && (
           <div
             style={{ top: 30, left: 0, position: "absolute" }}
             className="invalid-feedback"
           >
             {errors.field2.message}
           </div>
-        )}
-      </div>
-
-      <div
+        )} */}
+      {/* </div> */}
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "column",
           position: "relative",
         }}
-      >
-        <input
-          type="number"
-          name="field3"
-          value={form.field3}
-          // class={classes["ip-octet"]}
-          className={classNames(
-            classes["ip-octet"],
-            `form-control${errors.field3 ? " is-invalid" : ""}`
-          )}
-          onChange={handleChange}
-          {...register("field3", {
-            required: "وارد کردن این فیلد اجباری است",
-            min: {
-              value: 1,
-              message: "مقدار این فیلد باید حداقل 1 باشد",
-            },
-            max: {
-              value: 192,
-              message: "مقدار این فیلد باید حداکثر 192 باشد",
-            },
-          })}
-        />
-        {errors.field3 && (
+      > */}
+      <input
+        type="number"
+        name="field3"
+        value={form.field3}
+        class={classes["ip-octet"]}
+        onChange={handleChange}
+        // className={classNames(
+        //   classes["ip-octet"],
+        //   `form-control${errors.field3 ? " is-invalid" : ""}`
+        // )}
+        // {...register("field3", {
+        //   required: "وارد کردن این فیلد اجباری است",
+        //   min: {
+        //     value: 1,
+        //     message: "مقدار این فیلد باید حداقل 1 باشد",
+        //   },
+        //   max: {
+        //     value: 192,
+        //     message: "مقدار این فیلد باید حداکثر 192 باشد",
+        //   },
+        // })}
+      />
+      {/* {errors.field3 && (
           <div
             style={{ top: 30, left: 0, position: "absolute" }}
             className="invalid-feedback"
           >
             {errors.field3.message}
           </div>
-        )}
-      </div>
-
-      <div
+        )} */}
+      {/* </div> */}
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "column",
           position: "relative",
         }}
-      >
-        <input
-          type="number"
-          name="field4"
-          value={form.field4}
-          // class={classes["ip-octet"]}
-          className={classNames(
-            classes["ip-octet"],
-            `form-control${errors.field4 ? " is-invalid" : ""}`
-          )}
-          onChange={handleChange}
-          {...register("field4", {
-            required: "وارد کردن این فیلد اجباری است",
-            min: {
-              value: 1,
-              message: "مقدار این فیلد باید حداقل 1 باشد",
-            },
-            max: {
-              value: 192,
-              message: "مقدار این فیلد باید حداکثر 192 باشد",
-            },
-          })}
-        />
-        {errors.field4 && (
+      > */}
+      <input
+        type="number"
+        name="field4"
+        value={form.field4}
+        class={classes["ip-octet"]}
+        onChange={handleChange}
+        // className={classNames(
+        //   classes["ip-octet"],
+        //   `form-control${errors.field4 ? " is-invalid" : ""}`
+        // )}
+        // {...register("field4", {
+        //   required: "وارد کردن این فیلد اجباری است",
+        //   min: {
+        //     value: 1,
+        //     message: "مقدار این فیلد باید حداقل 1 باشد",
+        //   },
+        //   max: {
+        //     value: 192,
+        //     message: "مقدار این فیلد باید حداکثر 192 باشد",
+        //   },
+        // })}
+      />
+      {/* {errors.field4 && (
           <div
             style={{ top: 30, left: 0, position: "absolute" }}
             className="invalid-feedback"
           >
             {errors.field4.message}
           </div>
-        )}
-      </div>
+        )} */}
+      {/* </div> */}
+      {/* { (errors.field1 || errors.field2 )} */}
     </div>
   );
 };

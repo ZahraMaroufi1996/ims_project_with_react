@@ -1,19 +1,19 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Harchi = () => {
-  const navigate = useNavigate();
+const Default = () => {
+  const history = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
 
     if (token) {
-      navigate("/dashboard/topology");
+      history("/dashboard/topology");
     } else {
-      navigate("/login");
+      history("/login");
     }
   }, []);
-  return <></>;
+  return <> Hiiiiiiiiiiiiiiiii </>;
 };
 
-export { Harchi };
+export default Default;

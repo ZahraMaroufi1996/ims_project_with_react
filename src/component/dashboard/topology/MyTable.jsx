@@ -181,7 +181,7 @@ const MyTable = () => {
                         "justify-content-around"
                       )}
                     >
-                      <div onClick={() => alert("pencil")}>
+                      <div>
                         <Pencil />
                       </div>
 

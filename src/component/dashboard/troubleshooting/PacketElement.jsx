@@ -15,8 +15,8 @@ const PacketElement = () => {
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
-  } = useForm();
+    // setValue,
+  } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
     const token = localStorage.getItem("token");
@@ -82,11 +82,16 @@ const PacketElement = () => {
             )}
           >
             <InputComponent
-              {...register("packet_option")}
               title={"Options"}
               name={"packet_option"}
               id={"packet-option"}
               className={classes["node-option-box"]}
+              type={"text"}
+              {...register("packet_option", {
+                required: "وارد کردن این فیلد اجباری است",
+              })}
+              isError={Boolean(errors?.packet_option)}
+              errorMessage={errors?.packet_option?.message}
             />
           </div>
           <MyButton title={"Start"} className={classes["start-button"]} />
