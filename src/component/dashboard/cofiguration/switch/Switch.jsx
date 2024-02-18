@@ -4,9 +4,9 @@ import { forwardRef } from "react";
 import Axios from "axios";
 import classes from "./Switch.module.css";
 import classNames from "classnames";
-import { InputComponent } from "./InputComponent";
+import { InputComponent } from "../input/InputComponent";
 
-const Switch = forwardRef(({ className,title, id, name, ...rest }, ref) => {
+const Switch = forwardRef(({ className, title, id, name, ...rest }, ref) => {
   // const { register } = useFormContext();
   return (
     <div

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./General.module.css";
-import { Checkbox } from "./Checkbox";
-import { InputComponent } from "./InputComponent";
+import { Checkbox } from "../checkbox/Checkbox";
+import { InputComponent } from "../input/InputComponent";
 import classNames from "classnames";
 import { useFormContext, useWatch } from "react-hook-form";
 

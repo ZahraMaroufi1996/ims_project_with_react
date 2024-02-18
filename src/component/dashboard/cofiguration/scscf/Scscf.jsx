@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
 import Axios from "axios";
 import classes from "./Scscf.module.css";
-import { InputComponent } from "./InputComponent";
+import { InputComponent } from "../input/InputComponent";
 import classNames from "classnames";
 
 const Scscf = () => {

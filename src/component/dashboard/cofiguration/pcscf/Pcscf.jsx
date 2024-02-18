@@ -8,11 +8,11 @@ import {
 } from "react-hook-form";
 
 import classes from "./Pcscf.module.css";
-import { Switch } from "./Switch";
-import { Checkbox } from "./Checkbox";
-import { RxConfiguration } from "./RxConfiguration";
+import { Switch } from "../switch/Switch";
+import { Checkbox } from "../checkbox/Checkbox";
+import { RxConfiguration } from "../rxConfiguration/RxConfiguration";
 import classNames from "classnames";
-import { InputComponent } from "./InputComponent";
+import { InputComponent } from "../input/InputComponent";
 
 const Pcscf = ({ onChange }) => {
   const {

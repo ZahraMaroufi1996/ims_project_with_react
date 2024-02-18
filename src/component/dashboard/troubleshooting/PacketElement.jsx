@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import classes from "./PacketElement.module.css";
 import { SelectComponent } from "./SelectComponent";
-import { InputComponent } from "../cofiguration/InputComponent";
+import { InputComponent } from "../cofiguration/input/InputComponent";
 import classNames from "classnames";
 import { MyButton } from "../cofiguration/MyButton";
 
@@ -20,7 +20,6 @@ const PacketElement = () => {
 
   const onSubmit = (data) => {
     const token = localStorage.getItem("token");
-    // console.log(data);
     Axios.post(`${url}/api/troubleshooting/packetCapture`, data, {
       headers: {
         "Content-Type": "application/json",

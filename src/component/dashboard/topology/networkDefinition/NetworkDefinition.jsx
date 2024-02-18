@@ -3,8 +3,8 @@ import Axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import classes from "./NetworkDefinition.module.css";
-import { IpInput } from "./ipInput";
-import { MyButton } from "../cofiguration/MyButton";
+import { IpInput } from "../ipInput";
+import { MyButton } from "../../cofiguration/MyButton";
 import classNames from "classnames";
 
 const NetworkDefinition = () => {

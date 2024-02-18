@@ -10,8 +10,6 @@ import { PassIcon } from "../component/login/PassIcon";
 
 const Login = () => {
   const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
-  // let token;
-
   const [form, setForm] = useState({
     username: "",
     password: "",

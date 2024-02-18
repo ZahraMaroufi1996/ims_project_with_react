@@ -4,13 +4,13 @@ import Axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import classes from "./Node.module.css";
-import { IpInput } from "../topology/ipInput";
-import { Checkbox } from "../cofiguration/Checkbox";
-import { Radio } from "../topology/Radio";
+import { IpInput } from "../ipInput";
+import { Checkbox } from "../../cofiguration/checkbox/Checkbox";
+import { Radio } from "../radio/Radio";
 import classNames from "classnames";
-import { MyButton } from "../cofiguration/MyButton";
-import { MyTable } from "./MyTable";
-import { NodeContext } from "../../../context/NodeContext";
+import { MyButton } from "../../cofiguration/MyButton";
+import { MyTable } from "../table/MyTable";
+import { NodeContext } from "../../../../context/NodeContext";
 
 const Node = () => {
   const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";

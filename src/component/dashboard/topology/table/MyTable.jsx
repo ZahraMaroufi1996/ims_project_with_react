@@ -3,15 +3,15 @@ import Axios from "axios";
 import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { NodeContext } from "../../../context/NodeContext";
-import { TopologyDataContext } from "../../../context/TopologyDataContext";
+import { NodeContext } from "../../../../context/NodeContext";
+import { TopologyDataContext } from "../../../../context/TopologyDataContext";
 import classes from "./MyTable.module.css";
 import classNames from "classnames";
-import { Modal } from "../topology/Modal";
-import { Pencil } from "../../icons/Pencil";
-import { Tick } from "../../icons/Tick";
-import { Close } from "../../icons/Close";
-import { Trash } from "../../icons/Trash";
+import { Modal } from "../modal/Modal";
+import { Pencil } from "../../../icons/Pencil";
+import { Tick } from "../../../icons/Tick";
+import { Close } from "../../../icons/Close";
+import { Trash } from "../../../icons/Trash";
 
 const MyTable = () => {
   const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";

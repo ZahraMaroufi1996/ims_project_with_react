@@ -7,9 +7,9 @@ import {
   useWatch,
 } from "react-hook-form";
 import classes from "./RtpProxy.module.css";
-import { InputComponent } from "./InputComponent";
-import { Checkbox } from "./Checkbox";
-import { Switch } from "./Switch";
+import { InputComponent } from "../input/InputComponent";
+import { Checkbox } from "../checkbox/Checkbox";
+import { Switch } from "../switch/Switch";
 
 import classNames from "classnames";
 

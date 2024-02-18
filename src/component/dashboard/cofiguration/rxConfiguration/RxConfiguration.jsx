@@ -3,11 +3,11 @@ import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import Axios from "axios";
 import classes from "./RxConfiguration.module.css";
 import classNames from "classnames";
-import { InputComponent } from "./InputComponent";
-import { IpInput } from "../topology/ipInput";
-import { Checkbox } from "./Checkbox";
-import { Radio } from "../topology/Radio";
-import { Switch } from "./Switch";
+import { InputComponent } from "../input/InputComponent";
+import { IpInput } from "../../topology/ipInput";
+import { Checkbox } from "../checkbox/Checkbox";
+import { Radio } from "../../topology/radio/Radio";
+import { Switch } from "../switch/Switch";
 
 const RxConfiguration = ({ onChange }) => {
   const {
