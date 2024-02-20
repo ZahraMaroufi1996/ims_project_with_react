@@ -50,7 +50,6 @@ const PacketElement = () => {
           >
             <SelectComponent
               title={"Node"}
-              replace={"Select Node"}
               id={"packet-node-id"}
               {...register(`packet_node_type`)}
             />
@@ -65,7 +64,6 @@ const PacketElement = () => {
           >
             <SelectComponent
               title={"Interface"}
-              replace={"any"}
               id={"packet-interface-id"}
               {...register(`packet_interface_type`)}
             />
