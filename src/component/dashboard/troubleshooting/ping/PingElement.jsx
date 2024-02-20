@@ -5,9 +5,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import classes from "./PingElement.module.css";
 import classNames from "classnames";
-import { SelectComponent } from "./SelectComponent";
-import { IpInput } from "../topology/ipInput";
-import { MyButton } from "../cofiguration/myButton/MyButton";
+import { SelectComponent } from "../select/SelectComponent";
+import { IpInput } from "../../topology/ipInput";
+import { MyButton } from "../../cofiguration/myButton/MyButton";
 
 const PingElement = () => {
   const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";

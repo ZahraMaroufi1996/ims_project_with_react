@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Toolbar from "../header/Toolbar";
+import { Routes, Route } from "react-router-dom";
+import Toolbar from "../header/toolbar/Toolbar";
 import Sidebar from "../sidebar/Sidebar";
 import Footer from "../footer/Footer";
 import Content from "../content/Content";

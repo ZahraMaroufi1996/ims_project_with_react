@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { About } from "../icons/About";
-import { Message } from "../icons/Message";
-import { Sound } from "../icons/Sound";
-import { Profile } from "../icons/Profile";
-import { Logout } from "../icons/Logout";
-import { Exit } from "../icons/Exit";
-import { Help } from "../icons/Help";
-import { Lock } from "../icons/Lock";
-import { LogOutComp } from "./LogOutComp";
-
-import "./Toolbar.css";
+import { About } from "../../icons/About";
+import { Message } from "../../icons/Message";
+import { Sound } from "../../icons/Sound";
+import { Profile } from "../../icons/Profile";
+import { Logout } from "../../icons/Logout";
+import { Exit } from "../../icons/Exit";
+import { Help } from "../../icons/Help";
+import { Lock } from "../../icons/Lock";
+import { LogOutComp } from "../logout/LogOutComp";
+import classes from "./Toolbar.module.css";
+import classNames from "classnames";
 
 const Toolbar = () => {
   const [logOutState, setLogOutState] = useState(false);
@@ -22,8 +22,8 @@ const Toolbar = () => {
 
   return (
     <>
-      <nav class="toolbar">
-        <div class="toolbar-nav-content">
+      <nav className={classNames(classes["toolbar"])}>
+        <div className={classNames(classes["toolbar-nav-content"])}>
           <a href="#">
             <About />
           </a>

@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./troubleshooting.module.css";
 import classNames from "classnames";
-import { PingElement } from "../component/dashboard/troubleshooting/PingElement";
-import { PacketElement } from "../component/dashboard/troubleshooting/PacketElement";
+import { PingElement } from "../component/dashboard/troubleshooting/ping/PingElement";
+import { PacketElement } from "../component/dashboard/troubleshooting/packet/PacketElement";
 
 const Troubleshooting = () => {
   return (
