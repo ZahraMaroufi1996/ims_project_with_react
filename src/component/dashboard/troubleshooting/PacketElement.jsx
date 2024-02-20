@@ -7,7 +7,7 @@ import classes from "./PacketElement.module.css";
 import { SelectComponent } from "./SelectComponent";
 import { InputComponent } from "../cofiguration/input/InputComponent";
 import classNames from "classnames";
-import { MyButton } from "../cofiguration/MyButton";
+import { MyButton } from "../cofiguration/myButton/MyButton";
 
 const PacketElement = () => {
   const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";

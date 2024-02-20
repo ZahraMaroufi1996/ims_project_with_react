@@ -8,7 +8,7 @@ import { General } from "../component/dashboard/cofiguration/general/General";
 import { Pcscf } from "../component/dashboard/cofiguration/pcscf/Pcscf";
 import { Icscf } from "../component/dashboard/cofiguration/icscf/Icscf";
 import { Scscf } from "../component/dashboard/cofiguration/scscf/Scscf";
-import { MyButton } from "../component/dashboard/cofiguration/MyButton";
+import { MyButton } from "../component/dashboard/cofiguration/myButton/MyButton";
 import { RtpProxy } from "../component/dashboard/cofiguration/rtpProxy/RtpProxy";
 import classes from "./configuration.module.css";
 import classNames from "classnames";
@@ -159,9 +159,9 @@ const Configuration = () => {
     handleOnChangeIpAddress(response.data.pcscf.rxConfiguration.pcrfIp);
   };
 
-  // useEffect(() => {
-  //   getConfigInfo();
-  // }, []);
+  useEffect(() => {
+    getConfigInfo();
+  }, []);
 
   const getConfigInfo = () => {
     Axios.get(`${url}/api/configuration`, {

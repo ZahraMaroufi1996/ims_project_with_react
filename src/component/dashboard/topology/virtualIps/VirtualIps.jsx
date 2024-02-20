@@ -4,8 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import classes from "./VirtualIps.module.css";
 import classNames from "classnames";
-import { VirtualIpInput } from "./virtualIpInput";
-import { MyButton } from "../cofiguration/MyButton";
+import { VirtualIpInput } from "../virtualIpInput";
+import { MyButton } from "../../cofiguration/myButton/MyButton";
 
 const VirtualIps = () => {
   const [databaseVirtualIp, setDatabaseVirtualIp] = useState();

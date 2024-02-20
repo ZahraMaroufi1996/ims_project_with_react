@@ -8,7 +8,7 @@ import { IpInput } from "../ipInput";
 import { Checkbox } from "../../cofiguration/checkbox/Checkbox";
 import { Radio } from "../radio/Radio";
 import classNames from "classnames";
-import { MyButton } from "../../cofiguration/MyButton";
+import { MyButton } from "../../cofiguration/myButton/MyButton";
 import { MyTable } from "../table/MyTable";
 import { NodeContext } from "../../../../context/NodeContext";
 
