@@ -52,6 +52,7 @@ const PacketElement = () => {
               title={"Node"}
               id={"packet-node-id"}
               {...register(`packet_node_type`)}
+              name={"packet_node_type"}
             />
           </div>
           <div
@@ -66,6 +67,7 @@ const PacketElement = () => {
               title={"Interface"}
               id={"packet-interface-id"}
               {...register(`packet_interface_type`)}
+              name={"packet_interface_type"}
             />
           </div>
         </div>

@@ -40,6 +40,7 @@ const InputComponent = forwardRef(
             name={name}
             {...rest}
             onChange={(e) => {
+              console.log(e);
               rest.onChange(e);
             }}
           />
@@ -47,13 +48,12 @@ const InputComponent = forwardRef(
             <div
               style={{ top: 20, left: 0, position: "absolute" }}
               className="invalid-feedback"
-              // className={classNames(classes["invalid-message"])}
             >
               {errorMessage}
             </div>
           )}
         </div>
-        {/* </div> */}
+
         {unit ? (
           <span className={classNames(classes["unit"])}>{unit}</span>
         ) : (
