@@ -21,7 +21,6 @@ const IpInput = ({ onChange, title, className }) => {
     field3: "",
     field4: "",
   });
-  // console.log(errors);
 
   const handleChange = (e) => {
     e.preventDefault();

@@ -7,7 +7,7 @@
   padding-right: 5px;
 }
 
-.chb-1-circle + label::before {
+.chb-circle + label::before {
   position: absolute;
   width: 0.91vw;
   height: 1.75vh;
@@ -18,7 +18,7 @@
   left: -20px;
 }
 
-.chb-1-circle:checked + label::before {
+.chb-circle:checked + label::before {
   background-color: #68d5b0;
 }
 

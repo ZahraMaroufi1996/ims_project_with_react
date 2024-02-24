@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import Axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import classes from "./Node.module.css";
+import classNames from "classnames";
 import { IpInput } from "../ipInput";
 import { Checkbox } from "../../cofiguration/checkbox/Checkbox";
 import { Radio } from "../radio/Radio";
-import classNames from "classnames";
 import { MyButton } from "../../cofiguration/myButton/MyButton";
 import { MyTable } from "../table/MyTable";
 import { NodeContext } from "../../../../context/NodeContext";
@@ -130,7 +130,7 @@ const Node = () => {
               <Radio
                 {...register(`node_type_icon`)}
                 title={"P-CSCF"}
-                id={"node-type-1"}
+                id={"node-type-pscf"}
                 value="pcscf"
                 name={"node_type_icon"}
                 className={classes["node-type-pcscf-checkbox"]}
@@ -139,7 +139,7 @@ const Node = () => {
               <Radio
                 {...register(`node_type_icon`)}
                 title={"RTP Proxy"}
-                id={"node-type-2"}
+                id={"node-type-rtp-proxy"}
                 value="rtpProxy"
                 name={"node_type_icon"}
                 className={classes["node-type-rtp-proxy-checkbox"]}
@@ -148,7 +148,7 @@ const Node = () => {
               <Radio
                 {...register(`node_type_icon`)}
                 title={"Core"}
-                id={"node-type-3"}
+                id={"node-type-core"}
                 value="core"
                 name={"node_type_icon"}
                 className={classes["node-type-core-checkbox"]}

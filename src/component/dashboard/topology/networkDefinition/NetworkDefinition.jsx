@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState } from "react";
 import Axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,9 +8,8 @@ import { MyButton } from "../../cofiguration/myButton/MyButton";
 import classNames from "classnames";
 
 const NetworkDefinition = () => {
-  const [isShow, setShow] = useState(null);
-  const [subnet, setSubnet] = useState();
-  const [gateway, setGateWay] = useState();
+  const [subnetmask, setSubnetmask] = useState();
+  const [gateway, setGateway] = useState();
   const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
 
   const handleSubmit = (event) => {
@@ -18,7 +17,7 @@ const NetworkDefinition = () => {
     const token = localStorage.getItem("token");
 
     const formData = {
-      SubnetMask: subnet,
+      SubnetMask: subnetmask,
       Gateway: gateway,
     };
 
@@ -37,11 +36,11 @@ const NetworkDefinition = () => {
       });
   };
 
-  const handleOnChangeSubnet = (value) => {
-    setSubnet(value);
+  const handleOnChangeSubnetmask = (value) => {
+    setSubnetmask(value);
   };
-  const handleOnChangeGateWay = (value) => {
-    setGateWay(value);
+  const handleOnChangeGateway = (value) => {
+    setGateway(value);
   };
 
   return (
@@ -71,12 +70,12 @@ const NetworkDefinition = () => {
             </span>
             <IpInput
               title={"subnetmask"}
-              onChange={handleOnChangeSubnet}
+              onChange={handleOnChangeSubnetmask}
               className={classes["network-definition-subnetmask"]}
             />
             <IpInput
               title={"gateway"}
-              onChange={handleOnChangeGateWay}
+              onChange={handleOnChangeGateway}
               className={classes["network-definition-gateway"]}
             />
           </div>

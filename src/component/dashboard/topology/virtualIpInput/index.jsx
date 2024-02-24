@@ -66,7 +66,7 @@ const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
           "align-items-center"
         )}
       >
-        <span className={classNames(classes["virtual-ips-main-text"])}>
+        <span className={classNames(classes["virtual-ips-main-title"])}>
           {mainTitle}
         </span>
         <div
@@ -81,7 +81,6 @@ const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
             type="text"
             name="field1"
             className={classNames(classes["ip-octet"])}
-            id="virtual-ips-database-octet1"
             value={form.field1}
             onChange={handleChange}
           />
@@ -89,7 +88,6 @@ const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
             type="text"
             name="field2"
             className={classNames(classes["ip-octet"])}
-            id="virtual-ips-database-octet2"
             value={form.field2}
             onChange={handleChange}
           />
@@ -97,7 +95,6 @@ const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
             type="text"
             name="field3"
             className={classNames(classes["ip-octet"])}
-            id="virtual-ips-database-octet3"
             value={form.field3}
             onChange={handleChange}
           />
@@ -105,14 +102,13 @@ const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
             type="text"
             name="field4"
             className={classNames(classes["ip-octet"])}
-            id="virtual-ips-database-octet4"
             value={form.field4}
             onChange={handleChange}
           />
         </div>
       </div>
 
-      <div className={classNames(classes["virtual-ips-down-text"])}>
+      <div className={classNames(classes["virtual-ips-sub-title"])}>
         {subTitle}
       </div>
     </div>

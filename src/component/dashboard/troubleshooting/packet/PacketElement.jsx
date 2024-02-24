@@ -4,9 +4,9 @@ import Axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import classes from "./PacketElement.module.css";
+import classNames from "classnames";
 import { SelectComponent } from "../select/SelectComponent";
 import { InputComponent } from "../../cofiguration/input/InputComponent";
-import classNames from "classnames";
 import { MyButton } from "../../cofiguration/myButton/MyButton";
 
 const PacketElement = () => {
@@ -15,7 +15,6 @@ const PacketElement = () => {
     register,
     handleSubmit,
     formState: { errors },
-    // setValue,
   } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
@@ -36,7 +35,7 @@ const PacketElement = () => {
 
   return (
     <>
-      <span className={classNames(classes["right-side-content-title"])}>
+      <span className={classNames(classes["packet-content-title"])}>
         Packet Capture : tcpdump
       </span>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -50,7 +49,7 @@ const PacketElement = () => {
           >
             <SelectComponent
               title={"Node"}
-              id={"packet-node-id"}
+              id={"packet-node"}
               {...register(`packet_node_type`)}
               name={"packet_node_type"}
             />
@@ -65,7 +64,7 @@ const PacketElement = () => {
           >
             <SelectComponent
               title={"Interface"}
-              id={"packet-interface-id"}
+              id={"packet-interface"}
               {...register(`packet_interface_type`)}
               name={"packet_interface_type"}
             />

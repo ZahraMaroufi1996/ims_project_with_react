@@ -50,15 +50,13 @@ const PingElement = () => {
   return (
     <div
       className={classNames(
-        classes["main-content-left-side"],
+        classes["ping-content"],
         "d-flex",
         "justify-content-between",
         "flex-column"
       )}
     >
-      <span className={classNames(classes["left-side-content-title"])}>
-        Ping
-      </span>
+      <span className={classNames(classes["ping-content-title"])}>Ping</span>
 
       <div className={classNames("d-flex", "flex-column")}>
         <form

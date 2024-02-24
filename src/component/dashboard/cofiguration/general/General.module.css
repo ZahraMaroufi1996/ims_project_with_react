@@ -1,4 +1,4 @@
-.general-class {
+.general {
   width: 36.82vw;
   height: 12.68vh;
   margin-left: 2.083vw;
@@ -7,7 +7,7 @@
   border-radius: 0.83vh;
 }
 
-.general-class-content {
+.general-content {
   width: 34.48vw;
   height: 8.42vh;
   margin-left: 1.3vw;
@@ -15,13 +15,13 @@
   border-radius: 0.83vh;
 }
 
-.general-class-content-field1 {
+.general-content-ims-domain {
   width: 29.06vw;
   height: 3.7vh;
   margin-left: 2.5vw;
 }
 
-.general-class-content-title {
+.general-content-title {
   margin-left: 0;
   width: 3.17vw;
   height: 2.22vh;
@@ -31,18 +31,18 @@
   font-family: "FiraGO", sans-serif;
 }
 
-.general-class-content-field2 {
+.general-content-enable-homer {
   height: 2.037vh;
   margin-top: 2.66vh;
   margin-left: 5.57vw;
 }
 
-.general-class-content-field2-checkbox {
+.general-content-enable-homer-checkbox {
   height: 2.04vh;
   width: 4.5vw;
 }
 
-.general-class-content-field1-box {
+.general-content-ims-domain-box {
   width: 21.125vw;
   height: 3.7vh;
   background-color: #eef5f2;
@@ -57,7 +57,7 @@ p {
   font-family: "FiraGO", sans-serif;
 }
 
-input.general-class-content-field1-box {
+input.general-content-ims-domain-box {
   border: none;
 }
 

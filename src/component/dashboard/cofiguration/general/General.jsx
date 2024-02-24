@@ -12,37 +12,37 @@ const General = () => {
   } = useFormContext();
 
   return (
-    <div className={classNames(classes["general-class"])}>
-      <div className={classNames(classes["general-class-content"])}>
+    <div className={classNames(classes["general"])}>
+      <div className={classNames(classes["general-content"])}>
         <div className="d-flex flex-row justify-content-between align-items-center">
-          <div className={classNames(classes["general-class-content-title"])}>
+          <div className={classNames(classes["general-content-title"])}>
             General
           </div>
           <div
             className={classNames(
-              classes["general-class-content-field1"],
+              classes["general-content-ims-domain"],
               "d-flex",
               "justify-content-between",
               "align-items-center"
             )}
           >
             <InputComponent
-              {...register("IMS_Domain", {
+              {...register("ims_domain", {
                 required: "وارد کردن این فیلد اجباری است",
               })}
               title={"IMS Domain*"}
               id={"ims-domain"}
-              name={"IMS_Domain"}
-              className={classes["general-class-content-field1-box"]}
-              isError={Boolean(errors?.IMS_Domain)}
-              errorMessage={errors?.IMS_Domain?.message}
+              name={"ims_domain"}
+              className={classes["general-content-ims-domain-box"]}
+              isError={Boolean(errors?.ims_domain)}
+              errorMessage={errors?.ims_domain?.message}
             />
           </div>
         </div>
 
         <div
           className={classNames(
-            classes["general-class-content-field2"],
+            classes["general-content-enable-homer"],
             "d-flex",
             "justify-content-between",
             "align-items-center"
@@ -53,26 +53,26 @@ const General = () => {
           </span>
 
           <Checkbox
-            {...register(`General_type_icon1`)}
+            {...register(`enable_homer_pcscf`)}
             title={"P-CSCF"}
-            id={"General_type_1"}
-            name={"General_type_icon1"}
-            className={classes["general-class-content-field2-checkbox"]}
+            id={"enable-homer-pcscf"}
+            name={"enable_homer_pcscf"}
+            className={classes["general-content-enable-homer-checkbox"]}
           />
 
           <Checkbox
-            {...register(`General_type_icon2`)}
+            {...register(`enable_homer_scscf`)}
             title={"S-CSCF"}
-            id={"General-type-2"}
-            name={"General_type_icon2"}
-            className={classes["general-class-content-field2-checkbox"]}
+            id={"enable-homer-scscf"}
+            name={"enable_homer_scscf"}
+            className={classes["general-content-enable-homer-checkbox"]}
           />
           <Checkbox
-            {...register(`General_type_icon3`)}
+            {...register(`enable_homer_icscf`)}
             title={"I-CSCF"}
-            id={"General-type-3"}
-            name={"General_type_icon3"}
-            className={classes["general-class-content-field2-checkbox"]}
+            id={"enable-homer-icscf"}
+            name={"enable_homer_icscf"}
+            className={classes["general-content-enable-homer-checkbox"]}
           />
         </div>
       </div>

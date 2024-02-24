@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Axios from "axios";
 import {
   useForm,
   FormProvider,
@@ -22,7 +21,7 @@ const RtpProxy = () => {
   return (
     <div
       className={classNames(
-        classes["RTP-Proxy-class"],
+        classes["rtp-proxy"],
         "d-flex",
         "align-items-center",
         "justify-content-center"
@@ -30,21 +29,19 @@ const RtpProxy = () => {
     >
       <div
         className={classNames(
-          classes["RTP-Proxy-class-content"],
+          classes["rtp-proxy-content"],
           "d-flex",
           "flex-column",
           "justify-content-between"
         )}
       >
         <div className={classNames("d-flex", "align-item-center")}>
-          <span
-            className={classNames(classes["RTP-Proxy-class-content-title"])}
-          >
+          <span className={classNames(classes["rtp-proxy-content-title"])}>
             RTP Proxy
           </span>
           <div
             className={classNames(
-              classes["RTP-Proxy-class-content-input1"],
+              classes["rtp-proxy-content-hd-codes"],
               "d-flex",
               "align-items-center",
               "justify-content-between"
@@ -52,18 +49,18 @@ const RtpProxy = () => {
           >
             <span>Supported HD Codecs :</span>
             <Checkbox
-              {...register("Supported_HD_Codecs_type_icon1")}
+              {...register("supported_hd_codes_g.722")}
               title={"G.722"}
-              id={"Supported-HD-Codecs-type-1"}
-              name={"Supported_HD_Codecs_type_icon1"}
-              className={classes["RTP-Proxy-class-content-input1-checkbox"]}
+              id={"supported-hd-codes-g.722"}
+              name={"supported_hd_codes_g.722"}
+              className={classes["rtp-proxy-content-hd-codes-checkbox"]}
             />
             <Checkbox
-              {...register("Supported_HD_Codecs_type_icon2")}
+              {...register("supported_hd_codes_amr_wb")}
               title={"AMR-WB"}
-              id={"Supported-HD-Codecs-type-2"}
-              name={"Supported_HD_Codecs_type_icon2"}
-              className={classes["RTP-Proxy-class-content-input1-checkbox"]}
+              id={"supported-hd-codes-amr-wb"}
+              name={"supported_hd_codes_amr_wb"}
+              className={classes["rtp-proxy-content-hd-codes-checkbox"]}
             />
           </div>
         </div>
@@ -71,23 +68,23 @@ const RtpProxy = () => {
           title={"Enable SRTP"}
           id={"srtp"}
           name={"Enable_SRTP"}
-          {...register("Enable_SRTP")}
-          className={classes["RTP-Proxy-class-content-input2"]}
+          {...register("enable_srtp")}
+          className={classes["rtp-proxy-content-enable-srtp"]}
         />
         <div
           className={classNames(
-            classes["RTP-Proxy-class-content-input3"],
+            classes["rtp-proxy-content-inbound-port-range"],
             "d-flex",
             "flex-column",
             "justify-content-between"
           )}
         >
-          <span className={classNames("RTP-Proxy-Ports-title")}>
+          <span className={classNames("rtp-proxy-port-title")}>
             Inbound RTP Proxy Port Range :
           </span>
           <div
             className={classNames(
-              classes["RTP-Proxy-Ports"],
+              classes["rtp-proxy-port"],
               "d-flex",
               "align-items-center",
               "justify-content-between"
@@ -102,9 +99,9 @@ const RtpProxy = () => {
             >
               <InputComponent
                 title={"Port Minimum*"}
-                id={"Inbound-Port-Minimum"}
+                id={"inbound-port-minimum"}
                 className={classes["port"]}
-                name={"Inbound_Port_Minimum"}
+                name={"inbound_port_minimum"}
                 type={"number"}
                 {...register("Inbound_Port_Minimum", {
                   required: "وارد کردن این فیلد اجباری است",
@@ -113,8 +110,8 @@ const RtpProxy = () => {
                     message: "مقدار این فیلد باید حداقل 10000 باشد",
                   },
                 })}
-                isError={Boolean(errors?.Inbound_Port_Minimum)}
-                errorMessage={errors?.Inbound_Port_Minimum?.message}
+                isError={Boolean(errors?.inbound_port_minimum)}
+                errorMessage={errors?.inbound_port_minimum?.message}
               />
             </div>
 
@@ -146,18 +143,18 @@ const RtpProxy = () => {
         </div>
         <div
           className={classNames(
-            classes["RTP-Proxy-class-content-input4"],
+            classes["rtp-proxy-content-outbound-port-range"],
             "d-flex",
             "flex-column",
             "justify-content-between"
           )}
         >
-          <span className={classNames("RTP-Proxy-Ports-title")}>
+          <span className={classNames("rtp-proxy-port-title")}>
             Outbound RTP Proxy Port Range :
           </span>
           <div
             className={classNames(
-              classes["RTP-Proxy-Ports"],
+              classes["rtp-proxy-port"],
               "d-flex",
               "align-items-center",
               "justify-content-between"
@@ -172,19 +169,19 @@ const RtpProxy = () => {
             >
               <InputComponent
                 title={"Port Minimum*"}
-                id={"Outbound-Port-Minimum"}
+                id={"outbound-port-minimum"}
                 className={classes["port"]}
-                name={"Outbound_Port_Minimum"}
+                name={"outbound_port_minimum"}
                 type={"number"}
-                {...register("Outbound_Port_Minimum", {
+                {...register("outbound_port_minimum", {
                   required: "وارد کردن این فیلد اجباری است",
                   min: {
                     value: 10000,
                     message: "مقدار این فیلد باید حداقل 10000 باشد",
                   },
                 })}
-                isError={Boolean(errors?.Outbound_Port_Minimum)}
-                errorMessage={errors?.Outbound_Port_Minimum?.message}
+                isError={Boolean(errors?.outbound_port_minimum)}
+                errorMessage={errors?.outbound_port_minimum?.message}
               />
             </div>
 
@@ -197,19 +194,19 @@ const RtpProxy = () => {
             >
               <InputComponent
                 title={"Port Maximum*"}
-                id={"Outbound-Port-Maximum"}
+                id={"outbound-port-maximum"}
                 className={classes["port"]}
-                name={"Outbound_Port_Maximum"}
+                name={"outbound_port_maximum"}
                 type={"number"}
-                {...register("Outbound_Port_Maximum", {
+                {...register("outbound_port_maximum", {
                   required: "وارد کردن این فیلد اجباری است",
                   min: {
                     value: 10000,
                     message: "مقدار این فیلد باید حداقل 10000 باشد",
                   },
                 })}
-                isError={Boolean(errors?.Outbound_Port_Maximum)}
-                errorMessage={errors?.Outbound_Port_Maximum?.message}
+                isError={Boolean(errors?.outbound_port_maximum)}
+                errorMessage={errors?.outbound_port_maximum?.message}
               />
             </div>
           </div>
@@ -217,7 +214,7 @@ const RtpProxy = () => {
 
         <div
           className={classNames(
-            classes["RTP-Proxy-class-content-input5"],
+            classes["rtp-proxy-content-call-duration"],
             "d-flex",
             "align-items-center",
             "justify-content-between"
@@ -225,10 +222,10 @@ const RtpProxy = () => {
         >
           <Switch
             title={"Enable Maximum Call Duration :"}
-            id={"Enable-Call-Duration"}
-            name={"Enable_Maximum_Call_Duration"}
-            {...register("Enable_Maximum_Call_Duration")}
-            className={classes["RTP-Proxy-class-content-input5-switch"]}
+            id={"enable-call-duration"}
+            name={"enable_call_duration"}
+            {...register("enable_call_duration")}
+            className={classes["rtp-proxy-content-call-duration-switch"]}
           />
 
           <div
@@ -239,50 +236,49 @@ const RtpProxy = () => {
             )}
           >
             <InputComponent
-              id={"Call-Duration"}
-              className={classes["Call-Duration"]}
-              name={"Call_Duration"}
+              id={"call-duration"}
+              className={classes["call-duration"]}
+              name={"call_duration"}
               unit={"Second"}
-              {...register("Call_Duration")}
               type={"number"}
-              {...register("Call_Duration", {
+              {...register("call_duration", {
                 required: "وارد کردن این فیلد اجباری است",
                 min: {
                   value: 100,
                   message: "مقدار این فیلد باید حداقل 100 باشد",
                 },
               })}
-              isError={Boolean(errors?.Call_Duration)}
-              errorMessage={errors?.Call_Duration?.message}
+              isError={Boolean(errors?.call_duration)}
+              errorMessage={errors?.call_duration?.message}
             />
           </div>
         </div>
 
         <div
           className={classNames(
-            classes["RTP-Proxy-class-content-input6"],
+            classes["rtp-proxy-content-loss-timeout"],
             "d-flex",
             "align-items-center",
             "justify-content-between"
           )}
         >
-          <label for={"RTP-Loss-Timeout"}>{"RTP Loss Timeout :"}</label>
+          <label for={"rtp_proxy_loss_timeout"}>{"RTP Loss Timeout :"}</label>
           <div>
             <InputComponent
-              id={"RTP-Loss-Timeout"}
-              className={classes["RTP-Loss-Timeout"]}
-              name={"RTP_Loss_Timeout"}
+              id={"rtp-proxy-loss-timeout"}
+              className={classes["rtp-loss-timeout"]}
+              name={"rtp_proxy_loss_timeout"}
               unit={"Second"}
               type={"number"}
-              {...register("RTP_Loss_Timeout", {
+              {...register("rtp_proxy_loss_timeout", {
                 required: "وارد کردن این فیلد اجباری است",
                 min: {
                   value: 10,
                   message: "مقدار این فیلد باید حداقل 10 باشد",
                 },
               })}
-              isError={Boolean(errors?.RTP_Loss_Timeout)}
-              errorMessage={errors?.RTP_Loss_Timeout?.message}
+              isError={Boolean(errors?.rtp_proxy_loss_timeout)}
+              errorMessage={errors?.rtp_proxy_loss_timeout?.message}
             />
           </div>
         </div>

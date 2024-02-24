@@ -25,7 +25,7 @@ const Modal = ({ node, onClose, onConfirm }) => {
       >
         <div
           className={classNames(
-            classes["my-modal-content"],
+            classes["modal-content"],
             "d-flex",
             "flex-column",
             "align-items-center",

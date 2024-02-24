@@ -8,7 +8,7 @@
   margin-left: 5px;
 }
 
-.chb-1 + label::before {
+.chb-square + label::before {
   position: absolute;
   width: 0.91vw;
   height: 1.75vh;
@@ -19,7 +19,7 @@
   left: -20px;
 }
 
-.chb-1:checked + label::before {
+.chb-square:checked + label::before {
   background-color: #68d5b0;
 }
 

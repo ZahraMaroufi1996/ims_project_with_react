@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
-import Axios from "axios";
 import classes from "./Scscf.module.css";
 import { InputComponent } from "../input/InputComponent";
 import classNames from "classnames";
@@ -14,7 +13,7 @@ const Scscf = () => {
   return (
     <div
       className={classNames(
-        classes["S-CSCF-class"],
+        classes["scscf"],
         "d-flex",
         "justify-content-center ",
         "align-items-center"
@@ -22,20 +21,20 @@ const Scscf = () => {
     >
       <div
         className={classNames(
-          classes["S-CSCF-class-content"],
+          classes["scscf-content"],
           "d-flex",
           "justify-content-between ",
           "flex-column"
         )}
       >
         <div className={classNames("d-flex", "justify-content-between")}>
-          <span className={classNames(classes["S-CSCF-class-content-title"])}>
+          <span className={classNames(classes["scscf-content-title"])}>
             S-CSCF
           </span>
 
           <div
             className={classNames(
-              classes["S-CSCF-class-content-input12"],
+              classes["scscf-content-register-time"],
               "d-flex",
               "justify-content-between ",
               "align-items-center"
@@ -43,7 +42,7 @@ const Scscf = () => {
           >
             <div
               className={classNames(
-                classes["S-CSCF-class-content-input1"],
+                classes["scscf-content-register-time-input"],
                 "d-flex",
                 "justify-content-between ",
                 "align-items-center"
@@ -51,27 +50,26 @@ const Scscf = () => {
             >
               <InputComponent
                 title={"Minimum Register Time"}
-                id={"Minimum-Register-Time"}
-                name={"Minimum_Register_Time"}
+                id={"minimum-register-time"}
+                name={"minimum_register_time"}
                 className={classes["register-time"]}
                 unit={"S"}
-                {...register("Minimum_Register_Time")}
                 type={"number"}
-                {...register("Minimum_Register_Time", {
+                {...register("minimum_register_time", {
                   required: "وارد کردن این فیلد اجباری است",
                   min: {
                     value: 10,
                     message: "مقدار این فیلد باید حداقل 10 باشد",
                   },
                 })}
-                isError={Boolean(errors?.Minimum_Register_Time)}
-                errorMessage={errors?.Minimum_Register_Time?.message}
+                isError={Boolean(errors?.minimum_register_time)}
+                errorMessage={errors?.minimum_register_time?.message}
               />
             </div>
 
             <div
               className={classNames(
-                classes["S-CSCF-class-content-input2"],
+                classes["scscf-content-register-time-input"],
                 "d-flex",
                 "justify-content-between ",
                 "align-items-center"
@@ -79,20 +77,20 @@ const Scscf = () => {
             >
               <InputComponent
                 title={"Maximum Register Time"}
-                id={"Maximum-Register-Time"}
-                name={"Maximum_Register_Time"}
+                id={"maximum-register-time"}
+                name={"maximum_register_time"}
                 className={classes["register-time"]}
                 unit={"S"}
                 type={"number"}
-                {...register("Maximum_Register_Time", {
+                {...register("maximum_register_time", {
                   required: "وارد کردن این فیلد اجباری است",
                   min: {
                     value: 30,
                     message: "مقدار این فیلد باید حداقل 30 باشد",
                   },
                 })}
-                isError={Boolean(errors?.Maximum_Register_Time)}
-                errorMessage={errors?.Maximum_Register_Time?.message}
+                isError={Boolean(errors?.maximum_register_time)}
+                errorMessage={errors?.maximum_register_time?.message}
               />
             </div>
           </div>
@@ -100,7 +98,7 @@ const Scscf = () => {
 
         <div
           className={classNames(
-            classes["S-CSCF-class-content-input34"],
+            classes["scscf-content-memory"],
             "d-flex",
             "align-items-center",
             "justify-content-between"
@@ -108,7 +106,7 @@ const Scscf = () => {
         >
           <div
             className={classNames(
-              classes["S-CSCF-class-content-input3"],
+              classes["scscf-content-memory-input"],
               "d-flex",
               "align-items-center",
               "justify-content-between"
@@ -117,25 +115,25 @@ const Scscf = () => {
             <InputComponent
               title={"Shared Memory*"}
               id={"scscf-shared-memory"}
-              name={"s_shared_memory"}
+              name={"scscf_shared_memory"}
               className={classes["memory"]}
               unit={"MB"}
               type={"number"}
-              {...register("s_shared_memory", {
+              {...register("scscf_shared_memory", {
                 required: "وارد کردن این فیلد اجباری است",
                 min: {
                   value: 5,
                   message: "مقدار این فیلد باید حداقل 5 باشد",
                 },
               })}
-              isError={Boolean(errors?.s_shared_memory)}
-              errorMessage={errors?.s_shared_memory?.message}
+              isError={Boolean(errors?.scscf_shared_memory)}
+              errorMessage={errors?.scscf_shared_memory?.message}
             />
           </div>
 
           <div
             className={classNames(
-              classes["S-CSCF-class-content-input4"],
+              classes["scscf-content-memory-input"],
               "d-flex",
               "align-items-center",
               "justify-content-between"
@@ -144,19 +142,19 @@ const Scscf = () => {
             <InputComponent
               title={"Private Memory*"}
               id={"scscf-private-memory"}
-              name={"s_private_memory"}
+              name={"scscf_private_memory"}
               className={classes["memory"]}
               unit={"MB"}
               type={"number"}
-              {...register("s_private_memory", {
+              {...register("scscf_private_memory", {
                 required: "وارد کردن این فیلد اجباری است",
                 min: {
                   value: 5,
                   message: "مقدار این فیلد باید حداقل 5 باشد",
                 },
               })}
-              isError={Boolean(errors?.s_private_memory)}
-              errorMessage={errors?.s_private_memory?.message}
+              isError={Boolean(errors?.scscf_private_memory)}
+              errorMessage={errors?.scscf_private_memory?.message}
             />
           </div>
         </div>

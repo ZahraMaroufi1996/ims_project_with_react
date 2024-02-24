@@ -29,21 +29,21 @@ const Configuration = () => {
   const onSubmit = (data) => {
     const newData = {
       ...data,
-      p_private_memory: Number(data.p_private_memory),
-      p_shared_memory: Number(data.p_shared_memory),
-      s_private_memory: Number(data.s_private_memory),
-      s_shared_memory: Number(data.s_shared_memory),
-      i_private_memory: Number(data.i_private_memory),
-      i_shared_memory: Number(data.i_shared_memory),
-      Call_Duration: Number(data.Call_Duration),
-      Inbound_Port_Maximum: Number(data.Inbound_Port_Maximum),
-      Inbound_Port_Minimum: Number(data.Inbound_Port_Minimum),
-      Outbound_Port_Maximum: Number(data.Outbound_Port_Maximum),
-      Outbound_Port_Minimum: Number(data.Outbound_Port_Minimum),
-      Maximum_Register_Time: Number(data.Maximum_Register_Time),
-      Minimum_Register_Time: Number(data.Minimum_Register_Time),
-      RTP_Loss_Timeout: Number(data.RTP_Loss_Timeout),
-      Rx_Source_Port: Number(data.Rx_Source_Port),
+      pcscf_private_memory: Number(data.pcscf_private_memory),
+      pcscf_shared_memory: Number(data.pcscf_shared_memory),
+      scscf_private_memory: Number(data.scscf_private_memory),
+      scscf_shared_memory: Number(data.scscf_shared_memory),
+      icscf_private_memory: Number(data.icscf_private_memory),
+      icscf_shared_memory: Number(data.icscf_shared_memory),
+      call_duration: Number(data.call_duration),
+      inbound_port_maximum: Number(data.inbound_port_maximum),
+      inbound_port_minimum: Number(data.inbound_port_minimum),
+      outbound_port_maximum: Number(data.outbound_port_maximum),
+      outbound_port_minimum: Number(data.outbound_port_minimum),
+      maximum_register_time: Number(data.maximum_register_time),
+      minimum_register_time: Number(data.minimum_register_time),
+      rtp_proxy_loss_timeout: Number(data.rtp_proxy_loss_timeout),
+      rx_source_port: Number(data.rx_source_port),
       PCRF_IP: pcrfIpAddress,
     };
     console.log(newData);
@@ -64,97 +64,100 @@ const Configuration = () => {
   };
 
   const setInputValue = (response) => {
-    methods.setValue("IMS_Domain", response.data.domain);
-    methods.setValue("General_type_icon1", response.data.homerEnable.pcscf);
-    methods.setValue("General_type_icon2", response.data.homerEnable.scscf);
-    methods.setValue("General_type_icon3", response.data.homerEnable.icscf);
+    methods.setValue("ims_domain", response.data.domain);
+    methods.setValue("enable_homer_pcscf", response.data.homerEnable.pcscf);
+    methods.setValue("enable_homer_scscf", response.data.homerEnable.scscf);
+    methods.setValue("enable_homer_icscf", response.data.homerEnable.icscf);
 
-    methods.setValue("p_shared_memory", response.data.pcscf.shareMemory);
-    methods.setValue("p_private_memory", response.data.pcscf.privateMemory);
-    methods.setValue("Enable_IPsec", response.data.pcscf.ipSec);
-    methods.setValue("Enable_TLS", response.data.pcscf.tls);
+    methods.setValue("pcscf_shared_memory", response.data.pcscf.shareMemory);
+    methods.setValue("pcscf_private_memory", response.data.pcscf.privateMemory);
+    methods.setValue("enable_ipsec", response.data.pcscf.ipSec);
+    methods.setValue("enable_tls", response.data.pcscf.tls);
 
     methods.setValue(
-      "Encryption_Algorithm_type_icon1",
+      "encryption_algorithm_aes",
       response.data.pcscf.algorithms.aes
     );
     methods.setValue(
-      "Encryption_Algorithm_type_icon2",
+      "encryption_algorithm_des",
       response.data.pcscf.algorithms.des
     );
 
     methods.setValue(
-      "Encryption_Algorithm_type_icon3",
+      "encryption_algorithm_plain",
       response.data.pcscf.algorithms.plain
     );
 
     methods.setValue(
-      "Enable_Rx_Source_Port",
+      "enable_rx_source_port",
       response.data.pcscf.rxConfiguration.sourcePortEnabled
     );
 
     methods.setValue(
-      "Rx_Source_Port",
+      "rx_source_port",
       response.data.pcscf.rxConfiguration.sourcePort
     );
-    methods.setValue("PCRF_FQDN", response.data.pcscf.rxConfiguration.fqdn);
-    methods.setValue("PCRF_Realm", response.data.pcscf.rxConfiguration.realm);
+    methods.setValue("pcrf_fqdn", response.data.pcscf.rxConfiguration.fqdn);
+    methods.setValue("pcrf_realm", response.data.pcscf.rxConfiguration.realm);
 
     methods.setValue(
-      "Transport_Protocol",
+      "transport_protocol",
       response.data.pcscf.rxConfiguration.protocol
     );
 
-    methods.setValue("i_shared_memory", response.data.icscf.shareMemory);
-    methods.setValue("i_private_memory", response.data.icscf.privateMemory);
+    methods.setValue("icscf_shared_memory", response.data.icscf.shareMemory);
+    methods.setValue("icscf_private_memory", response.data.icscf.privateMemory);
 
-    methods.setValue("s_shared_memory", response.data.scscf.shareMemory);
-    methods.setValue("s_private_memory", response.data.scscf.privateMemory);
+    methods.setValue("scscf_shared_memory", response.data.scscf.shareMemory);
+    methods.setValue("scscf_private_memory", response.data.scscf.privateMemory);
     methods.setValue(
-      "Maximum_Register_Time",
+      "maximum_register_time",
       response.data.scscf.maximumRegisterTime
     );
     methods.setValue(
-      "Minimum_Register_Time",
+      "minimum_register_time",
       response.data.scscf.minimumRegisterTime
     );
 
     methods.setValue(
-      "Supported_HD_Codecs_type_icon1",
+      "supported_hd_codes_g.722",
       response.data.rtpProxy.supportedHdCoders.g722
     );
     methods.setValue(
-      "Supported_HD_Codecs_type_icon2",
+      "supported_hd_codes_amr_wb",
       response.data.rtpProxy.supportedHdCoders.armwb
     );
 
     methods.setValue(
-      "Enable_Maximum_Call_Duration",
+      "enable_call_duration",
       response.data.rtpProxy.maximumCallDurationEnable
     );
-    methods.setValue("Enable_SRTP", response.data.rtpProxy.srtp);
+    methods.setValue("enable_srtp", response.data.rtpProxy.srtp);
 
     methods.setValue(
-      "Inbound_Port_Minimum",
+      "inbound_port_minimum",
       response.data.rtpProxy.inboundPortMinimum
     );
     methods.setValue(
-      "Inbound_Port_Maximum",
+      "inbound_port_maximum",
       response.data.rtpProxy.inboundPortMaximum
     );
     methods.setValue(
-      "Outbound_Port_Minimum",
+      "outbound_port_minimum",
       response.data.rtpProxy.outboundPortMinimum
     );
     methods.setValue(
-      "Outbound_Port_Maximum",
+      "outbound_port_maximum",
       response.data.rtpProxy.outboundPortMaximum
     );
     methods.setValue(
-      "Call_Duration",
+      "call_duration",
       response.data.rtpProxy.maximumCallDuration
     );
-    methods.setValue("RTP_Loss_Timeout", response.data.rtpProxy.rtpLossTimeout);
+    methods.setValue(
+      "rtp_proxy_loss_timeout",
+      response.data.rtpProxy.rtpLossTimeout
+    );
 
     handleOnChangeIpAddress(response.data.pcscf.rxConfiguration.pcrfIp);
   };

@@ -1,4 +1,4 @@
-.I-CSCF-class {
+.icscf {
   width: 36.35vw;
   height: 6.94vh;
   margin-top: 3.7vh;
@@ -7,7 +7,7 @@
   border-radius: 0.83vh;
 }
 
-.I-CSCF-class-content-title {
+.icscf-content-title {
   color: #83a79a;
   font-size: 1.66vh;
   font-family: "FiraGO", sans-serif;
@@ -16,19 +16,18 @@
   margin-left: 0.42vw;
 }
 
-.I-CSCF-class-content-inputs {
-  /* border: 1px solid black; */
+.icscf-content-memory {
   width: 28.95vw;
   height: 3.7vh;
   border-radius: 0.83vh;
   margin-left: 0.8vw;
 }
 
-.I-CSCF-class-content-input {
+.icscf-content-memory-input {
   height: 3.7vh;
   width: 11.61vw;
-  /* border: 0.092vh solid red; */
 }
+
 .memory {
   height: 3.7vh;
   width: 3.125vw;

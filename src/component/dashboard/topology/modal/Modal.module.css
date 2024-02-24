@@ -1,5 +1,4 @@
 .modal {
-  /* display: none; */
   position: fixed;
   z-index: 1;
   width: 47.39vw;
@@ -12,7 +11,7 @@
   color: white;
 }
 
-.my-modal-content {
+.modal-content {
   width: 21.56vw;
   height: 19.44vh;
   border-radius: 1.85vh;
@@ -39,7 +38,6 @@
 }
 
 #modal-cancel-button {
-  /* background-color: #1a4348; */
   background-color: black;
 }
 

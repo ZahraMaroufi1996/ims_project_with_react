@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import Axios from "axios";
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { NodeContext } from "../../../../context/NodeContext";
@@ -152,21 +152,18 @@ const MyTable = () => {
                   >
                     <input
                       type="text"
-                      id={`${item.id}pname`}
                       className={classNames(classes["node-table-content-name"])}
                       value={item.name}
                       disabled
                     />
                     <input
                       type="text"
-                      id={`${item.id}pip`}
                       className={classNames(classes["node-table-content-ip"])}
                       value={item.ip}
                       disabled
                     />
                     <input
                       type="text"
-                      id={`${item.id}pstatus`}
                       className={classNames(
                         classes["node-table-content-status"]
                       )}

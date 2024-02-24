@@ -4,10 +4,9 @@
   margin-left: 1.46vw;
   margin-top: 2.22vh;
   border-radius: 0.65vh;
-  /* border: 1px solid red; */
 }
 
-.virtual-ips-main-text {
+.virtual-ips-main-title {
   color: #1a4348;
   font-size: 1.66vh;
   font-family: "FiraGO", sans-serif;
@@ -28,7 +27,7 @@
   color: black;
 }
 
-.virtual-ips-down-text {
+.virtual-ips-sub-title {
   color: #1f666e;
   font-size: 1.48vh;
   font-family: "FiraGO", sans-serif;

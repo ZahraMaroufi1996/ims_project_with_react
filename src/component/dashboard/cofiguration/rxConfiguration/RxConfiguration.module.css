@@ -1,4 +1,4 @@
-.P-CSCF-class-Rx-configuration {
+.pcscf-rx-configuration {
   width: 29.01vw;
   height: 32.59vh;
   margin-left: 6.72vw;
@@ -7,7 +7,7 @@
   border: 0.092vh solid #d5e8e1;
 }
 
-.P-CSCF-class-Rx-configuration-title {
+.pcscf-rx-configuration-title {
   width: 6.14vw;
   height: 1.94vh;
   font-size: 1.66vh;
@@ -15,43 +15,42 @@
   color: #83a79a;
 }
 
-.P-CSCF-class-Rx-configuration-field1 {
+.pcscf-rx-configuration-pcrf-ip {
   width: 19.43vw;
   height: 3.7vh;
   margin-left: 2.2vw;
   border-radius: 0.83vh;
 }
-.P-CSCF-class-Rx-configuration-field2,
-.P-CSCF-class-Rx-configuration-field3 {
+.pcscf-rx-configuration-pcrf-fqdn,
+.pcscf-rx-configuration-pcrf-realm {
   width: 19.63vw;
   height: 3.7vh;
   margin-left: 8.49vw;
   border-radius: 0.83vh;
 }
 
-.P-CSCF-class-Rx-configuration-field4 {
+.pcscf-rx-configuration-protocol {
   margin-left: 8.49vw;
   width: 19.32vw;
   height: 2.037vh;
   border-radius: 0.83vh;
 }
 
-.P-CSCF-class-Rx-configuration-field5 {
+.pcscf-rx-configuration-port {
+  background-color: red;
   margin-left: 8.49vw;
   width: 19.27vw;
   height: 3.7vh;
   border-radius: 0.83vh;
-  /* border: 1px solid red; */
 }
 
-.P-CSCF-class-Rx-configuration-field5-switch {
+.pcscf-rx-configuration-port-switch {
   width: 9.5vw;
   height: 1.94vh;
   border-radius: 0.83vh;
-  /* background-color: red; */
 }
 
-.Rx-Source-Port {
+.rx-source-port {
   width: 8.48vw;
   height: 3.7vh;
   background-color: #f9f9f9;
@@ -71,5 +70,4 @@
   width: 3.3vw;
   height: 2.037vh;
   border-radius: 0.83vh;
-  /* background-color: red; */
 }

@@ -21,31 +21,31 @@ const Pcscf = ({ onChange }) => {
   } = useFormContext();
 
   return (
-    <div className={classNames(classes["P-CSCF-class"])}>
+    <div className={classNames(classes["pcscf"])}>
       <div
         className={classNames(
-          classes["P-CSCF-class-content"],
+          classes["pcscf-content"],
           "d-flex",
           "flex-column",
           "justify-content-between"
         )}
       >
         <div className={classNames("d-flex", "align-item-center")}>
-          <span className={classNames(classes["P-CSCF-class-content-title"])}>
+          <span className={classNames(classes["pcscf-content-title"])}>
             P-CSCF
           </span>
           <Switch
-            title={"Enable TLS"}
+            title={"Enable IPsec"}
             id={"ipsec"}
-            name={"Enable_IPsec"}
-            {...register("Enable_IPsec")}
-            className={classes["P-CSCF-class-content-field1"]}
+            name={"enable_ipsec"}
+            {...register("enable_ipsec")}
+            className={classes["pcscf-content-enable-ipsec"]}
           />
         </div>
 
         <div
           className={classNames(
-            classes["P-CSCF-class-content-field2"],
+            classes["pcscf-content-encryption-algorithms"],
             "d-flex",
             "flex-column",
             "justify-content-between"
@@ -54,86 +54,88 @@ const Pcscf = ({ onChange }) => {
           <p>Supported IPsec Encryption Algorithms :</p>
           <div className="d-flex flex-row justify-content-between">
             <Checkbox
-              {...register("Encryption_Algorithm_type_icon1")}
+              {...register("encryption_algorithm_aes")}
               title={"AES-CBC"}
-              id={"Encryption-Algorithm-type-1"}
-              name={"Encryption_Algorithm_type_icon1"}
-              className={classes["P-CSCF-class-content-field2-checkbox1"]}
+              id={"encryption-algorithm-aes"}
+              name={"encryption_algorithm_aes"}
+              className={
+                classes["pcscf-content-encryption-algorithms-aes-checkbox"]
+              }
             />
             <Checkbox
-              {...register("Encryption_Algorithm_type_icon2")}
+              {...register("encryption_algorithm_des")}
               title={"DES-EDE3-CBC"}
-              id={"Encryption-Algorithm-type-2"}
-              name={"Encryption_Algorithm_type_icon2"}
-              className={classes["P-CSCF-class-content-field2-checkbox2"]}
+              id={"encryption-algorithm-des"}
+              name={"encryption_algorithm_des"}
+              className={
+                classes["pcscf-content-encryption-algorithms-des-checkbox"]
+              }
             />
             <Checkbox
-              {...register("Encryption_Algorithm_type_icon3")}
+              {...register("encryption_algorithm_plain")}
               title={"Plain(No encryption)"}
-              id={"Encryption-Algorithm-type-3"}
-              name={"Encryption_Algorithm_type_icon3"}
-              className={classes["P-CSCF-class-content-field2-checkbox3"]}
+              id={"encryption-algorithm-plain"}
+              name={"encryption_algorithm_plain"}
+              className={
+                classes["pcscf-content-encryption-algorithms-plain-checkbox"]
+              }
             />
           </div>
         </div>
 
         <Switch
-          title={"Enable IPsec"}
+          title={"Enable TLS"}
           id={"tls"}
-          name={"Enable_TLS"}
-          className={classes["P-CSCF-class-content-field3"]}
-          {...register("Enable_TLS")}
+          name={"enable_tls"}
+          className={classes["pcscf-content-enable-tls"]}
+          {...register("enable_tls")}
         />
 
         <div
           className={classNames(
-            classes["P-CSCF-class-content-field4"],
+            classes["pcscf-content-memory"],
             "d-flex",
             "align-items-center",
             "justify-content-between"
           )}
         >
-          <div
-            className={classNames(classes["P-CSCF-class-content-field4-input"])}
-          >
+          <div className={classNames(classes["pcscf-content-memory-input"])}>
             <InputComponent
               title={"Shared Memory*"}
               id={"pcscf-shared-memory"}
-              name={"p_shared_memory"}
+              name={"pcscf_shared_memory"}
               className={classes["memory"]}
               unit={"MB"}
               type={"number"}
-              {...register("p_shared_memory", {
+              {...register("pcscf_shared_memory", {
                 required: "وارد کردن این فیلد اجباری است",
                 min: {
                   value: 5,
                   message: "مقدار این فیلد باید حداقل 5 باشد",
                 },
               })}
-              isError={Boolean(errors?.p_shared_memory)}
-              errorMessage={errors?.p_shared_memory?.message}
+              isError={Boolean(errors?.pcscf_shared_memory)}
+              errorMessage={errors?.pcscf_shared_memory?.message}
             />
           </div>
 
-          <div
-            className={classNames(classes["P-CSCF-class-content-field4-input"])}
-          >
+          <div className={classNames(classes["pcscf-content-memory-input"])}>
             <InputComponent
               title={"Private Memory*"}
               id={"pcscf-private-memory"}
-              name={"p_private_memory"}
+              name={"pcscf_private_memory"}
               className={classes["memory"]}
               unit={"MB"}
               type={"number"}
-              {...register("p_private_memory", {
+              {...register("pcscf_private_memory", {
                 required: "وارد کردن این فیلد اجباری است",
                 min: {
                   value: 5,
                   message: "مقدار این فیلد باید حداقل 5 باشد",
                 },
               })}
-              isError={Boolean(errors?.p_private_memory)}
-              errorMessage={errors?.p_private_memory?.message}
+              isError={Boolean(errors?.pcscf_private_memory)}
+              errorMessage={errors?.pcscf_private_memory?.message}
             />
           </div>
         </div>

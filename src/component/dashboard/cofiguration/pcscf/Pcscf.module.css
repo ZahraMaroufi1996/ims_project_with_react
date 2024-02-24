@@ -1,4 +1,4 @@
-.P-CSCF-class {
+.pcscf {
   width: 36.82vw;
   height: 61.57vh;
   margin-left: 2.083vw;
@@ -7,17 +7,15 @@
   border-radius: 0.83vh;
 }
 
-.P-CSCF-class-content {
-  /* border: 0.092vh solid red; */
+.pcscf-content {
   width: 34.41vw;
   height: 21.57vh;
   margin-left: 1.31vw;
   margin-top: 2.41vh;
-  /* position: absolute; */
   border-radius: 0.83vh;
 }
 
-.P-CSCF-class-content-title {
+.pcscf-content-title {
   font-size: 1.66vh;
   font-family: "FiraGO", sans-serif;
   color: #83a79a;
@@ -26,40 +24,40 @@
   margin-left: 0.1vw;
 }
 
-.P-CSCF-class-content-field1,
-.P-CSCF-class-content-field3 {
+.pcscf-content-enable-ipsec,
+.pcscf-content-enable-tls {
   width: 8.62vw;
   height: 1.94vh;
   border-radius: 0.83vh;
 }
 
-.P-CSCF-class-content-field1 {
+.pcscf-content-enable-ipsec {
   margin-left: 2.12vw;
 }
 
-.P-CSCF-class-content-field3 {
+.pcscf-content-enable-tls {
   margin-left: 5.51vw;
 }
-.P-CSCF-class-content-field2 {
+
+.pcscf-content-encryption-algorithms {
   width: 28.82vw;
   height: 5.69vh;
   margin-left: 5.51vw;
   border-radius: 0.83vh;
 }
 
-.P-CSCF-class-content-field2 p {
+.pcscf-content-encryption-algorithms p {
   margin-top: 0;
 }
 
-.P-CSCF-class-content-field4 {
-  /* border: 1px solid red; */
+.pcscf-content-memory {
   width: 28.95vw;
   height: 3.7vh;
   margin-left: 5.51vw;
   border-radius: 0.83vh;
 }
 
-.P-CSCF-class-content-field4-input {
+.pcscf-content-memory-input {
   height: 3.7vh;
   width: 11.61vw;
   display: flex;
@@ -67,20 +65,17 @@
   align-items: center;
 }
 
-.P-CSCF-class-content-field2-checkbox1 {
+.pcscf-content-encryption-algorithms-aes-checkbox {
   width: 4.9vw;
-  /* width: 4.68vw; */
   height: 2.037vh;
 }
 
-.P-CSCF-class-content-field2-checkbox2 {
-  /* width: 6.94vw; */
+.pcscf-content-encryption-algorithms-des-checkbox {
   width: 7.2vw;
   height: 2.037vh;
 }
 
-.P-CSCF-class-content-field2-checkbox3 {
-  /* width: 8.92vw; */
+.pcscf-content-encryption-algorithms-plain-checkbox {
   width: 9.2vw;
   height: 2.037vh;
 }
@@ -92,11 +87,3 @@
   background-color: #f9f9f9;
   border-radius: 0.64vh;
 }
-
-/* .register-time {
-  height: 3.7vh;
-  width: 2.6vw;
-  border: none;
-  background-color: #eef5f2;
-  border-radius: 0.64vh;
-} */

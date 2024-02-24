@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { forwardRef } from "react";
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
-import Axios from "axios";
 import classes from "./InputComponent.module.css";
 import classNames from "classnames";
 

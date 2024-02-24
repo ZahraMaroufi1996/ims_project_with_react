@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 import Axios from "axios";
 import classes from "./RxConfiguration.module.css";
 import classNames from "classnames";
@@ -24,7 +24,7 @@ const RxConfiguration = ({ onChange }) => {
   return (
     <div
       className={classNames(
-        classes["P-CSCF-class-Rx-configuration"],
+        classes["pcscf-rx-configuration"],
         "d-flex",
         "flex-column",
         "justify-content-around",
@@ -32,20 +32,18 @@ const RxConfiguration = ({ onChange }) => {
       )}
     >
       <div className={classNames("d-flex", "align-item-center")}>
-        <span
-          className={classNames(classes["P-CSCF-class-Rx-configuration-title"])}
-        >
+        <span className={classNames(classes["pcscf-rx-configuration-title"])}>
           Rx Configuration
         </span>
         <IpInput
           title={"PCRF IP Address"}
-          className={classes["P-CSCF-class-Rx-configuration-field1"]}
+          className={classes["pcscf-rx-configuration-pcrf-ip"]}
           onChange={onChange}
         />
       </div>
       <div
         className={classNames(
-          classes["P-CSCF-class-Rx-configuration-field2"],
+          classes["pcscf-rx-configuration-pcrf-fqdn"],
           "d-flex",
           "justify-content-between",
           "align-items-center"
@@ -53,42 +51,42 @@ const RxConfiguration = ({ onChange }) => {
       >
         <InputComponent
           title={"PCRF FQDN*"}
-          name={"PCRF_FQDN"}
-          id={"Rx-configuration-field2"}
+          name={"pcrf_fqdn"}
+          id={"rx-configuration-pcrf-fqdn"}
           className={classes["rx-configuration-box"]}
           type={"text"}
-          {...register("PCRF_FQDN", {
+          {...register("pcrf_fqdn", {
             required: "وارد کردن این فیلد اجباری است",
           })}
-          isError={Boolean(errors?.PCRF_FQDN)}
-          errorMessage={errors?.PCRF_FQDN?.message}
+          isError={Boolean(errors?.pcrf_fqdn)}
+          errorMessage={errors?.pcrf_fqdn?.message}
         />
       </div>
 
       <div
         className={classNames(
-          classes["P-CSCF-class-Rx-configuration-field3"],
+          classes["pcscf-rx-configuration-pcrf-realm"],
           "d-flex",
           "align-items-center"
         )}
       >
         <InputComponent
           title={"PCRF Realm*"}
-          name={"PCRF_Realm"}
-          id={"Rx-configuration-field3"}
+          name={"pcrf_realm"}
+          id={"rx-configuration-pcrf-realm"}
           className={classes["rx-configuration-box"]}
           type={"text"}
-          {...register("PCRF_Realm", {
+          {...register("pcrf_realm", {
             required: "وارد کردن این فیلد اجباری است",
           })}
-          isError={Boolean(errors?.PCRF_Realm)}
-          errorMessage={errors?.PCRF_Realm?.message}
+          isError={Boolean(errors?.pcrf_realm)}
+          errorMessage={errors?.pcrf_realm?.message}
         />
       </div>
 
       <div
         className={classNames(
-          classes["P-CSCF-class-Rx-configuration-field4"],
+          classes["pcscf-rx-configuration-protocol"],
           "d-flex",
           "justify-content-between",
           "align-items-center"
@@ -97,18 +95,18 @@ const RxConfiguration = ({ onChange }) => {
         <span>Transport Protocol</span>
 
         <Radio
-          {...register(`Transport_Protocol`)}
+          {...register(`transport_protocol`)}
           title={"SCTP"}
-          id={"Transport-Protocol-type-1"}
-          name={"Transport_Protocol"}
+          id={"transport-protocol-sctp"}
+          name={"transport_protocol"}
           value={"SCTP"}
           className={classes["transport-protocol"]}
         />
         <Radio
-          {...register(`Transport_Protocol`)}
+          {...register(`transport_protocol`)}
           title={"TCP"}
-          id={"Transport-Protocol-type-2"}
-          name={"Transport_Protocol"}
+          id={"transport-protocol-tcp"}
+          name={"transport_protocol"}
           value={"TCP"}
           className={classes["transport-protocol"]}
         />
@@ -116,7 +114,7 @@ const RxConfiguration = ({ onChange }) => {
 
       <div
         className={classNames(
-          classes["P-CSCF-class-Rx-configuration-field5"],
+          classes["pcscf-rx-configuration-port"],
           "d-flex",
           "justify-content-between",
           "align-items-center"
@@ -124,25 +122,25 @@ const RxConfiguration = ({ onChange }) => {
       >
         <Switch
           title={"Rx Source Port"}
-          id={"Enable-Rx-Source-Port"}
-          name={"Enable_Rx_Source_Port"}
-          {...register("Enable_Rx_Source_Port")}
-          className={classes["P-CSCF-class-Rx-configuration-field5-switch"]}
+          id={"enable-rx-source-port"}
+          name={"enable_rx_source_port"}
+          {...register("enable_rx_source_port")}
+          className={classes["pcscf-rx-configuration-port-switch"]}
         />
         <InputComponent
-          name={"Rx_Source_Port"}
-          id={"Rx-Source-Port"}
-          className={classes["Rx-Source-Port"]}
+          name={"rx_source_port"}
+          id={"rx-source-port"}
+          className={classes["rx-source-port"]}
           type={"number"}
-          {...register("Rx_Source_Port", {
+          {...register("rx_source_port", {
             required: "وارد کردن این فیلد اجباری است",
             min: {
               value: 1000,
               message: "مقدار این فیلد باید حداقل 1000 باشد",
             },
           })}
-          isError={Boolean(errors?.Rx_Source_Port)}
-          errorMessage={errors?.Rx_Source_Port?.message}
+          isError={Boolean(errors?.rx_source_port)}
+          errorMessage={errors?.rx_source_port?.message}
         />
       </div>
     </div>

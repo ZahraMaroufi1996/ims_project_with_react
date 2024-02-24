@@ -1,4 +1,4 @@
-.RTP-Proxy-class {
+.rtp-proxy {
   width: 36.35vw;
   height: 45.09vh;
   margin-top: 2.59vh;
@@ -6,12 +6,12 @@
   border: 0.092vh solid #d5e8e1;
   border-radius: 0.83vh;
 }
-.RTP-Proxy-class-content {
+.rtp-proxy-content {
   width: 35.04vw;
   height: 40.55vh;
 }
 
-.RTP-Proxy-class-content-title {
+.rtp-proxy-content-title {
   font-size: 1.66vh;
   font-family: "FiraGO", sans-serif;
   color: #83a79a;
@@ -20,55 +20,54 @@
   margin-left: 0.1vw;
 }
 
-.RTP-Proxy-class-content-input1 {
+.rtp-proxy-content-hd-codes {
   width: 29.5vw;
   height: 2.037vh;
   margin-left: 0.54vw;
 }
 
-.RTP-Proxy-class-content-input2 {
+.rtp-proxy-content-enable-srtp {
   width: 8.57vw;
   height: 1.94vh;
   margin-left: 5.31vw;
 }
 
-.RTP-Proxy-class-content-input3,
-.RTP-Proxy-class-content-input4 {
+.rtp-proxy-content-inbound-port-range {
   width: 29.63vw;
   height: 6.2vh;
   margin-left: 5.31vw;
 }
 
-.RTP-Proxy-class-content-input5,
-.RTP-Proxy-class-content-input6 {
+.rtp-proxy-content-call-duration,
+.rtp-proxy-content-loss-timeout {
   width: 29.53vw;
   height: 3.7vh;
   margin-left: 5.31vw;
 }
 
-.RTP-Proxy-class-content-input5-switch {
+.rtp-proxy-content-call-duration-switch {
   width: 14.36vw;
   height: 1.94vh;
   border-radius: 0.83vh;
 }
 
-.RTP-Proxy-Ports-title {
+.rtp-proxy-port-title {
   width: 11.61vw;
   height: 1.94vh;
   margin-bottom: 5px;
 }
 
-.RTP-Proxy-Ports {
+.rtp-proxy-port {
   width: 29.63vw;
   height: 3.7vh;
 }
 
-.RTP-Proxy-Ports input {
+.rtp-proxy-port input {
   margin-left: 7px;
 }
 
-.RTP-Loss-Timeout,
-.Call-Duration,
+.rtp-loss-timeout,
+.call-duration,
 .port {
   width: 4.58vw;
   height: 3.7vh;
@@ -77,7 +76,7 @@
   border-radius: 0.65vh;
 }
 
-.RTP-Proxy-class-content-input1-checkbox {
+.rtp-proxy-content-hd-codes-checkbox {
   width: 5.1vw;
   height: 2.037vh;
 }
