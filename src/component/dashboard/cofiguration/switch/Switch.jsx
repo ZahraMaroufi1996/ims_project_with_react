@@ -1,17 +1,12 @@
-import React, { useState } from "react";
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import React from "react";
 import { forwardRef } from "react";
-import Axios from "axios";
 import classes from "./Switch.module.css";
 import classNames from "classnames";
-import { InputComponent } from "../input/InputComponent";
 
 const Switch = forwardRef(({ className, title, id, name, ...rest }, ref) => {
-  // const { register } = useFormContext();
   return (
     <div
       className={classNames(
-        // classes["P-CSCF-class-content-field1"],
         className,
         "d-flex",
         "justify-content-between",

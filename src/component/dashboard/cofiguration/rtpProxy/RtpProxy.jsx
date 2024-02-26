@@ -1,10 +1,5 @@
-import React, { useState } from "react";
-import {
-  useForm,
-  FormProvider,
-  useFormContext,
-  useWatch,
-} from "react-hook-form";
+import React from "react";
+import { useFormContext } from "react-hook-form";
 import classes from "./RtpProxy.module.css";
 import { InputComponent } from "../input/InputComponent";
 import { Checkbox } from "../checkbox/Checkbox";
@@ -49,10 +44,10 @@ const RtpProxy = () => {
           >
             <span>Supported HD Codecs :</span>
             <Checkbox
-              {...register("supported_hd_codes_g.722")}
+              {...register("supported_hd_codes_g722")}
               title={"G.722"}
-              id={"supported-hd-codes-g.722"}
-              name={"supported_hd_codes_g.722"}
+              id={"supported-hd-codes-g722"}
+              name={"supported_hd_codes_g722"}
               className={classes["rtp-proxy-content-hd-codes-checkbox"]}
             />
             <Checkbox
@@ -103,7 +98,7 @@ const RtpProxy = () => {
                 className={classes["port"]}
                 name={"inbound_port_minimum"}
                 type={"number"}
-                {...register("Inbound_Port_Minimum", {
+                {...register("inbound_port_minimum", {
                   required: "وارد کردن این فیلد اجباری است",
                   min: {
                     value: 10000,
@@ -124,19 +119,19 @@ const RtpProxy = () => {
             >
               <InputComponent
                 title={"Port Maximum*"}
-                id={"Inbound-Port-Maximum"}
+                id={"inbound-port-maximum"}
                 className={classes["port"]}
-                name={"Inbound_Port_Maximum"}
+                name={"inbound_port_maximum"}
                 type={"number"}
-                {...register("Inbound_Port_Maximum", {
+                {...register("inbound_port_maximum", {
                   required: "وارد کردن این فیلد اجباری است",
                   min: {
                     value: 10000,
                     message: "مقدار این فیلد باید حداقل 10000 باشد",
                   },
                 })}
-                isError={Boolean(errors?.Inbound_Port_Maximum)}
-                errorMessage={errors?.Inbound_Port_Maximum?.message}
+                isError={Boolean(errors?.inbound_port_maximum)}
+                errorMessage={errors?.inbound_port_maximum?.message}
               />
             </div>
           </div>
@@ -266,7 +261,7 @@ const RtpProxy = () => {
           <div>
             <InputComponent
               id={"rtp-proxy-loss-timeout"}
-              className={classes["rtp-loss-timeout"]}
+              className={classes["rtp-proxy-loss-timeout"]}
               name={"rtp_proxy_loss_timeout"}
               unit={"Second"}
               type={"number"}

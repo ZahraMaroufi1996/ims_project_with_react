@@ -1,8 +1,7 @@
-import Topology from "../pages/topology";
-import Configuration from "../pages/configuration";
-import Monitoring from "../pages/monitoring";
-import Login from "../pages/login";
-import Troubleshooting from "../pages/troubleshooting";
+import Topology from "../pages/topology/topology";
+import Configuration from "../pages/configuration/configuration";
+import Monitoring from "../pages/monitoring/monitoring";
+import Troubleshooting from "../pages/troubleshooting/troubleshooting";
 
 const AppRoutes = [
   {

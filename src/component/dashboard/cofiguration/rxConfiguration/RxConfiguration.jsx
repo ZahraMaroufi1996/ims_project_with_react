@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useFormContext } from "react-hook-form";
-import Axios from "axios";
 import classes from "./RxConfiguration.module.css";
 import classNames from "classnames";
 import { InputComponent } from "../input/InputComponent";
 import { IpInput } from "../../topology/ipInput";
-import { Checkbox } from "../checkbox/Checkbox";
 import { Radio } from "../../topology/radio/Radio";
 import { Switch } from "../switch/Switch";
 
@@ -14,12 +12,6 @@ const RxConfiguration = ({ onChange }) => {
     register,
     formState: { errors },
   } = useFormContext();
-
-  const [pcrfIpAddress, setPcrfIpAddress] = useState("");
-
-  const handleOnChangeIpAddress = (value) => {
-    setPcrfIpAddress(value);
-  };
 
   return (
     <div
@@ -127,21 +119,23 @@ const RxConfiguration = ({ onChange }) => {
           {...register("enable_rx_source_port")}
           className={classes["pcscf-rx-configuration-port-switch"]}
         />
-        <InputComponent
-          name={"rx_source_port"}
-          id={"rx-source-port"}
-          className={classes["rx-source-port"]}
-          type={"number"}
-          {...register("rx_source_port", {
-            required: "وارد کردن این فیلد اجباری است",
-            min: {
-              value: 1000,
-              message: "مقدار این فیلد باید حداقل 1000 باشد",
-            },
-          })}
-          isError={Boolean(errors?.rx_source_port)}
-          errorMessage={errors?.rx_source_port?.message}
-        />
+        <div>
+          <InputComponent
+            name={"rx_source_port"}
+            id={"rx-source-port"}
+            className={classes["rx-source-port"]}
+            type={"number"}
+            {...register("rx_source_port", {
+              required: "وارد کردن این فیلد اجباری است",
+              min: {
+                value: 1000,
+                message: "مقدار این فیلد باید حداقل 1000 باشد",
+              },
+            })}
+            isError={Boolean(errors?.rx_source_port)}
+            errorMessage={errors?.rx_source_port?.message}
+          />
+        </div>
       </div>
     </div>
   );

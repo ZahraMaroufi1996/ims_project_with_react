@@ -3,13 +3,13 @@ import { useForm, FormProvider, useFormContext } from "react-hook-form";
 import Axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { ConfigDataContext } from "../../src/context/ConfigDataContext";
-import { General } from "../component/dashboard/cofiguration/general/General";
-import { Pcscf } from "../component/dashboard/cofiguration/pcscf/Pcscf";
-import { Icscf } from "../component/dashboard/cofiguration/icscf/Icscf";
-import { Scscf } from "../component/dashboard/cofiguration/scscf/Scscf";
-import { MyButton } from "../component/dashboard/cofiguration/myButton/MyButton";
-import { RtpProxy } from "../component/dashboard/cofiguration/rtpProxy/RtpProxy";
+import { ConfigDataContext } from "../../context/ConfigDataContext";
+import { General } from "../../component/dashboard/cofiguration/general/General";
+import { Pcscf } from "../../component/dashboard/cofiguration/pcscf/Pcscf";
+import { Icscf } from "../../component/dashboard/cofiguration/icscf/Icscf";
+import { Scscf } from "../../component/dashboard/cofiguration/scscf/Scscf";
+import { MyButton } from "../../component/dashboard/cofiguration/myButton/MyButton";
+import { RtpProxy } from "../../component/dashboard/cofiguration/rtpProxy/RtpProxy";
 import classes from "./configuration.module.css";
 import classNames from "classnames";
 
@@ -44,9 +44,9 @@ const Configuration = () => {
       minimum_register_time: Number(data.minimum_register_time),
       rtp_proxy_loss_timeout: Number(data.rtp_proxy_loss_timeout),
       rx_source_port: Number(data.rx_source_port),
-      PCRF_IP: pcrfIpAddress,
+      pcrf_ip: pcrfIpAddress,
     };
-    console.log(newData);
+
     Axios.post(`${url}/api/configuration/submittForm`, newData, {
       headers: {
         "Content-Type": "application/json",
@@ -120,7 +120,7 @@ const Configuration = () => {
     );
 
     methods.setValue(
-      "supported_hd_codes_g.722",
+      "supported_hd_codes_g722",
       response.data.rtpProxy.supportedHdCoders.g722
     );
     methods.setValue(

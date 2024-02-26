@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { NetworkDefinition } from "../component/dashboard/topology/networkDefinition/NetworkDefinition";
-import { Node } from "../component/dashboard/topology/node/Node";
-import { VirtualIps } from "../component/dashboard/topology/virtualIps/VirtualIps";
-import { TopologyDataContext } from "../../src/context/TopologyDataContext";
+import { NetworkDefinition } from "../../component/dashboard/topology/networkDefinition/NetworkDefinition";
+import { Node } from "../../component/dashboard/topology/node/Node";
+import { VirtualIps } from "../../component/dashboard/topology/virtualIps/VirtualIps";
+import { TopologyDataContext } from "../../context/TopologyDataContext";
 import Axios from "axios";
 
 const Topology = () => {

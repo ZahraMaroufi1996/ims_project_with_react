@@ -1,25 +1,10 @@
-/* .Pre-Login-body {
-  background-image: url("../images/Pre-Login\ Page.svg");
-  object-fit: fill;
-}
-
-.Login-body {
-  background-image: url("../images/Login\ Page\ –\ Language\ Toggle.svg");
-  height: 100vh;
-}
-
-/* .After-Login-body {
-  background-image: url("../images/After_Login_Page.svg");
-} */
-
-.Login-body {
-  background-image: url("../../images/login_images/Login\ Page\ –\ Language\ Toggle.svg");
+.login-body {
+  background-image: url("../../../images/login_images/Login\ Page\ –\ Language\ Toggle.svg");
   height: 100%;
   width: 100%;
 }
 
 .login-content {
-  /* background-color: black; */
   height: 100%;
   width: 17.71vw;
   margin: 0 auto;
@@ -34,7 +19,7 @@
   display: block;
 }
 
-.After-login-text {
+.after-login-text {
   color: white;
   right: 47.18vw;
   top: 56.02vh;
@@ -53,12 +38,10 @@
   position: absolute;
 }
 
-.Login-container {
+.login-container {
   width: 17.71vw;
   height: 40.83vh;
   margin: auto auto;
-  /* top: 29.53vh;
-  right: 41.14vw; */
 }
 
 .username-container,
@@ -73,9 +56,14 @@
   opacity: 20%;
 }
 
-.username-input,
-.password-input {
+.username-input-persian,
+.password-input-persian {
   margin-left: 60px;
+}
+
+.username-input-english,
+.password-input-english {
+  margin-right: 60px;
 }
 
 input {
@@ -96,9 +84,10 @@ input::placeholder {
 .password-icon {
   width: 1.87vw;
   height: 3.7vh;
+  margin-top: 5px;
 }
 
-.Login-Avatar {
+.login-avatar {
   border: 1px solid white;
   border-radius: 50%;
   width: 4.16vw;
@@ -106,11 +95,11 @@ input::placeholder {
   margin: 0 auto;
 }
 
-#login-form.d-flex {
+.login-form {
   gap: 3.7vh;
 }
 
-.Login-Avatar svg {
+.login-avatar svg {
   margin: auto auto;
   display: block;
   margin-top: 8px;
@@ -133,7 +122,7 @@ button.submit-button {
   margin: 8px auto;
 }
 
-.Login-Logo-text {
+.login-logo-text {
   text-align: center;
   color: white;
   font-size: 1.48vh;
@@ -145,7 +134,7 @@ button.submit-button {
   margin-bottom: 8vh;
 }
 
-.Login-Language {
+.login-language {
   width: 3.85vw;
   height: 3.15vh;
   margin: 0 auto;

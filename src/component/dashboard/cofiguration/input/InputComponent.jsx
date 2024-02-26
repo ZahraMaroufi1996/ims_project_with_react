@@ -38,7 +38,6 @@ const InputComponent = forwardRef(
             name={name}
             {...rest}
             onChange={(e) => {
-              console.log(e);
               rest.onChange(e);
             }}
           />

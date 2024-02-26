@@ -32,7 +32,8 @@
   margin-left: 5.31vw;
 }
 
-.rtp-proxy-content-inbound-port-range {
+.rtp-proxy-content-inbound-port-range,
+.rtp-proxy-content-outbound-port-range {
   width: 29.63vw;
   height: 6.2vh;
   margin-left: 5.31vw;
@@ -66,7 +67,7 @@
   margin-left: 7px;
 }
 
-.rtp-loss-timeout,
+.rtp-proxy-loss-timeout,
 .call-duration,
 .port {
   width: 4.58vw;

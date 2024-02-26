@@ -1,5 +1,5 @@
 import React from "react";
-import { Performance } from "../component/icons/Performance";
+import { Performance } from "../../component/icons/Performance";
 import classes from "./monitoring.module.css";
 import classNames from "classnames";
 
