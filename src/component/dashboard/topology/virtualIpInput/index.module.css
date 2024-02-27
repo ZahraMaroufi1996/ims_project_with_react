@@ -34,3 +34,11 @@
   margin-left: 0vw;
   margin-bottom: 0vh;
 }
+
+.input-general {
+  text-align: center;
+  border: none;
+  font-size: 1.6vh;
+  font-family: "FiraGO", sans-serif;
+  color: #2fbc8c !important;
+}

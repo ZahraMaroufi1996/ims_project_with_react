@@ -65,3 +65,11 @@ svg {
   margin-left: 7px;
   margin-top: 2px;
 }
+
+.input-general {
+  text-align: center;
+  border: none;
+  font-size: 1.2vh;
+  font-family: "FiraGO", sans-serif;
+  color: #2fbc8c !important;
+}

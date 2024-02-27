@@ -5,3 +5,11 @@
   background-color: #eef5f2;
   color: black;
 }
+
+.input-general {
+  text-align: center;
+  border: none;
+  font-size: 1.6vh;
+  font-family: "FiraGO", sans-serif;
+  color: #2fbc8c !important;
+}

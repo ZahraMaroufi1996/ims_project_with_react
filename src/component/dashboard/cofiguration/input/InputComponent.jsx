@@ -30,6 +30,7 @@ const InputComponent = forwardRef(
           <input
             className={classNames(
               className,
+              classes["input-general"],
               `form-control${isError ? " is-invalid" : ""}`
             )}
             id={id}

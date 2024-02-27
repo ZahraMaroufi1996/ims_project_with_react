@@ -11,12 +11,13 @@ const PassInverseIcon = () => {
           id="Line_3"
           data-name="Line 3"
           y1="40"
+          transform="translate(35)"
           fill="none"
           stroke="#a6d4c4"
           stroke-linecap="round"
           stroke-width="1"
         />
-        <g id="Lock_icon" data-name="Lock icon" transform="translate(15 7.379)">
+        <g id="Lock_icon" data-name="Lock icon" transform="translate(0 7.379)">
           <g id="lock" transform="translate(0 9.717)">
             <rect
               id="Rectangle_7"

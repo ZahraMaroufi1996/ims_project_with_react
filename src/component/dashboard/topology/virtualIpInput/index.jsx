@@ -80,28 +80,40 @@ const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
           <input
             type="text"
             name="field1"
-            className={classNames(classes["ip-octet"])}
+            className={classNames(
+              classes["ip-octet"],
+              classes["input-general"]
+            )}
             value={form.field1}
             onChange={handleChange}
           />
           <input
             type="text"
             name="field2"
-            className={classNames(classes["ip-octet"])}
+            className={classNames(
+              classes["ip-octet"],
+              classes["input-general"]
+            )}
             value={form.field2}
             onChange={handleChange}
           />
           <input
             type="text"
             name="field3"
-            className={classNames(classes["ip-octet"])}
+            className={classNames(
+              classes["ip-octet"],
+              classes["input-general"]
+            )}
             value={form.field3}
             onChange={handleChange}
           />
           <input
             type="text"
             name="field4"
-            className={classNames(classes["ip-octet"])}
+            className={classNames(
+              classes["ip-octet"],
+              classes["input-general"]
+            )}
             value={form.field4}
             onChange={handleChange}
           />

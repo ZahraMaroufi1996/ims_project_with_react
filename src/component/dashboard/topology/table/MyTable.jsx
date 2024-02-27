@@ -152,20 +152,27 @@ const MyTable = () => {
                   >
                     <input
                       type="text"
-                      className={classNames(classes["node-table-content-name"])}
+                      className={classNames(
+                        classes["node-table-content-name"],
+                        classes["input-general"]
+                      )}
                       value={item.name}
                       disabled
                     />
                     <input
                       type="text"
-                      className={classNames(classes["node-table-content-ip"])}
+                      className={classNames(
+                        classes["node-table-content-ip"],
+                        classes["input-general"]
+                      )}
                       value={item.ip}
                       disabled
                     />
                     <input
                       type="text"
                       className={classNames(
-                        classes["node-table-content-status"]
+                        classes["node-table-content-status"],
+                        classes["input-general"]
                       )}
                       value={item.status}
                       disabled

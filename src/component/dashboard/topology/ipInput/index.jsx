@@ -93,7 +93,7 @@ const IpInput = ({ onChange, title, className }) => {
         type="number"
         name="field1"
         value={form.field1}
-        class={classes["ip-octet"]}
+        className={classNames(classes["ip-octet"], classes["input-general"])}
         onChange={handleChange}
         // className={classNames(
         //   classes["ip-octet"],
@@ -131,7 +131,7 @@ const IpInput = ({ onChange, title, className }) => {
         type="number"
         name="field2"
         value={form.field2}
-        class={classes["ip-octet"]}
+        className={classNames(classes["ip-octet"], classes["input-general"])}
         onChange={handleChange}
         // className={classNames(
         //   classes["ip-octet"],
@@ -169,7 +169,7 @@ const IpInput = ({ onChange, title, className }) => {
         type="number"
         name="field3"
         value={form.field3}
-        class={classes["ip-octet"]}
+        className={classNames(classes["ip-octet"], classes["input-general"])}
         onChange={handleChange}
         // className={classNames(
         //   classes["ip-octet"],
@@ -207,7 +207,7 @@ const IpInput = ({ onChange, title, className }) => {
         type="number"
         name="field4"
         value={form.field4}
-        class={classes["ip-octet"]}
+        className={classNames(classes["ip-octet"], classes["input-general"])}
         onChange={handleChange}
         // className={classNames(
         //   classes["ip-octet"],

@@ -92,6 +92,7 @@ const Node = () => {
                   name="node_name"
                   className={classNames(
                     classes["node-name-box"],
+                    classes["input-general"],
                     `form-control${errors.node_name ? " is-invalid" : ""}`
                   )}
                   {...register("node_name", {

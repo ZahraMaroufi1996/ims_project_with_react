@@ -78,7 +78,10 @@ const Login = () => {
               {language ? (
                 <>
                   <input
-                    className={classNames(classes["username-input-persian"])}
+                    className={classNames(
+                      classes["username-input-persian"],
+                      classes["input-general"]
+                    )}
                     type="text"
                     name="username"
                     placeholder="نام کاربری"
@@ -90,10 +93,13 @@ const Login = () => {
                 <>
                   <UserInverseIcon />
                   <input
-                    className={classNames(classes["username-input-english"])}
+                    className={classNames(
+                      classes["username-input-english"],
+                      classes["input-general"]
+                    )}
                     type="text"
                     name="username"
-                    placeholder="Username"
+                    placeholder="username"
                     onChange={handleChange}
                   />
                 </>
@@ -109,7 +115,10 @@ const Login = () => {
               {language ? (
                 <>
                   <input
-                    className={classNames(classes["password-input-persian"])}
+                    className={classNames(
+                      classes["password-input-persian"],
+                      classes["input-general"]
+                    )}
                     type="password"
                     name="password"
                     placeholder="رمز عبور"
@@ -121,10 +130,13 @@ const Login = () => {
                 <>
                   <PassInverseIcon />
                   <input
-                    className={classNames(classes["password-input-english"])}
+                    className={classNames(
+                      classes["password-input-english"],
+                      classes["input-general"]
+                    )}
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder="password"
                     onChange={handleChange}
                   />
                 </>
@@ -135,7 +147,7 @@ const Login = () => {
                 type="submit"
                 className={classNames(classes["submit-button"])}
               >
-                {language ? "وارد شوید" : "Login"}
+                {language ? "وارد شوید" : "LOGIN"}
               </button>
             </div>
           </form>

@@ -86,3 +86,11 @@
   width: 4.4vw;
   height: 2.04vh;
 }
+
+.input-general {
+  text-align: center;
+  border: none;
+  font-size: 1.6vh;
+  font-family: "FiraGO", sans-serif;
+  color: #2fbc8c !important;
+}

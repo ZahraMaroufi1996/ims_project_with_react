@@ -2,7 +2,6 @@ import classes from "./LogOutComp.module.css";
 import classNames from "classnames";
 
 const LogOutComp = ({ onClose, onConfirm }) => {
-  // const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
   const handleConfirm = (event) => {
     onConfirm?.(event);
   };

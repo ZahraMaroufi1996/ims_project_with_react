@@ -59,29 +59,32 @@
 .username-input-persian,
 .password-input-persian {
   margin-left: 60px;
+  font-size: 1.5vh;
+  font-family: "Iranian Sans", sans-serif;
+  color: white;
 }
 
 .username-input-english,
 .password-input-english {
   margin-right: 60px;
-}
-
-input {
-  height: 5.175vh;
-  background-color: inherit;
-  border: none;
-  text-align: center;
+  font-size: 1.5vh;
+  font-family: "FiraGO", sans-serif;
   color: white;
-  font-size: 1.85vh;
 }
 
-input::placeholder {
+.input-general {
+  text-align: center;
+  border: none;
+  font-size: 1.6vh;
+}
+
+.password-input-persian::placeholder,
+.username-input-persian::placeholder {
   color: white;
   font-family: "Iranian Sans", sans-serif;
 }
 
-.username-icon,
-.password-icon {
+.login-form svg {
   width: 1.87vw;
   height: 3.7vh;
   margin-top: 5px;
