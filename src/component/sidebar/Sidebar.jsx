@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import classes from "./Sidebar.module.css";
 import classNames from "classnames";
 import { Logo } from "../icons/Logo";
+import { Img1 } from "../icons/Img1";
+import { Img2 } from "../icons/Img2";
 import { TopologyIcon } from "../icons/TopologyIcon";
 import { ConfigurationIcon } from "../icons/ConfigurationIcon";
 import { MonitoringIcon } from "../icons/MonitoringIcon";
@@ -20,6 +22,10 @@ const Sidebar = () => {
           "align-items-center"
         )}
       >
+        <div id="current-user">
+          <Img1 />
+        </div>
+
         <div
           className={classNames(
             classes["sidebar-account-info-name"],

@@ -9,15 +9,22 @@ import { Exit } from "../../icons/Exit";
 import { Help } from "../../icons/Help";
 import { Lock } from "../../icons/Lock";
 import { LogOutComp } from "../logout/LogOutComp";
+import { ProfileComp } from "../profile/ProfileComp";
 import classes from "./Toolbar.module.css";
 import classNames from "classnames";
 
 const Toolbar = () => {
   const [logOutState, setLogOutState] = useState(false);
+  const [profile, setProfile] = useState(false);
+
   const history = useNavigate();
   const onLogOutConfirm = () => {
     localStorage.removeItem("token");
     history("/login");
+  };
+
+  const onProfileConfirm = () => {
+    console.log("hiiiiiii");
   };
 
   return (
@@ -39,7 +46,7 @@ const Toolbar = () => {
           <a href="#">
             <Lock />
           </a>
-          <a href="#" id="profile-icon">
+          <a href="#" id="profile-icon" onClick={() => setProfile(true)}>
             <Profile />
           </a>
           <a href="#" id="log-out-icon" onClick={() => setLogOutState(true)}>
@@ -54,6 +61,12 @@ const Toolbar = () => {
         <LogOutComp
           onClose={() => setLogOutState(false)}
           onConfirm={() => onLogOutConfirm()}
+        />
+      )}
+      {profile && (
+        <ProfileComp
+          onClose={() => setProfile(false)}
+          onConfirm={() => onProfileConfirm()}
         />
       )}
     </>
