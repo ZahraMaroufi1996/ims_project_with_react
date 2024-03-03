@@ -10,7 +10,7 @@ import { InputComponent } from "../../cofiguration/input/InputComponent";
 import { MyButton } from "../../cofiguration/myButton/MyButton";
 
 const PacketElement = () => {
-  const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
+  const url = "https://35a474cb-4d59-4846-8b43-fc913daf7a5f.mock.pstmn.io";
   const {
     register,
     handleSubmit,
@@ -18,6 +18,7 @@ const PacketElement = () => {
   } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
+    console.log(data);
     const token = localStorage.getItem("token");
     Axios.post(`${url}/api/troubleshooting/packetCapture`, data, {
       headers: {
@@ -49,9 +50,9 @@ const PacketElement = () => {
           >
             <SelectComponent
               title={"Node"}
+              replace={"Select Node"}
               id={"packet-node"}
               {...register(`packet_node_type`)}
-              name={"packet_node_type"}
             />
           </div>
           <div
@@ -64,9 +65,9 @@ const PacketElement = () => {
           >
             <SelectComponent
               title={"Interface"}
+              replace={"any"}
               id={"packet-interface"}
               {...register(`packet_interface_type`)}
-              name={"packet_interface_type"}
             />
           </div>
         </div>

@@ -17,7 +17,7 @@ const Configuration = () => {
   const methods = useForm({ mode: "onChange" });
   const [pcrfIpAddress, setPcrfIpAddress] = useState();
   const [configData, setConfigData] = useState(undefined);
-  const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
+  const url = "https://35a474cb-4d59-4846-8b43-fc913daf7a5f.mock.pstmn.io";
   const token = localStorage.getItem("token");
   const handleOnChangeIpAddress = (value) => {
     setPcrfIpAddress(value);

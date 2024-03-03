@@ -23,7 +23,7 @@ const Sidebar = () => {
         )}
       >
         <div id="current-user">
-          <Img1 />
+          <Img2 />
         </div>
 
         <div

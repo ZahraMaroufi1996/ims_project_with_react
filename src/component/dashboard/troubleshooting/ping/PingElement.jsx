@@ -10,13 +10,14 @@ import { IpInput } from "../../topology/ipInput";
 import { MyButton } from "../../cofiguration/myButton/MyButton";
 
 const PingElement = () => {
-  const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
+  const url = "https://35a474cb-4d59-4846-8b43-fc913daf7a5f.mock.pstmn.io";
   const {
     register,
     handleSubmit,
     formState: { errors },
     setValue,
   } = useForm();
+
   const [ipAddress, setIpAddress] = useState();
   const [node, setNode] = useState();
   const [commandResult, setCommandResult] = useState("");
@@ -76,10 +77,9 @@ const PingElement = () => {
             )}
           >
             <SelectComponent
-              {...register(`ping_node_type`)}
               title={"Node"}
-              id={"ping-node-id"}
-              name={"ping_node_type"}
+              id={"ping-node"}
+              {...register(`ping_node_type`)}
             />
           </div>
           <div

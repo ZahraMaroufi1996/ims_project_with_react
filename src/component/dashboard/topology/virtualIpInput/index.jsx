@@ -6,7 +6,7 @@ import classes from "./index.module.css";
 import classNames from "classnames";
 
 const VirtualIpInput = ({ onChange, mainTitle, subTitle }) => {
-  const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
+  const url = "https://35a474cb-4d59-4846-8b43-fc913daf7a5f.mock.pstmn.io";
   const { topologyData, toggleTopologyData } = useContext(TopologyDataContext);
   const [form, setForm] = useState({
     field1: "",

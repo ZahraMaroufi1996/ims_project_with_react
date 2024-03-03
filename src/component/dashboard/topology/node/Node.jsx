@@ -13,7 +13,7 @@ import { MyTable } from "../table/MyTable";
 import { NodeContext } from "../../../../context/NodeContext";
 
 const Node = () => {
-  const url = "https://ba09580e-e7a2-4d8f-ac33-1e59e5594f17.mock.pstmn.io";
+  const url = "https://35a474cb-4d59-4846-8b43-fc913daf7a5f.mock.pstmn.io";
   const {
     register,
     formState: { errors },
@@ -37,7 +37,7 @@ const Node = () => {
       ip: ipAddress,
       type: data.node_type_icon,
     };
-    Axios.post(`${url}/api/topology/reactAddNode`, formData, {
+    Axios.post(`${url}/api/topology/addNode`, formData, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
