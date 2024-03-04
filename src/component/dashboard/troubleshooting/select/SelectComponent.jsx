@@ -31,17 +31,14 @@ const SelectComponent = forwardRef(({ title, id, replace, ...rest }, ref) => {
   //       fontSize: "1.48vh",
   //       fontFamily: `"FiraGO", sans-serif"`,
   //     },
-  //     console.log(provided)
   //   ),
   // };
-  // console.log(customStyles);
   // return (
   //   <>
   //     <label htmlForfor={id}>{title}</label>
   //     <Select ref={ref} options={options} styles={customStyles} />
   //   </>
   // );
-  console.log(rest);
   return (
     <>
       <label htmlFor={id}>{title}</label>

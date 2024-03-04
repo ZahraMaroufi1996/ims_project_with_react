@@ -32,7 +32,6 @@ const Login = () => {
       .then((response) => {
         const token = response.data.token;
         localStorage.setItem("token", token);
-        console.log(token);
         history("/dashboard/topology");
       })
       .catch((error) => {});

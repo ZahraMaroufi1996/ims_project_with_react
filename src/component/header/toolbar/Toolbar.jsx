@@ -24,7 +24,7 @@ const Toolbar = () => {
   };
 
   const onProfileConfirm = () => {
-    // console.log("hi");
+    // console.log("check profile!");
   };
 
   return (

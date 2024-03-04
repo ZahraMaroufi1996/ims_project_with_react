@@ -18,7 +18,6 @@ const PacketElement = () => {
   } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
-    console.log(data);
     const token = localStorage.getItem("token");
     Axios.post(`${url}/api/troubleshooting/packetCapture`, data, {
       headers: {
